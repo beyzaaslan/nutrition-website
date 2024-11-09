@@ -9,8 +9,10 @@ const getProductById = async (req, res) => {
 
     const product = await db.Product.findOne({
       where: { id: product_id },
-      include: [{ model: db.Review }],
+      include: [{ model: db.Review },],
       include: [{model:db.Category}],
+      include: [{model:db.PriceInfo}],
+
       //product id category id relation  
     });
 

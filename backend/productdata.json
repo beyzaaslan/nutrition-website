@@ -11,7 +11,7 @@
       "total_price": 239.0,
       "discounted_price": null,
       "price_per_servings": 11.95,
-      "discount_percentage": null
+      "discount_percentage": 20
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/cream-of-rice_1000_chocolate.webp",
     "comment_count": 0,
@@ -31,7 +31,7 @@
       "total_price": 349.0,
       "discounted_price": null,
       "price_per_servings": 8.72,
-      "discount_percentage": null
+      "discount_percentage": 20
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/dextrose_1000_.webp",
     "comment_count": 0,
@@ -51,7 +51,7 @@
       "total_price": 199.0,
       "discounted_price": null,
       "price_per_servings": 4.42,
-      "discount_percentage": null
+      "discount_percentage": 10
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/hyaluronic-acid_.webp",
     "comment_count": 0,
@@ -71,7 +71,7 @@
       "total_price": 199.0,
       "discounted_price": null,
       "price_per_servings": 4.42,
-      "discount_percentage": null
+      "discount_percentage": 12
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/tyrosine_.webp",
     "comment_count": 0,
@@ -91,7 +91,7 @@
       "total_price": 399.0,
       "discounted_price": null,
       "price_per_servings": 19.95,
-      "discount_percentage": null
+      "discount_percentage": 23
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/pump_300_peach.webp",
     "comment_count": 0,
@@ -111,7 +111,7 @@
       "total_price": 599.0,
       "discounted_price": null,
       "price_per_servings": 29.95,
-      "discount_percentage": null
+      "discount_percentage": 40
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/heavy-duty-preworkout_300_apple.webp",
     "comment_count": 0,
@@ -151,7 +151,7 @@
       "total_price": 269.0,
       "discounted_price": null,
       "price_per_servings": 5.98,
-      "discount_percentage": null
+      "discount_percentage": 5
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/omega3_.webp",
     "comment_count": 0,
@@ -171,7 +171,7 @@
       "total_price": 299.0,
       "discounted_price": null,
       "price_per_servings": 3.99,
-      "discount_percentage": null
+      "discount_percentage": 15
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/betaine_300_.webp",
     "comment_count": 0,
@@ -191,7 +191,7 @@
       "total_price": 599.0,
       "discounted_price": null,
       "price_per_servings": 37.44,
-      "discount_percentage": null
+      "discount_percentage": 30
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/micellar-casein_400_strawberry.webp",
     "comment_count": 0,
@@ -211,7 +211,7 @@
       "total_price": 299.0,
       "discounted_price": null,
       "price_per_servings": 3.99,
-      "discount_percentage": null
+      "discount_percentage": 30
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/electrolyte-blend_150_.webp",
     "comment_count": 0,
@@ -231,7 +231,7 @@
       "total_price": 199.0,
       "discounted_price": null,
       "price_per_servings": 8.29,
-      "discount_percentage": null
+      "discount_percentage": 20
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/glutamine_120_.webp",
     "comment_count": 0,
@@ -251,7 +251,7 @@
       "total_price": 239.0,
       "discounted_price": null,
       "price_per_servings": 5.97,
-      "discount_percentage": null
+      "discount_percentage": 10
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/creatine_120_.webp",
     "comment_count": 0,
@@ -271,7 +271,7 @@
       "total_price": 199.0,
       "discounted_price": null,
       "price_per_servings": 4.42,
-      "discount_percentage": null
+      "discount_percentage": 40
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/theanine_.webp",
     "comment_count": 0,
@@ -291,7 +291,7 @@
       "total_price": 249.0,
       "discounted_price": null,
       "price_per_servings": 5.53,
-      "discount_percentage": null
+      "discount_percentage": 50
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/bromelain_.webp",
     "comment_count": 0,
@@ -311,7 +311,7 @@
       "total_price": 599.0,
       "discounted_price": null,
       "price_per_servings": 33.28,
-      "discount_percentage": null
+      "discount_percentage": 60
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/post-workout-tm_720_strawberry.webp",
     "comment_count": 0,
@@ -331,7 +331,7 @@
       "total_price": 199.0,
       "discounted_price": null,
       "price_per_servings": 4.42,
-      "discount_percentage": null
+      "discount_percentage": 15
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/beta-glucan_.webp",
     "comment_count": 0,
@@ -351,7 +351,7 @@
       "total_price": 399.0,
       "discounted_price": null,
       "price_per_servings": 13.3,
-      "discount_percentage": null
+      "discount_percentage": 25
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/red-detox_300_.webp",
     "comment_count": 0,
@@ -371,7 +371,7 @@
       "total_price": 199.0,
       "discounted_price": null,
       "price_per_servings": 3.32,
-      "discount_percentage": null
+      "discount_percentage": 35
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/vitamin-d3_.webp",
     "comment_count": 0,
@@ -391,7 +391,7 @@
       "total_price": 249.0,
       "discounted_price": null,
       "price_per_servings": 4.15,
-      "discount_percentage": null
+      "discount_percentage": 25
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/melatonin_.webp",
     "comment_count": 0,
@@ -411,7 +411,7 @@
       "total_price": 179.0,
       "discounted_price": null,
       "price_per_servings": 3.98,
-      "discount_percentage": null
+      "discount_percentage": 10
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/vitamin-k2_.webp",
     "comment_count": 0,
@@ -431,7 +431,7 @@
       "total_price": 219.0,
       "discounted_price": null,
       "price_per_servings": 9.13,
-      "discount_percentage": null
+      "discount_percentage": 10
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/bcaa-411_120_apple.webp",
     "comment_count": 0,
@@ -451,7 +451,7 @@
       "total_price": 399.0,
       "discounted_price": null,
       "price_per_servings": 13.3,
-      "discount_percentage": null
+      "discount_percentage":  10
     },
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/mctoil_150_.webp",
     "comment_count": 0,
