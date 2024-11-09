@@ -57,10 +57,12 @@ const createCategory = async (req, res) => {
 
 // Belirli bir kategorinin tüm ürünlerini getir
 const getProductsByCategory = async (req, res) => {
+  console.log("beyza");
   try {
     const { category_id } = req.params;
     console.log(req.params);
     console.log(category_id);
+    console.log("beyza1");
     const category = await db.Category.findOne({
       where: { id: category_id },
       include: [

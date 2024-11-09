@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 interface ProductCardProps {
     product: Product;
 }
-
+/*  */
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
       <Card sx={{

@@ -12,8 +12,7 @@ const getProductById = async (req, res) => {
       include: [{ model: db.Review },],
       include: [{model:db.Category}],
       include: [{model:db.PriceInfo}],
-
-      //product id category id relation  
+      include: [{ model: Variant }],
     });
 
     if (!product) {
@@ -48,6 +47,7 @@ const getProductByName = async (req, res) => {
 };
 const createProduct = async (req, res) => {
   try {
+   // Önce ürünü kaydedin
     const {
       name,
       short_explanation,
@@ -57,8 +57,10 @@ const createProduct = async (req, res) => {
       average_star,
       usage,
       features, 
-      description
+      description,
+      variants 
     } = req.body;
+    
     const createProduct = await db.Product.create({
       name,
       short_explanation,
@@ -75,6 +77,15 @@ const createProduct = async (req, res) => {
 
     if (!createProduct) {
       return res.status(400).send("Product not created");
+    }
+     // Varyantları ürüne ekleyin
+     if (variants && variants.length > 0) {
+      const variantInstances = variants.map((variant) => ({
+        ...variant,
+        productId: product.id,
+      }));
+      console.log("variant")
+      await variants.bulkCreate(variantInstances);
     }
 
     return res.status(201).send("Product Created Successfully");

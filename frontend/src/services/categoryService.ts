@@ -10,10 +10,11 @@ export const getCategoryById = async (id: number) => {
 };
 // Belirli bir kategorinin ürünlerini almak için
 export const getProductsByCategoryId = async (categoryId: number) => {
-    console.log("getProductsByCategoryId",getProductsByCategoryId);
+    console.log("kategoriye göre ürünler",getProductsByCategoryId);
     return await apiRequest('GET', `/category/${categoryId}/products`);
 };
 // Yeni bir kategori eklemek için
 export const addCategory = async (categoryData:Category) => {
+  
     return await apiRequest('POST', '/category', categoryData);
 };

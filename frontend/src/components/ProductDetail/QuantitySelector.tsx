@@ -1,35 +1,18 @@
-import React from 'react';
-import {  Box, Typography, Button } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
+import React, { useState } from 'react';
+import { Button, TextField } from '@mui/material';
 
-interface QuantitySelectorProps {
-  count: number;
-  onIncrease: () => void;
-  onDecrease: () => void;
-}
+const QuantitySelector: React.FC = () => {
+  const [quantity, setQuantity] = useState(1);
 
-const QuantitySelector: React.FC<QuantitySelectorProps> = ({ count, onIncrease, onDecrease }) => {
+  const handleIncrement = () => setQuantity(quantity + 1);
+  const handleDecrement = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
+
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center',marginTop:'.5rem' }}>
-      <Button
-        variant="contained"
-        onClick={onDecrease}
-        sx={{ minWidth: '30px', minHeight: '30px', }}
-      >
-        <RemoveIcon />
-      </Button>
-      <Typography variant="h4" mx={2}>
-        {count}
-      </Typography>
-      <Button
-        variant="contained"
-        onClick={onIncrease}
-        sx={{ minWidth: '30px', minHeight: '30px',}}
-      >
-        <AddIcon />
-      </Button>
-    </Box>
+    <div>
+      <Button onClick={handleDecrement}>-</Button>
+      <TextField value={quantity} readOnly />
+      <Button onClick={handleIncrement}>+</Button>
+    </div>
   );
 };
 
