@@ -1,2 +1,2 @@
-devam ediyorum ama işlerim var uzun bi ara :\
+bitti işlerim devammm :\
 https://github.com/orgs/beyzaaslan/projects/2/views/2
