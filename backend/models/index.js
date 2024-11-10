@@ -27,6 +27,7 @@ db.PriceInfo = require('./priceInfo')(sequelize, Sequelize);
 db.Review = require('./review')(sequelize, Sequelize);
 db.User = require('./user')(sequelize, Sequelize);
 db.Variant = require('./variant')(sequelize, Sequelize);
+db.Size = require('./size')(sequelize, Sequelize);
 db.ProductCategory = sequelize.define('ProductCategory', {}, { timestamps: false });
 
 // User and Address
@@ -70,6 +71,8 @@ db.Variant.belongsTo(db.Product, { foreignKey: 'productId' });
 // PriceInfo and Variant relationship
 db.PriceInfo.belongsTo(db.Variant, { foreignKey: 'variantId' });
 db.PriceInfo.belongsTo(db.Product, { foreignKey: 'ProductId' });
-
+// Size ve Variant arasındaki ilişkiyi 
+db.Variant.hasOne(db.Size, { foreignKey: 'variantId' });
+db.Size.belongsTo(db.Variant, { foreignKey: 'variantId' });
 
 module.exports = db;

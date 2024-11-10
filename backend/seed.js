@@ -4,23 +4,22 @@ const db = require('./models');
 
 async function seedDatabase() {
     try {
-        // Force: true kullanmak yerine, sırayla tabloları oluşturalım
         await db.sequelize.sync({ force: false });
-      
-            // Önce kategorileri oluşturalım
-            const categories = [
-                { id: 1, name: 'PROTEİN'},
-                { id: 2, name: 'SPOR GIDALARI'},
-                { id: 3, name: 'KARBONHİDRATLAR'},
-                { id: 4, name: 'GIDA'},
-                { id: 5, name: 'SAĞLIK'},
-                { id: 6, name: 'VİTAMİN' },
-            ];
-        
-            for (const category of categories) {
-                await db.Category.create(category);
-            }
-        
+
+        // Kategorileri oluştur
+        const categories = [
+            { id: 1, name: 'PROTEİN' },
+            { id: 2, name: 'SPOR GIDALARI' },
+            { id: 3, name: 'KARBONHİDRATLAR' },
+            { id: 4, name: 'GIDA' },
+            { id: 5, name: 'SAĞLIK' },
+            { id: 6, name: 'VİTAMİN' },
+        ];
+
+        for (const category of categories) {
+            await db.Category.upsert(category); // Önceden var olan kategorileri güncelle
+        }
+
         // JSON dosyasını oku
         const productData = JSON.parse(
             fs.readFileSync(path.resolve(__dirname, 'productdata.json'), 'utf-8')
@@ -61,6 +60,14 @@ async function seedDatabase() {
                             ProductId: createdProduct.id
                         });
 
+                        // Variant için Size ekle
+                        const createdSize = await db.Size.create({
+                            gram: variant.size.gram,
+                            pieces: variant.size.pieces,
+                            total_services: variant.size.total_services,
+                            variantId: createdVariant.id
+                        });
+
                         // Fiyat bilgisini ekle
                         await db.PriceInfo.create({
                             profit: variant.price.profit,
@@ -85,5 +92,6 @@ async function seedDatabase() {
         throw error;
     }
 }
+
 // Seed işlemini başlat
-seedDatabase(); 
+seedDatabase();
