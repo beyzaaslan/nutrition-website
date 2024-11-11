@@ -2,7 +2,7 @@
 const Detail = () => {
   return (
     <div>
-      detail
+      Detail
     </div>
   )
 }

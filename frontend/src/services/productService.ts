@@ -23,5 +23,6 @@ export const getProductById = async (productId: number) => {
 
 // Yeni bir ürün oluşturmak için
 export const createProduct = async (productData: Product) => {
+    console.log('Product olusturuldu:', Response);
     return await apiRequest('POST', '/product', productData);
 };

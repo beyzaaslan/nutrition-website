@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 interface ProductCardProps {
     product: Product;
 }
-/*  */
+
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
       <Card sx={{
@@ -84,15 +84,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           }}>
             {product.comment_count} Yorum
           </Typography>
-       {/*    <Typography variant="h6" sx={{
+        <Typography variant="h6" sx={{
             fontSize: "1.5rem",
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'normal', // Allow text to wrap
             lineHeight: '1.2rem', // Control line height for better spacing
           }}>
-            {product.price_info.total_price} TL
-          </Typography> */}
+           {/*   {product.priceInfo.total_price} TL */}
+          </Typography> 
         </CardContent>
       </Card>
     );

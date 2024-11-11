@@ -13,7 +13,6 @@ import {
     SSS ,
     Login,
     ProductList,
-    Detail, 
 } from './pages'; 
 
 
@@ -31,8 +30,9 @@ const AppRouter = () => {
                 <Route path="/404" element={<MainLayout><Page404 /></MainLayout>} />
                 <Route path="/sss" element={<MainLayout><SSS /></MainLayout>} />
                 <Route path="/all-products" element={<MainLayout><ProductList /></MainLayout>} />
-                <Route path="/detail" element={<MainLayout><Detail/></MainLayout>} />
                 <Route path="/:categoryName" element={<MainLayout><CategoryProductsPage /></MainLayout>} />
+
+
             </Routes>
   )
 }

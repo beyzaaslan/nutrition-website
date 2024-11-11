@@ -65,14 +65,14 @@ db.User.hasMany(db.Review, { foreignKey: 'UserId' });
 db.Review.belongsTo(db.User, { foreignKey: 'UserId' });
 
 // Product ve Variant arasındaki ilişki
-db.Product.hasMany(db.Variant, { foreignKey: 'productId' });
-db.Variant.belongsTo(db.Product, { foreignKey: 'productId' });
+db.Product.hasMany(db.Variant, { foreignKey: 'ProductId' });
+db.Variant.belongsTo(db.Product, { foreignKey: 'ProductId' });
 
 // PriceInfo and Variant relationship
 db.PriceInfo.belongsTo(db.Variant, { foreignKey: 'variantId' });
 db.PriceInfo.belongsTo(db.Product, { foreignKey: 'ProductId' });
 // Size ve Variant arasındaki ilişkiyi 
-db.Variant.hasOne(db.Size, { foreignKey: 'variantId' });
-db.Size.belongsTo(db.Variant, { foreignKey: 'variantId' });
+db.Variant.hasOne(db.Size, { foreignKey: 'VariantId' });
+db.Size.belongsTo(db.Variant, { foreignKey: 'VariantId' });
 
 module.exports = db;

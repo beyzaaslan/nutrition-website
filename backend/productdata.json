@@ -6,22 +6,20 @@
     "usage": "1 ölçek (yaklaşık 50g) ürünü tavaya veya tencereye koyunuz, 200ml su veya süt ile kıvam alana kadar kısık ateşte pişiriniz. Gün içerisinde kendi programınıza göre dilediğiniz zaman kullanabilirsiniz.",
     "features": "Cream of Rice, beyaz pirinç unundan yapılan, sindirimi kolay kompleks bir karbonhidrattır. Glutensizdir ve vücut geliştirme sürecindeki diyetiniz için mükemmel bir seçenektir. Ek olarak, gün içerisinde ara öğünlerde veya öğünlerinizde ekstra kalori kaynağınızdır.\n\nKarbonhidratlar; normal beyin fonksiyonunun korunmasına ve iskelet kaslarındaki glikojen depolarının azalması ve kas yorulmasına sebep olan yüksek yoğunluklu ve/veya uzun süreli fiziksel egzersiz sonrası normal kas fonksiyonlarına katkıda bulunur.\n\n-   Pratik ve hızlı karbonhidrat kaynağı\n-   Her servisinde 38g karbonhidrat içerir.\n-   Tek başına veya tariflerinize ekleyerek kullanabilirsiniz.",
     "description": "Pratik, lezzetli ve sağlıklı karbonhidrat kaynağıdır.\n\n-   Mikronize yapısı sayesinde kolayca karışır, pişer ve kıvam alır.\n-   İçerisindeki ölçek sayesinde kolay bir şekilde porsiyon ayarlanabilir.\n-   Taze ve kaliteli pirinçlerden ufaltılarak elde edilmiştir.",
-
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/cream-of-rice_1000_chocolate.webp",
     "comment_count": 0,
     "average_star": 0.0,
     "id": "1",
     "categories": [{ "id": 3 }, { "id": 4 }],
-
     "variants": [
       {
-        "id": "40675f04-012b-4012-9084-ceffc013ad29",
         "size": {
           "gram": 1000,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Çikolata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -29,17 +27,17 @@
           "price_per_servings": 11.95,
           "discount_percentage": null
         },
-        "photo_src": "/media/cream-of-rice_1000_chocolate.webp",
+        "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/cream-of-rice_1000_chocolate.webp",
         "is_available": true
       },
       {
-        "id": "7da79a6f-b588-4010-b008-b8581229274e",
         "size": {
           "gram": 1000,
           "pieces": 3,
           "total_services": 60
         },
         "aroma": "Çikolata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
@@ -51,13 +49,13 @@
         "is_available": true
       },
       {
-        "id": "b8242eca-6bb5-4536-bb28-558a4dc8d6b8",
         "size": {
           "gram": 1000,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Muz",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -69,13 +67,13 @@
         "is_available": true
       },
       {
-        "id": "2f50218b-febe-458f-a3ec-27433c421cd2",
         "size": {
           "gram": 1000,
           "pieces": 3,
           "total_services": 60
         },
         "aroma": "Muz",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
@@ -87,13 +85,13 @@
         "is_available": true
       },
       {
-        "id": "985d2874-3a98-4a9e-a38c-8c581f133821",
         "size": {
           "gram": 1000,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Lemon Cheesecake",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/73819501-fa0c-4eee-b462-778d11b4b64a/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -105,13 +103,13 @@
         "is_available": true
       },
       {
-        "id": "e6e532d1-bdb2-4b5d-aaf5-314e366a844b",
         "size": {
           "gram": 1000,
           "pieces": 3,
           "total_services": 60
         },
         "aroma": "Lemon Cheesecake",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/73819501-fa0c-4eee-b462-778d11b4b64a/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
@@ -123,13 +121,13 @@
         "is_available": true
       },
       {
-        "id": "2a0ec05c-5706-4129-a615-50786806d378",
         "size": {
           "gram": 1000,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Muhallebi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/5d97d644-a60e-4bf4-8e88-e42929f4745e/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -141,13 +139,13 @@
         "is_available": true
       },
       {
-        "id": "4b1c84ee-6100-45fe-a5f1-667b172f2a6f",
         "size": {
           "gram": 1000,
           "pieces": 3,
           "total_services": 60
         },
         "aroma": "Muhallebi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/5d97d644-a60e-4bf4-8e88-e42929f4745e/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
@@ -159,13 +157,13 @@
         "is_available": true
       },
       {
-        "id": "efc48af2-e2e7-4a67-890d-b69b43b7f316",
         "size": {
           "gram": 1000,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -177,13 +175,13 @@
         "is_available": true
       },
       {
-        "id": "ee8e9274-da2e-41af-a3c5-3606e329b100",
         "size": {
           "gram": 1000,
           "pieces": 3,
           "total_services": 60
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
@@ -195,13 +193,13 @@
         "is_available": true
       },
       {
-        "id": "39036a05-70c0-442f-97bf-bc00724f8e0a",
         "size": {
           "gram": 1000,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Hindistan Cevizi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/6a92a294-231f-4326-9533-9ad0b85e1a50/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -213,13 +211,13 @@
         "is_available": true
       },
       {
-        "id": "aef40cd3-3564-46b0-bed2-178433b1e3be",
         "size": {
           "gram": 1000,
           "pieces": 3,
           "total_services": 60
         },
         "aroma": "Hindistan Cevizi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/6a92a294-231f-4326-9533-9ad0b85e1a50/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
@@ -230,9 +228,8 @@
         "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/cream-of-rice_1000_3_coconut.webp",
         "is_available": true
       }
-    ],
-    "tags": ["VEJETARYEN", "GLUTENSİZ", "VEGAN"]
-  },
+    ]
+    },
   {
     "name": "DEXTROSE",
     "short_explanation": "KASLARDAKİ GLİKOJEN DEPOLARINI HIZLICA DOLDURUR",
@@ -248,13 +245,13 @@
     "categories": [{ "id": 1 }, { "id": 3 }],
     "variants": [
       {
-        "id": "649494bd-efd0-4d2c-b627-757cd64450d0",
         "size": {
           "gram": 1000,
           "pieces": 1,
           "total_services": 40
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 349.0,
@@ -266,13 +263,14 @@
         "is_available": true
       },
       {
-        "id": "ad8cced3-08be-45aa-a125-1dc243bc7775",
         "size": {
           "gram": 1000,
           "pieces": 2,
           "total_services": 80
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 698.0,
@@ -300,12 +298,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "d204a3bf-754d-4ecb-b9f6-6c22a56495bc",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 199.0,
@@ -317,12 +316,13 @@
         "is_available": true
       },
       {
-        "id": "870e00f4-583f-409d-a91c-f2c7624d0814",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 49,
           "total_price": 398.0,
@@ -350,12 +350,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "7cac2acc-03b8-436c-bdc0-13750f5e0399",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 199.0,
@@ -367,12 +368,13 @@
         "is_available": true
       },
       {
-        "id": "5f13a61c-50a9-4330-bdd6-655283ba461b",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59,
           "total_price": 398.0,
@@ -400,13 +402,13 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "5f11b78d-0191-4513-9cc6-a152d89ada37",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Şeftali",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -418,13 +420,13 @@
         "is_available": true
       },
       {
-        "id": "9b5b460c-accb-401b-879b-9d56d9518b0b",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 20
         },
         "aroma": "Şeftali",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
         "price": {
           "profit": 119,
           "total_price": 798.0,
@@ -452,13 +454,13 @@
     "categories": [{ "id": 1 }, { "id": 2 }, { "id": 3 }],
     "variants": [
       {
-        "id": "f49644d0-cdd7-4581-8b32-c8b768c8113e",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 599.0,
@@ -470,13 +472,14 @@
         "is_available": true
       },
       {
-        "id": "c2dfad4f-92c3-4f49-bc36-ca2d05f607a6",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+
         "price": {
           "profit": 199,
           "total_price": 1198.0,
@@ -496,7 +499,6 @@
     "usage": "Yatmadan 30-60 dakika önce kullanabilirsiniz.",
     "features": "Deep Sleep, yapılan araştırmalarda uyku kalitesini etkileyen, rahatlatıcı etkisi olan, anksiyete ve stresi azaltmaya yardımcı olan etken maddelerden oluşturulmuş kompleks bir formüle sahiptir. Ayrıca, içeriğindeki vitamin ve mineral takviyeleriyle de vücudun uyku sırasında toparlanmasına katkıda bulunur.\n\nDeep Sleep, içeriğindeki Valerian ve Melisa Ekstresi, 5-HTP, L-Triptofan etkenlerinin rahatlatıcı etkisi ile uyku kalitesini artırdığı bilinmektedir. Bu etkisi ile anksiyete ve stresi de azaltıcı etkisi olduğu söylenebilir.",
     "description": "Yaşam kalitesi için kaliteli ve derin bir şekilde uyumak önemlidir. Deep Sleep; içerdiği 10 etken madde efektif dozlarda kullanılmış ve sinerjik çalışacak şekilde tasarlanmıştır.\n\n-   Kompleks ve etkili bir formülasyona sahiptir.\n-   Kaliteli ve derin uyku yaşamımız için önemlidir.\n-   5-HTP, L-Triptofan, Theanin, Valerian Root Extract, Melissa Extract, Magnezyum, Çinko ve B6 içerir",
-
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/deep-sleep_150_raspberry.webp",
     "comment_count": 0,
     "average_star": 0.0,
@@ -504,13 +506,13 @@
     "categories": [{ "id": 1 }, { "id": 5 }],
     "variants": [
       {
-        "id": "7a8b1af9-1c9f-4755-8962-c1f153df2a79",
         "size": {
           "gram": 150,
           "pieces": 1,
           "total_services": 25
         },
         "aroma": "Ahududu",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -522,13 +524,13 @@
         "is_available": true
       },
       {
-        "id": "3dfe4508-cd70-4463-8327-dcd495d94461",
         "size": {
           "gram": 150,
           "pieces": 2,
           "total_services": 50
         },
         "aroma": "Ahududu",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -556,12 +558,13 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "d76e0d92-b971-426a-9c9f-e900e4d7e1e1",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 269.0,
@@ -573,12 +576,13 @@
         "is_available": true
       },
       {
-        "id": "937d9e8a-5488-4b57-bc0b-5df612bcd3cb",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59,
           "total_price": 538.0,
@@ -606,13 +610,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "7f0b75a8-ded1-48ce-ac43-2165b5cdc20f",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 75
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 299.0,
@@ -624,13 +629,14 @@
         "is_available": true
       },
       {
-        "id": "7eeffe24-d664-4af6-abc9-9764ea82a32e",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 150
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 598.0,
@@ -658,13 +664,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "8d7af1f2-31bf-4a09-883e-c3cf42b20eee",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 599.0,
@@ -676,13 +683,14 @@
         "is_available": true
       },
       {
-        "id": "793be346-4d0f-4b62-8641-cb929aaf7243",
         "size": {
           "gram": 400,
           "pieces": 2,
           "total_services": 32
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 1198.0,
@@ -710,13 +718,14 @@
     "categories": [{ "id": 1 }, { "id": 3 }],
     "variants": [
       {
-        "id": "3a5f50a4-2433-48d3-b3f1-dbdb42e8995c",
         "size": {
           "gram": 150,
           "pieces": 1,
           "total_services": 75
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 299.0,
@@ -728,13 +737,14 @@
         "is_available": true
       },
       {
-        "id": "a4fb7e17-533f-4ea9-a2be-cb9de9fc12ed",
         "size": {
           "gram": 150,
           "pieces": 2,
           "total_services": 150
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 598.0,
@@ -762,13 +772,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "9d9e5c96-72be-4fc8-9d57-04343fe687a9",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 24
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 199.0,
@@ -780,13 +791,14 @@
         "is_available": true
       },
       {
-        "id": "704023b1-75bf-4a52-80ba-6ab01f5c0056",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -798,13 +810,14 @@
         "is_available": true
       },
       {
-        "id": "4fb8409c-62d3-4f23-9615-d3c810996349",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 120
         },
-        "aroma": "Aromasız",
+        "aroma": "Aromasız",     
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -832,13 +845,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }, { "id": 3 }],
     "variants": [
       {
-        "id": "3f0a802a-b5dd-4493-858a-b37c9a55d75b",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 40
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -850,13 +864,14 @@
         "is_available": true
       },
       {
-        "id": "cea37a24-c79f-49c2-b1ef-d8b4b2e54e4c",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 100
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 469.0,
@@ -868,13 +883,14 @@
         "is_available": true
       },
       {
-        "id": "a4dc535d-a217-49c8-a0e7-8d370e8fade5",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 200
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 139,
           "total_price": 938.0,
@@ -886,13 +902,13 @@
         "is_available": true
       },
       {
-        "id": "4106dfcf-265d-40cb-9ed3-21e6a1b7a54d",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 40
         },
         "aroma": "Karpuz",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -904,13 +920,14 @@
         "is_available": true
       },
       {
-        "id": "8d91ff9a-1f53-488e-950c-52a52aa7c7c5",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 100
         },
         "aroma": "Karpuz",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 469.0,
@@ -922,13 +939,14 @@
         "is_available": true
       },
       {
-        "id": "e9f244e1-d2bc-4245-a1e9-0f6287822e4d",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 200
         },
         "aroma": "Karpuz",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 139,
           "total_price": 938.0,
@@ -940,13 +958,14 @@
         "is_available": true
       },
       {
-        "id": "743923f1-997b-4cfd-aea7-9ec55251af9f",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 40
         },
         "aroma": "Limonata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -958,13 +977,14 @@
         "is_available": true
       },
       {
-        "id": "3400b2f9-e765-4ca5-ac69-4b2d0b515007",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 100
         },
         "aroma": "Limonata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 469.0,
@@ -976,13 +996,14 @@
         "is_available": true
       },
       {
-        "id": "2e591a36-9724-434b-badc-f0ac34e5a755",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 200
         },
         "aroma": "Limonata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+
         "price": {
           "profit": 139,
           "total_price": 938.0,
@@ -994,13 +1015,14 @@
         "is_available": true
       },
       {
-        "id": "ea8d11f3-64b4-4a83-b595-f715539ee4b0",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 100
         },
         "aroma": "Fruit Fusion",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/d0875d69-b546-4714-89f0-bd382df23a3b/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 469.0,
@@ -1012,13 +1034,14 @@
         "is_available": true
       },
       {
-        "id": "e1fb6936-4068-40c1-971d-c2a1b702c034",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 200
         },
         "aroma": "Fruit Fusion",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/d0875d69-b546-4714-89f0-bd382df23a3b/image_180.webp",
+
         "price": {
           "profit": 139,
           "total_price": 938.0,
@@ -1046,12 +1069,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "0235e010-9a5b-46f8-8246-a6c9b5314825",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 23.88,
           "total_price": 199.0,
@@ -1063,12 +1087,13 @@
         "is_available": true
       },
       {
-        "id": "486e60df-795c-45ad-b45b-b444e727f625",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 47.76,
           "total_price": 398.0,
@@ -1096,12 +1121,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "cf6a6423-506c-40a6-bf5d-28bd63b26a7d",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 249.0,
@@ -1113,12 +1139,13 @@
         "is_available": true
       },
       {
-        "id": "c78daafb-4dd3-45d1-89c9-4c5e4a1bb55f",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 49,
           "total_price": 498.0,
@@ -1146,13 +1173,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "559f1362-8a58-4fa5-bb4a-7b6837e60de3",
         "size": {
           "gram": 720,
           "pieces": 1,
           "total_services": 18
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 599.0,
@@ -1164,13 +1192,14 @@
         "is_available": true
       },
       {
-        "id": "dea280e6-4320-4f02-a553-bad65b860ad4",
         "size": {
           "gram": 720,
           "pieces": 2,
           "total_services": 18
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 199,
           "total_price": 1198.0,
@@ -1198,12 +1227,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "e7ae9169-6e52-45b3-8673-81c945f1be8c",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 35.82,
           "total_price": 199.0,
@@ -1215,12 +1245,13 @@
         "is_available": true
       },
       {
-        "id": "2a3f3f05-54e3-42f9-9d8c-5659e92833ae",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 71.64,
           "total_price": 398.0,
@@ -1248,13 +1279,14 @@
     "categories": [{ "id": 1 }, { "id": 5 }],
     "variants": [
       {
-        "id": "8aff30b2-b088-4422-b5eb-e05c9036b807",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 55.86,
           "total_price": 399.0,
@@ -1266,13 +1298,14 @@
         "is_available": true
       },
       {
-        "id": "c3ea6be8-992d-4268-acef-e1b6eecd162e",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 111.72,
           "total_price": 798.0,
@@ -1300,12 +1333,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "fc09433a-4b78-4121-981b-d08c642d2a8a",
         "size": {
           "pieces": 1,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 199.0,
@@ -1317,12 +1351,13 @@
         "is_available": true
       },
       {
-        "id": "388131c2-2ebe-4669-81f2-8aa63869b532",
         "size": {
           "pieces": 2,
           "total_services": 120
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59,
           "total_price": 398.0,
@@ -1350,12 +1385,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "dd269844-0f38-4a53-bbec-e29d31214bf0",
         "size": {
           "pieces": 1,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 249.0,
@@ -1367,12 +1403,13 @@
         "is_available": true
       },
       {
-        "id": "3056f2d6-f13a-4989-874b-017ae08bd94e",
         "size": {
           "pieces": 2,
           "total_services": 120
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 49,
           "total_price": 498.0,
@@ -1400,12 +1437,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "87d48a8b-b848-42a1-9a0b-a027204e9cf2",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 179.0,
@@ -1417,12 +1455,13 @@
         "is_available": true
       },
       {
-        "id": "470e6300-d9c0-45e8-ae28-f0c1ac7b9c82",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59,
           "total_price": 358.0,
@@ -1450,13 +1489,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "5f90bde2-f124-441c-b25a-12768fc04f4c",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 24
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 219.0,
@@ -1468,13 +1508,14 @@
         "is_available": true
       },
       {
-        "id": "f46f57c0-a2b4-4cde-8079-1a887b9f6e4a",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 60
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 439.0,
@@ -1486,13 +1527,14 @@
         "is_available": true
       },
       {
-        "id": "412218e0-1f3c-4867-b6e0-d543bc5aa0f0",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 120
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+
         "price": {
           "profit": 129,
           "total_price": 878.0,
@@ -1504,13 +1546,14 @@
         "is_available": true
       },
       {
-        "id": "a313ffd5-4cdf-46a1-8a4f-a7af76a6b543",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 60
         },
         "aroma": "Limonata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 439.0,
@@ -1522,13 +1565,14 @@
         "is_available": true
       },
       {
-        "id": "28c86e3b-1777-4790-8c77-d56775b67d08",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 120
         },
         "aroma": "Limonata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+
         "price": {
           "profit": 129,
           "total_price": 878.0,
@@ -1556,13 +1600,14 @@
     "categories": [{ "id": 1 }, { "id": 5 }],
     "variants": [
       {
-        "id": "b3b5375d-52c6-4130-882c-4cf2be7243ac",
         "size": {
           "gram": 150,
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -1574,13 +1619,14 @@
         "is_available": true
       },
       {
-        "id": "ab64adcf-cbd9-47c1-a4f0-4f351d08c63f",
         "size": {
           "gram": 150,
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -1608,12 +1654,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "694e8e62-ac0c-459a-b0c3-450071729b0e",
         "size": {
           "pieces": 1,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 179.0,
@@ -1625,12 +1672,13 @@
         "is_available": true
       },
       {
-        "id": "54280c5a-0b00-4265-ad37-1eccd091e087",
         "size": {
           "pieces": 2,
           "total_services": 120
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59,
           "total_price": 358.0,
@@ -1658,12 +1706,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "c8b469f0-200e-4e60-8226-3535833ed0e7",
         "size": {
           "pieces": 1,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 229.0,
@@ -1675,12 +1724,13 @@
         "is_available": true
       },
       {
-        "id": "46d075e3-ad31-40f4-a2d2-d1791921305b",
         "size": {
           "pieces": 2,
           "total_services": 120
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59,
           "total_price": 458.0,
@@ -1708,13 +1758,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }, { "id": 3 }],
     "variants": [
       {
-        "id": "2d5625d2-a9ed-4198-9eb5-892a80358861",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -1726,13 +1777,14 @@
         "is_available": true
       },
       {
-        "id": "514d3bbf-e520-457d-8015-55395f8eb0d9",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+
         "price": {
           "profit": 119,
           "total_price": 798.0,
@@ -1744,13 +1796,14 @@
         "is_available": true
       },
       {
-        "id": "2b54a793-0c9d-444a-8040-f214549c050b",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Tigers Blood",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/64f1c508-1c43-4368-869b-4923d835ae28/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -1762,13 +1815,14 @@
         "is_available": true
       },
       {
-        "id": "8ac4e389-8505-48b3-8e1c-099e0b49c0a0",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Tigers Blood",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/64f1c508-1c43-4368-869b-4923d835ae28/image_180.webp",
+
         "price": {
           "profit": 119,
           "total_price": 798.0,
@@ -1780,13 +1834,14 @@
         "is_available": true
       },
       {
-        "id": "b602a6ac-920d-47cd-8d58-71755cf7470a",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Şeftali",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -1798,13 +1853,14 @@
         "is_available": true
       },
       {
-        "id": "4084eb6f-6313-4764-924f-7252d0225713",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Şeftali",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+
         "price": {
           "profit": 119,
           "total_price": 798.0,
@@ -1816,13 +1872,14 @@
         "is_available": true
       },
       {
-        "id": "24ecd2ea-8b2b-444c-8b94-1a2b6c097c2e",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Limonata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -1834,13 +1891,14 @@
         "is_available": true
       },
       {
-        "id": "11251b70-2eae-4244-a4d5-f55a4be0c705",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Limonata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+
         "price": {
           "profit": 119,
           "total_price": 798.0,
@@ -1868,13 +1926,14 @@
     "categories": [{ "id": 1 }, { "id": 5 }],
     "variants": [
       {
-        "id": "7d893e52-9a8b-4319-b3fd-b505ff4f87b6",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 299.0,
@@ -1886,13 +1945,14 @@
         "is_available": true
       },
       {
-        "id": "303dc1f4-cd87-4b11-b70f-8175d580871e",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 598.0,
@@ -1912,7 +1972,6 @@
     "usage": "11 Yaş ve üzeri yetişkinler için; günde 1 kapsül kullanılması tavsiye edilmektedir. Bol su ile birlikte tüketilmesi önerilmektedir.\n\nGün içerisinde öğünlerle birlikte veya tok karnına kullanılması önerilmektedir.",
     "features": "Tarım ve Orman Bakanlığı Onaylı.\nFLAVA Selenyum İçeren Takviye Edici Gıda\nTakviye Edici Gıda Onay Numarası: 011958-19.11.2021\n\nSelenyum normal saçın ve tırnakların korunmasına, bağışıklık sisteminin normal fonksiyonuna, normal tiroit fonksiyonuna katkıda bulunur.",
     "description": "Selenyum vücudumuz için gereken temel bir mineraldir.\n\n-   Selenyum normal saçın ve tırnakların korunmasına katkıda bulunur.\n-   Her kapsülde 200 mcg Selenyum vitamini içerir.",
-
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/selenium_.webp",
     "comment_count": 0,
     "average_star": 0.0,
@@ -1920,12 +1979,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "d3532a68-f102-42b6-9921-9f5a9a3c1a87",
         "size": {
           "pieces": 1,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 179.0,
@@ -1937,12 +1997,13 @@
         "is_available": true
       },
       {
-        "id": "40d061b1-56cb-4370-8a00-6dd548aa4ad7",
         "size": {
           "pieces": 2,
           "total_services": 120
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59,
           "total_price": 358.0,
@@ -1970,13 +2031,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "3bfb434c-4c82-461d-944e-2f257261e269",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 40
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 58.37,
           "total_price": 449.0,
@@ -2004,13 +2066,14 @@
     "categories": [{ "id": 1 }, { "id": 5 }],
     "variants": [
       {
-        "id": "9264f2a6-d693-4223-b9fd-90f1ad9f1bc0",
         "size": {
           "gram": 240,
           "pieces": 1,
           "total_services": 80
         },
         "aroma": "Şeftali",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+
         "price": {
           "profit": 69.8,
           "total_price": 349.0,
@@ -2022,13 +2085,14 @@
         "is_available": true
       },
       {
-        "id": "7c365491-eaae-4c89-ac0a-3801faff48e3",
         "size": {
           "gram": 240,
           "pieces": 2,
           "total_services": 80
         },
         "aroma": "Şeftali",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+
         "price": {
           "profit": 139.6,
           "total_price": 698.0,
@@ -2056,12 +2120,13 @@
     "categories": [{ "id": 6 }, { "id": 5 }],
     "variants": [
       {
-        "id": "faccf055-65ed-4055-9b35-01ece5d961ce",
         "size": {
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 249.0,
@@ -2073,12 +2138,13 @@
         "is_available": true
       },
       {
-        "id": "1d47ae56-25cf-4ee8-a39a-e1fa04c07b3c",
         "size": {
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 49,
           "total_price": 498.0,
@@ -2106,12 +2172,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "c9126b03-2c14-40b0-9d44-0de0c9b2a83f",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 27.48,
           "total_price": 229.0,
@@ -2123,12 +2190,13 @@
         "is_available": true
       },
       {
-        "id": "46304cb6-c211-4612-b185-36186e11ae7e",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 54.96,
           "total_price": 458.0,
@@ -2156,13 +2224,14 @@
     "categories": [{ "id": 1 }, { "id": 5 }],
     "variants": [
       {
-        "id": "4d64c2f9-3ba1-44a7-8621-f146be0b8c91",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 100
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 69.8,
           "total_price": 349.0,
@@ -2174,13 +2243,14 @@
         "is_available": true
       },
       {
-        "id": "1bc7d7dd-f423-4341-84c4-066c41238bab",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 200
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 139.6,
           "total_price": 698.0,
@@ -2208,13 +2278,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "3cd94716-2033-4d1d-82aa-d22a532baf2b",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 12
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 219.0,
@@ -2226,13 +2297,14 @@
         "is_available": true
       },
       {
-        "id": "2234773b-b1ba-40ac-adfc-9522072d2250",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 439.0,
@@ -2244,13 +2316,14 @@
         "is_available": true
       },
       {
-        "id": "57c623ad-c662-48e2-93ed-2b6ec98eb550",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+
         "price": {
           "profit": 129,
           "total_price": 878.0,
@@ -2278,13 +2351,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "36bfd4ee-5045-49a0-bb13-49abcd6db4e6",
         "size": {
           "gram": 250,
           "pieces": 1,
           "total_services": 25
         },
         "aroma": "Ahududu",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 449.0,
@@ -2296,13 +2370,14 @@
         "is_available": true
       },
       {
-        "id": "a0a7d38f-f7a0-4645-ab6d-40c20fdb7955",
         "size": {
           "gram": 250,
           "pieces": 2,
           "total_services": 50
         },
         "aroma": "Ahududu",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 998.0,
@@ -2330,13 +2405,13 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "fb583ba6-62c9-4ae9-ac06-f46c0c01be5e",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Bisküvi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/59ea1641-2678-48cb-a0de-f0045732653f/image_180.webp",
         "price": {
           "profit": 54.9,
           "total_price": 549.0,
@@ -2348,13 +2423,14 @@
         "is_available": true
       },
       {
-        "id": "de0de01b-6f0d-49fd-bd79-ae832249e4b1",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Bisküvi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/59ea1641-2678-48cb-a0de-f0045732653f/image_180.webp",
+
         "price": {
           "profit": 169.9,
           "total_price": 1699.0,
@@ -2366,13 +2442,14 @@
         "is_available": true
       },
       {
-        "id": "a0038b29-8472-4483-a13e-eb8baf79ddfa",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Bisküvi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/59ea1641-2678-48cb-a0de-f0045732653f/image_180.webp",
+
         "price": {
           "profit": 339.8,
           "total_price": 3398.0,
@@ -2384,13 +2461,14 @@
         "is_available": true
       },
       {
-        "id": "fcefbb45-3ee6-4159-abbe-c411e279c4ae",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Çikolata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+
         "price": {
           "profit": 54.9,
           "total_price": 549.0,
@@ -2402,13 +2480,14 @@
         "is_available": true
       },
       {
-        "id": "6b6fb4fd-d99a-4e92-a39e-e162ef6e0ea8",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Çikolata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+
         "price": {
           "profit": 169.9,
           "total_price": 1699.0,
@@ -2420,13 +2499,14 @@
         "is_available": true
       },
       {
-        "id": "199429cb-e2f4-4f94-acee-9e6a61e7c0fe",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Çikolata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+
         "price": {
           "profit": 339.8,
           "total_price": 3398.0,
@@ -2438,13 +2518,14 @@
         "is_available": true
       },
       {
-        "id": "ce2fd75b-be39-4f0a-96ee-b52708dd1f84",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Muz",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+
         "price": {
           "profit": 169.9,
           "total_price": 1699.0,
@@ -2456,13 +2537,14 @@
         "is_available": true
       },
       {
-        "id": "8e2297d4-56e5-4f02-a6ff-5c9368117bc5",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Muz",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+
         "price": {
           "profit": 339.8,
           "total_price": 3398.0,
@@ -2474,13 +2556,13 @@
         "is_available": true
       },
       {
-        "id": "b02aaab5-3904-474f-af06-383e21c30bed",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Salted Caramel",
+         "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e9368046-7128-474e-b4f2-0784506af5d5/image_180.webp",
         "price": {
           "profit": 54.9,
           "total_price": 549.0,
@@ -2492,13 +2574,13 @@
         "is_available": true
       },
       {
-        "id": "b18139b0-fc89-4700-a588-c28c0b50c1e0",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Salted Caramel",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e9368046-7128-474e-b4f2-0784506af5d5/image_180.webp",
         "price": {
           "profit": 169.9,
           "total_price": 1699.0,
@@ -2510,13 +2592,14 @@
         "is_available": true
       },
       {
-        "id": "09a085c5-3482-4459-beee-1626715f8e70",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Salted Caramel",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e9368046-7128-474e-b4f2-0784506af5d5/image_180.webp",
+
         "price": {
           "profit": 339.8,
           "total_price": 3398.0,
@@ -2528,13 +2611,13 @@
         "is_available": true
       },
       {
-        "id": "bb748c75-3972-478f-8fb6-3d38bbf4bb76",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Choco Nut",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/6a92a294-231f-4326-9533-9ad0b85e1a50/image_180.webp",
         "price": {
           "profit": 54.9,
           "total_price": 549.0,
@@ -2546,13 +2629,14 @@
         "is_available": true
       },
       {
-        "id": "5327ec69-1032-45e3-a14e-70c5cc605fc7",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Hindistan Cevizi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 54.9,
           "total_price": 549.0,
@@ -2564,13 +2648,14 @@
         "is_available": true
       },
       {
-        "id": "f7af529c-e96a-4cf6-998a-562f7b3b9ceb",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Hindistan Cevizi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 169.9,
           "total_price": 1699.0,
@@ -2582,13 +2667,14 @@
         "is_available": true
       },
       {
-        "id": "e620d5c3-2da3-4607-878a-42a956bd0147",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Hindistan Cevizi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 339.8,
           "total_price": 3398.0,
@@ -2600,13 +2686,14 @@
         "is_available": true
       },
       {
-        "id": "f94a9ab7-78d3-487c-9bef-a02912a7e0cc",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Raspberry Cheesecake",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 54.9,
           "total_price": 549.0,
@@ -2618,13 +2705,14 @@
         "is_available": true
       },
       {
-        "id": "d9e5d207-53ab-420e-b65d-b0cbd42ce469",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Raspberry Cheesecake",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 169.9,
           "total_price": 1699.0,
@@ -2636,13 +2724,14 @@
         "is_available": true
       },
       {
-        "id": "dc694a51-dcb9-437f-bf1f-8701086ad2db",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Raspberry Cheesecake",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 339.8,
           "total_price": 3398.0,
@@ -2654,13 +2743,14 @@
         "is_available": true
       },
       {
-        "id": "57aba386-b4d4-43af-adca-3aa73c076613",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 54.9,
           "total_price": 549.0,
@@ -2672,13 +2762,14 @@
         "is_available": true
       },
       {
-        "id": "a7323fe8-6e42-4208-9105-bc8afe35755a",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 169.9,
           "total_price": 1699.0,
@@ -2690,13 +2781,14 @@
         "is_available": true
       },
       {
-        "id": "236070e2-2002-4f22-aae2-f5ad5b30fa03",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 339.8,
           "total_price": 3398.0,
@@ -2724,12 +2816,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "f3bcf0c0-f07a-4614-a597-71bb723bf5df",
         "size": {
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 229.0,
@@ -2741,12 +2834,13 @@
         "is_available": true
       },
       {
-        "id": "b4db4632-0d1a-47d3-977f-5469e58ac86d",
         "size": {
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 458.0,
@@ -2774,13 +2868,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "5b031c68-2917-4755-8c02-82f7af451409",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 100
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 249.0,
@@ -2792,13 +2887,14 @@
         "is_available": true
       },
       {
-        "id": "1b8d8d55-7c73-4c15-80e7-9d4684bf8810",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 200
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 49,
           "total_price": 498.0,
@@ -2826,13 +2922,14 @@
     "categories": [{ "id": 1 }, { "id": 5 }],
     "variants": [
       {
-        "id": "d07dbd6e-608f-44c4-8c90-49f8614621d0",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 40
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 66.31,
           "total_price": 349.0,
@@ -2844,13 +2941,14 @@
         "is_available": true
       },
       {
-        "id": "f122f48e-b323-4198-bf11-99b055a6a314",
         "size": {
           "gram": 120,
           "pieces": 2,
           "total_services": 80
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 132.62,
           "total_price": 698.0,
@@ -2878,13 +2976,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "b770d9bf-f99f-4078-aa04-f0ed253f0199",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 66.31,
           "total_price": 349.0,
@@ -2896,13 +2995,14 @@
         "is_available": true
       },
       {
-        "id": "39f652e2-7d29-48a9-bd8c-95dc0651d8b8",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 189.81,
           "total_price": 999.0,
@@ -2914,13 +3014,14 @@
         "is_available": true
       },
       {
-        "id": "621a730c-abce-4caa-8eb9-9bcf09044727",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 379.62,
           "total_price": 1998.0,
@@ -2932,13 +3033,14 @@
         "is_available": true
       },
       {
-        "id": "bf2c5722-3cc4-405e-bceb-1452eaf14504",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Çikolata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+
         "price": {
           "profit": 66.31,
           "total_price": 349.0,
@@ -2950,13 +3052,14 @@
         "is_available": true
       },
       {
-        "id": "38d986be-e690-42cd-9ee7-822949e04edf",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Çikolata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+
         "price": {
           "profit": 189.81,
           "total_price": 999.0,
@@ -2968,13 +3071,14 @@
         "is_available": true
       },
       {
-        "id": "831eeb0e-384c-42a5-94aa-712298a55a36",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Çikolata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+
         "price": {
           "profit": 379.62,
           "total_price": 1998.0,
@@ -2986,13 +3090,14 @@
         "is_available": true
       },
       {
-        "id": "e60b5cc6-7b54-4309-b715-58076bd2c8a3",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 66.31,
           "total_price": 349.0,
@@ -3004,13 +3109,14 @@
         "is_available": true
       },
       {
-        "id": "09a40442-31af-48ce-8d66-bb0f4f195f0d",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 189.81,
           "total_price": 999.0,
@@ -3022,13 +3128,14 @@
         "is_available": true
       },
       {
-        "id": "a15dadad-da32-4e5e-8a69-c8e0849a7ebe",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 379.62,
           "total_price": 1998.0,
@@ -3056,12 +3163,13 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "86004572-4f6a-4b7a-aa47-a6bf4b6c0339",
         "size": {
           "gram": 150,
           "pieces": 1
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 299.0,
@@ -3073,12 +3181,13 @@
         "is_available": true
       },
       {
-        "id": "bfb11466-056f-4740-9b66-d98e8a82c9c7",
         "size": {
           "gram": 150,
           "pieces": 2
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 69,
           "total_price": 598.0,
@@ -3106,13 +3215,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "85c77a66-4072-40fd-93d2-8ecfc41cfa9c",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 699.0,
@@ -3124,13 +3234,14 @@
         "is_available": true
       },
       {
-        "id": "6c7d3816-c4ad-4129-a3ac-506eb3d43220",
         "size": {
           "gram": 400,
           "pieces": 2,
           "total_services": 32
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 199,
           "total_price": 1398.0,
@@ -3142,13 +3253,14 @@
         "is_available": true
       },
       {
-        "id": "3dbde25e-827c-40f4-8ece-0bdffbfd2759",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 699.0,
@@ -3160,13 +3272,14 @@
         "is_available": true
       },
       {
-        "id": "bed35fcd-6176-4649-987f-6cac228024d2",
         "size": {
           "gram": 400,
           "pieces": 2,
           "total_services": 32
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 199,
           "total_price": 1398.0,
@@ -3194,13 +3307,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "2dc187ba-ccca-4855-b7e7-b911ef323102",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59.88,
           "total_price": 499.0,
@@ -3212,13 +3326,14 @@
         "is_available": true
       },
       {
-        "id": "499b7142-e055-44f3-a500-1430745c1db6",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 120
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 119.76,
           "total_price": 998.0,
@@ -3246,12 +3361,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "ab6c334c-d0b3-46f6-a990-530e844edc2a",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 249.0,
@@ -3263,12 +3379,13 @@
         "is_available": true
       },
       {
-        "id": "cd5de2ff-60d3-43fa-b817-b0b9ee0dbe72",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 49,
           "total_price": 498.0,
@@ -3296,12 +3413,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "19adb92e-4add-4ed1-b0fb-bd2ce9d01ab0",
         "size": {
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 66.31,
           "total_price": 349.0,
@@ -3313,12 +3431,13 @@
         "is_available": true
       },
       {
-        "id": "6b85f59c-b1ee-4ce7-b8d8-26bd48142ed6",
         "size": {
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 132.62,
           "total_price": 698.0,
@@ -3346,12 +3465,13 @@
     "categories": [{ "id": 1 }, { "id": 4 }],
     "variants": [
       {
-        "id": "c2df23a7-6832-474d-977c-1b4540d0d1bb",
         "size": {
           "gram": 650,
           "pieces": 1
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 299.0,
@@ -3363,12 +3483,13 @@
         "is_available": true
       },
       {
-        "id": "eb55dbdf-159f-469c-ad10-84e779133b05",
         "size": {
           "gram": 650,
           "pieces": 2
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 49,
           "total_price": 598.0,
@@ -3396,13 +3517,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "808ccebb-3a60-4ebc-b64d-24fd6639a8db",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 24
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 229.0,
@@ -3414,13 +3536,14 @@
         "is_available": true
       },
       {
-        "id": "5cc4a1d9-12f2-41e4-9bc5-2c735b56f078",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 449.0,
@@ -3432,13 +3555,14 @@
         "is_available": true
       },
       {
-        "id": "18aa9810-de76-4aac-8206-f084a7013f32",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 120
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 898.0,
@@ -3466,12 +3590,13 @@
     "categories": [{ "id": 6 }, { "id": 5 }],
     "variants": [
       {
-        "id": "db82fbe7-7c06-4d30-a140-6c1357984883",
         "size": {
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 22.26,
           "total_price": 159.0,
@@ -3483,12 +3608,13 @@
         "is_available": true
       },
       {
-        "id": "018599dd-c5cf-47f1-8007-02e23e62b03e",
         "size": {
           "pieces": 3,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 66.78,
           "total_price": 477.0,
@@ -3516,13 +3642,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "d631d1a7-aab6-4a06-8d42-8a29425e1fc6",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 899.0,
@@ -3534,13 +3661,14 @@
         "is_available": true
       },
       {
-        "id": "80afcb94-61d1-42f7-9860-c5a5932df949",
         "size": {
           "gram": 400,
           "pieces": 2,
           "total_services": 32
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 1798.0,
@@ -3568,12 +3696,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "6674f7a6-6168-4a3c-944e-bdd29602e4fd",
         "size": {
           "pieces": 1,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 25.87,
           "total_price": 199.0,
@@ -3585,12 +3714,13 @@
         "is_available": true
       },
       {
-        "id": "90dbedbb-3056-409b-81c0-71221259bce9",
         "size": {
           "pieces": 2,
           "total_services": 120
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 51.74,
           "total_price": 398.0,
@@ -3618,12 +3748,13 @@
     "categories": [{ "id": 5 }, { "id": 2 }],
     "variants": [
       {
-        "id": "5440a1af-b7e0-410b-981d-2acefc66d76e",
         "size": {
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -3635,12 +3766,13 @@
         "is_available": true
       },
       {
-        "id": "e479e29c-547b-43d2-8be2-e0479a78ad10",
         "size": {
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -3668,12 +3800,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "926dac07-2e74-4de3-80b2-d068dcc1a7d2",
         "size": {
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 449.0,
@@ -3685,12 +3818,13 @@
         "is_available": true
       },
       {
-        "id": "88326a8a-c438-4e06-8fe7-47da4950cdc8",
         "size": {
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 898.0,
@@ -3718,13 +3852,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "a6b0b553-385b-4303-8747-72d3ebc52f44",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 120
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 229.0,
@@ -3736,13 +3871,14 @@
         "is_available": true
       },
       {
-        "id": "fed26715-b0bc-4d39-94f6-28a61cf30e98",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 300
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 449.0,
@@ -3754,13 +3890,13 @@
         "is_available": true
       },
       {
-        "id": "e637cf03-f81a-4f6a-a7bd-2e0775c49438",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 600
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
         "price": {
           "profit": 99,
           "total_price": 898.0,
@@ -3788,13 +3924,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "74eeb47a-9b4c-41ed-be71-f650f9b85f27",
         "size": {
           "gram": 2500,
           "pieces": 1,
           "total_services": 25
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 999.0,
@@ -3806,13 +3943,14 @@
         "is_available": true
       },
       {
-        "id": "9ba02b60-bc9d-4506-81e4-1687533798b6",
         "size": {
           "gram": 2500,
           "pieces": 2,
           "total_services": 50
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 199,
           "total_price": 1998.0,
@@ -3840,12 +3978,13 @@
     "categories": [{ "id": 5 }, { "id": 3 }, { "id": 6 }],
     "variants": [
       {
-        "id": "6c982841-ea98-4d51-8d93-fdfcae5ae202",
         "size": {
           "pieces": 1,
           "total_services": 15
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 199.0,
@@ -3857,12 +3996,13 @@
         "is_available": true
       },
       {
-        "id": "2a09ed0f-26b6-4c60-b048-3f5078e4c8d9",
         "size": {
           "pieces": 1,
           "total_services": 15
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59,
           "total_price": 398.0,
@@ -3890,12 +4030,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "36400c1e-9eca-4b8b-90d0-5eb254c93652",
         "size": {
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 47.84,
           "total_price": 299.0,
@@ -3907,12 +4048,13 @@
         "is_available": true
       },
       {
-        "id": "0ffffe06-3413-42c6-b354-319b74149f73",
         "size": {
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 95.68,
           "total_price": 598.0,
@@ -3940,12 +4082,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "ff07a221-238e-4ccf-8ffc-803cf977aecc",
         "size": {
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -3957,12 +4100,13 @@
         "is_available": true
       },
       {
-        "id": "51e355a6-c075-4678-8f55-fdd6bf992846",
         "size": {
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 49,
           "total_price": 478.0,
@@ -3990,12 +4134,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "183f17b8-a257-45f1-a2a2-1f34c606a00b",
         "size": {
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 249.0,
@@ -4007,12 +4152,13 @@
         "is_available": true
       },
       {
-        "id": "92c4f2a4-6629-42f1-a6f0-4e380752f5d2",
         "size": {
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 49,
           "total_price": 498.0,
@@ -4040,12 +4186,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "089535e0-8a27-4c74-8b65-2ba3eb587776",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 229.0,
@@ -4057,12 +4204,13 @@
         "is_available": true
       },
       {
-        "id": "b5f19fb5-9c7d-4389-82d4-20cd3b5a8633",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59,
           "total_price": 458.0,
@@ -4090,13 +4238,14 @@
     "categories": [{ "id": 1 }, { "id": 5 }],
     "variants": [
       {
-        "id": "c13f276f-8d57-41ee-8061-e55a26c320d8",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -4108,13 +4257,14 @@
         "is_available": true
       },
       {
-        "id": "29fcf4a3-a144-4df6-9f20-daaca804c8eb",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -4142,13 +4292,14 @@
     "categories": [{ "id": 1 }, { "id": 3 }],
     "variants": [
       {
-        "id": "f9ed555c-dbf7-4fcd-ba7f-3d71400f32c1",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Berry Blast",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 79.8,
           "total_price": 399.0,
@@ -4160,13 +4311,14 @@
         "is_available": true
       },
       {
-        "id": "8d39f73a-8c17-4bf3-a616-9dabfd824e72",
         "size": {
           "gram": 120,
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Berry Blast",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 159.6,
           "total_price": 798.0,
@@ -4194,12 +4346,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "147d991d-7be0-4883-9e54-8ab5b15e7d39",
         "size": {
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -4211,12 +4364,13 @@
         "is_available": true
       },
       {
-        "id": "c2468b4b-ceb9-4130-a893-28b4b9317861",
         "size": {
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -4244,12 +4398,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "d398f7ab-57eb-471a-8526-4b96d61b2752",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 249.0,
@@ -4261,12 +4416,13 @@
         "is_available": true
       },
       {
-        "id": "180c6ff2-dfcc-4154-8d11-0863d37dac9f",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 49,
           "total_price": 498.0,
@@ -4294,13 +4450,14 @@
     "categories": [{ "id": 1 }, { "id": 5 }],
     "variants": [
       {
-        "id": "5d60bb00-8f41-40d7-95d4-e48aefdd8740",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 40
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -4312,13 +4469,14 @@
         "is_available": true
       },
       {
-        "id": "f2fb5e8a-4fdf-42fd-9d58-439643a2bb11",
         "size": {
           "gram": 120,
           "pieces": 2,
           "total_services": 80
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -4346,13 +4504,14 @@
     "categories": [{ "id": 1 }, { "id": 3 }],
     "variants": [
       {
-        "id": "fc0dc954-3b0b-4078-94ca-eb68cd2dd6c3",
         "size": {
           "gram": 2500,
           "pieces": 1,
           "total_services": 25
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 159.84,
           "total_price": 999.0,
@@ -4364,13 +4523,14 @@
         "is_available": true
       },
       {
-        "id": "9aac6f2f-2fd9-4aa3-a614-8e8ccfb2edf8",
         "size": {
           "gram": 2500,
           "pieces": 2,
           "total_services": 50
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 319.68,
           "total_price": 1998.0,
@@ -4398,13 +4558,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "c4c4add0-6ca6-43b5-8941-cbb99569bea6",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 100
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 299.0,
@@ -4416,13 +4577,14 @@
         "is_available": true
       },
       {
-        "id": "1b2c141f-cc51-4b16-b305-355bcfccf907",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 200
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 598.0,
@@ -4450,12 +4612,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "4ee6984f-224a-4eb1-a107-568a51372e5d",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 229.0,
@@ -4467,12 +4630,13 @@
         "is_available": true
       },
       {
-        "id": "253a123d-55ba-42cf-bb7f-a91c5e6c0d8a",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59,
           "total_price": 458.0,
@@ -4500,13 +4664,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "bd53e9fa-3fd9-44db-8b53-c82ffc1950cd",
         "size": {
           "gram": 250,
           "pieces": 1,
           "total_services": 83
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59.9,
           "total_price": 599.0,
@@ -4518,13 +4683,14 @@
         "is_available": true
       },
       {
-        "id": "6a8550cd-5e66-4fad-9b4a-74a9986ddd86",
         "size": {
           "gram": 250,
           "pieces": 2,
           "total_services": 166
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 119.8,
           "total_price": 1198.0,
@@ -4552,13 +4718,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "5f9a74f2-e7bb-4217-8c9d-42edcea54a00",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Bisküvi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 749.0,
@@ -4570,13 +4737,14 @@
         "is_available": true
       },
       {
-        "id": "3d47f2b6-f35a-4085-9084-593cff3ca90a",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Bisküvi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 2399.0,
@@ -4588,13 +4756,14 @@
         "is_available": true
       },
       {
-        "id": "80bf1ab1-09a5-442e-9489-ae28c44a7a70",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Bisküvi",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 299,
           "total_price": 4798.0,
@@ -4606,13 +4775,14 @@
         "is_available": true
       },
       {
-        "id": "4209728f-9e0b-4800-9b09-7cc8e5436271",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Muz",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 749.0,
@@ -4624,13 +4794,14 @@
         "is_available": true
       },
       {
-        "id": "f75fb6b6-0dda-47dd-a4a2-b78067b9a8d8",
         "size": {
           "gram": 1600,
           "pieces": 1,
           "total_services": 64
         },
         "aroma": "Muz",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 2399.0,
@@ -4642,13 +4813,14 @@
         "is_available": true
       },
       {
-        "id": "672322d1-b441-4e56-b4ed-6ed740031d31",
         "size": {
           "gram": 1600,
           "pieces": 2,
           "total_services": 128
         },
         "aroma": "Muz",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+
         "price": {
           "profit": 299,
           "total_price": 4798.0,
@@ -4676,12 +4848,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "b8ee323a-c6c8-426a-8e7d-d4064032dc50",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 249.0,
@@ -4693,12 +4866,13 @@
         "is_available": true
       },
       {
-        "id": "f5c8bf17-4d4f-42a5-beca-9c221cb55f1b",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 49,
           "total_price": 498.0,
@@ -4726,13 +4900,14 @@
     "categories": [{ "id": 1 }, { "id": 3 }],
     "variants": [
       {
-        "id": "d7f4b7c0-7df7-4350-9ce6-49e1e5f27ccc",
         "size": {
           "gram": 120,
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Şeftali",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -4744,13 +4919,14 @@
         "is_available": true
       },
       {
-        "id": "5e3c9947-1388-4917-9f00-660c0af0f8c4",
         "size": {
           "gram": 120,
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Şeftali",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -4778,12 +4954,13 @@
     "categories": [{ "id": 1 }, { "id": 6 }, { "id": 5 }],
     "variants": [
       {
-        "id": "5eb28229-9639-4ece-a964-d5c527248eba",
         "size": {
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 21.89,
           "total_price": 199.0,
@@ -4795,12 +4972,13 @@
         "is_available": true
       },
       {
-        "id": "5056a832-fd8d-4f59-b543-e672e1ee0ef7",
         "size": {
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 43.78,
           "total_price": 398.0,
@@ -4812,12 +4990,13 @@
         "is_available": false
       },
       {
-        "id": "f93cf9b6-b22e-4eaa-be1b-cac3e168e5ee",
         "size": {
           "pieces": 3,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 65.67,
           "total_price": 597.0,
@@ -4845,13 +5024,14 @@
     "categories": [{ "id": 1 }, { "id": 5 }],
     "variants": [
       {
-        "id": "b03ba89d-7c3c-4823-8a2c-71945ec86adc",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 299.0,
@@ -4863,13 +5043,14 @@
         "is_available": true
       },
       {
-        "id": "77b86720-508b-4c0a-b779-69ae3675f5b1",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 598.0,
@@ -4897,12 +5078,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "6c4acb92-1ff9-4d15-8665-dd0d02c5c125",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 56.81,
           "total_price": 299.0,
@@ -4914,12 +5096,13 @@
         "is_available": true
       },
       {
-        "id": "9a056145-bc85-4e87-b755-09178504458b",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 113.62,
           "total_price": 598.0,
@@ -4947,13 +5130,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }, { "id": 5 }],
     "variants": [
       {
-        "id": "438ae9eb-f548-45b1-92db-a8223d707580",
         "size": {
           "gram": 150,
           "pieces": 1,
           "total_services": 50
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -4965,13 +5149,14 @@
         "is_available": true
       },
       {
-        "id": "5b7e51a3-d812-422d-aedb-0c7451341f02",
         "size": {
           "gram": 150,
           "pieces": 2,
           "total_services": 100
         },
         "aroma": "Yeşil Elma",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -4983,13 +5168,14 @@
         "is_available": true
       },
       {
-        "id": "51b0e6b3-e3e7-454a-9041-22dadeae0dbe",
         "size": {
           "gram": 150,
           "pieces": 1,
           "total_services": 50
         },
         "aroma": "Limonata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -5001,13 +5187,14 @@
         "is_available": true
       },
       {
-        "id": "e6df70f1-f1bc-4393-b92d-2c8d0b0323d7",
         "size": {
           "gram": 150,
           "pieces": 2,
           "total_services": 100
         },
         "aroma": "Limonata",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -5035,12 +5222,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "0ff76d2b-9941-4b17-b46e-40bb983173a6",
         "size": {
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 499.0,
@@ -5052,12 +5240,13 @@
         "is_available": true
       },
       {
-        "id": "1901d683-35e9-420c-af97-4539a8a1b28d",
         "size": {
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 998.0,
@@ -5085,12 +5274,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "296f5180-b1e8-4a47-be49-7f5c733c4f71",
         "size": {
           "pieces": 1,
           "total_services": 25
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 349.0,
@@ -5102,12 +5292,13 @@
         "is_available": true
       },
       {
-        "id": "842aa21e-c865-4dc5-bd1a-6f2ae00fe72c",
         "size": {
           "pieces": 2,
           "total_services": 50
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 698.0,
@@ -5135,12 +5326,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "0ea8471a-5a5b-4845-8daa-0f1c33eee805",
         "size": {
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 55.86,
           "total_price": 399.0,
@@ -5152,12 +5344,13 @@
         "is_available": true
       },
       {
-        "id": "81306bb6-1d37-4ea6-90b8-4de54775b80d",
         "size": {
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 111.72,
           "total_price": 798.0,
@@ -5185,13 +5378,14 @@
     "categories": [{ "id": 1 }, { "id": 3 }],
     "variants": [
       {
-        "id": "e9e1b317-6ee8-4a71-9345-c0284ee66715",
         "size": {
           "gram": 2500,
           "pieces": 1,
           "total_services": 100
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 101.83,
           "total_price": 599.0,
@@ -5203,13 +5397,14 @@
         "is_available": true
       },
       {
-        "id": "d8e45525-c82b-49ca-b95d-14c338b27846",
         "size": {
           "gram": 2500,
           "pieces": 2,
           "total_services": 200
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 203.66,
           "total_price": 1198.0,
@@ -5237,13 +5432,14 @@
     "categories": [{ "id": 1 }, { "id": 5 }],
     "variants": [
       {
-        "id": "40bd4350-5164-41c5-a6c1-4f9fa270f6fa",
         "size": {
           "gram": 300,
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 299.0,
@@ -5255,13 +5451,14 @@
         "is_available": true
       },
       {
-        "id": "c74af7f6-a417-4aab-904f-1b6274dd44ef",
         "size": {
           "gram": 300,
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 598.0,
@@ -5289,12 +5486,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "09b02377-b106-4eac-a1ad-afd53faee1dc",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 499.0,
@@ -5306,12 +5504,13 @@
         "is_available": true
       },
       {
-        "id": "210666da-2f80-4f35-95dd-0921ffdba50a",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 998.0,
@@ -5339,13 +5538,14 @@
     "categories": [{ "id": 1 }, { "id": 2 }],
     "variants": [
       {
-        "id": "ee498326-d4ae-42b3-ac90-f54b8de906e0",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 449.0,
@@ -5357,13 +5557,14 @@
         "is_available": true
       },
       {
-        "id": "6186436b-b828-4ebf-85cf-36a9babd7126",
         "size": {
           "gram": 400,
           "pieces": 2,
           "total_services": 32
         },
         "aroma": "Çilek",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 898.0,
@@ -5375,13 +5576,14 @@
         "is_available": true
       },
       {
-        "id": "4f9b08f2-a396-4db1-9176-3d44c2f26bf7",
         "size": {
           "gram": 400,
           "pieces": 1,
           "total_services": 16
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 449.0,
@@ -5393,13 +5595,14 @@
         "is_available": true
       },
       {
-        "id": "4820c137-9d78-4b9a-9c39-77e9314920a2",
         "size": {
           "gram": 400,
           "pieces": 2,
           "total_services": 32
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 898.0,
@@ -5427,12 +5630,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "b16e6529-5842-4c02-b6f0-af94464e3da5",
         "size": {
           "pieces": 1,
           "total_services": 45
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 179.0,
@@ -5444,12 +5648,13 @@
         "is_available": true
       },
       {
-        "id": "9bb4fa68-aba9-43fa-9481-d2f9d8c04187",
         "size": {
           "pieces": 2,
           "total_services": 90
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 59,
           "total_price": 358.0,
@@ -5477,12 +5682,13 @@
     "categories": [{ "id": 6 }, { "id": 2 }],
     "variants": [
       {
-        "id": "dda87e3e-d34a-4195-8f7e-70d7dfc010ee",
         "size": {
           "pieces": 1,
           "total_services": 20
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -5494,12 +5700,13 @@
         "is_available": true
       },
       {
-        "id": "477fe185-cf9b-42e8-9ad9-b9cceb348dc5",
         "size": {
           "pieces": 2,
           "total_services": 40
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -5519,7 +5726,6 @@
     "usage": "11 Yaş ve üzeri yetişkinler için; günde 2 kapsül kullanılması tavsiye edilmektedir. Sabah aç karna veya antrenmandan 30 dakika önce kullanılması önerilmektedir.",
     "features": "Tarım ve Orman Bakanlığı Onaylı.\n\nFLAVA CLA ve Kafein İçeren Takviye Edici Gıda\n\nTakviye Edici Gıda Onay Numarası: 012761-04.02.2022\n\nThermo Burner içeriğinde termojenik etkisini maksimum seviyeye çıkarması için Turunç, Karabiber ve Yeşil Çay Ekstreleri ile Kafein ve CLA kullanılmıştır.\n\nTurunç Ekstresi (%6 Sinefrin): Doğal kaynaklardan elde edilen bir bileşen olarak kabul edilir.\n\nYeşil Çay Ekstresi: Antioksidan özelliklere sahiptir; çay bitkisinden doğal olarak elde edilir.\n\nKafein: Kahve ve çay gibi doğal kaynaklarda bulunan bir uyarıcıdır.\n\nCLA (Konjuge Linoleik Asit): Belirli yiyeceklerde doğal olarak bulunan bir yağ asididir.\n\nBioperine® Karabiber Ekstresi: Karabiberden elde edilir ve doğal özelliklerinden dolayı içeriğe eklenir.\n\nKrom: Doğal olarak bazı yiyeceklerde bulunan bir mineraldir.\n\nB12 Vitamini: Belirli yiyeceklerde doğal olarak bulunur.\n\nThermo Burner içerisindeki Krom normal makro besin öğeleri metabolizmasına katkıda bulunur.\n\nThermo Burner içerisindeki B12 Vitamini, normal enerji oluşum ve homosistein metabolizmasına, normal kırmızı kan hücresi oluşumuna, bağışıklık sisteminin normal fonksiyonuna, yorgunluk ve bitkinliğin azalmasına katkıda bulunur.",
     "description": "Thermo Burner, doğal içeriklerden oluşturulmuş bir takviye ürünüdür ve aktif bir yaşam tarzını desteklemek amacıyla kullanılır. Dengeli bir diyet ve düzenli fiziksel aktiviteyle birlikte kullanılabilir.\n\n- Turunç, Karabiber, Yeşil Çay Ekstreleri ile Kafein ve CLA içerir\n- Servisinde 18 mg Sinefrin içerir.\n- Çeşitli etken maddeleri dengeli bir şekilde birleştirir.",
-
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/burner_.webp",
     "comment_count": 0,
     "average_star": 0.0,
@@ -5527,12 +5733,13 @@
     "categories": [{ "id": 5 }, { "id": 2 }, { "id": 3 }, { "id": 6 }],
     "variants": [
       {
-        "id": "f474486a-9538-43e0-93ea-2306f081640e",
         "size": {
           "pieces": 1,
           "total_services": 30
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": null,
           "total_price": 349.0,
@@ -5544,12 +5751,13 @@
         "is_available": true
       },
       {
-        "id": "5d3c0ef0-2794-4c67-bc38-a72fe2557042e",
         "size": {
           "pieces": 2,
           "total_services": 60
         },
         "aroma": "Aromasız",
+        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+
         "price": {
           "profit": 99,
           "total_price": 698.0,

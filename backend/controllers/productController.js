@@ -82,7 +82,7 @@ const createProduct = async (req, res) => {
      if (variants && variants.length > 0) {
       const variantInstances = variants.map((variant) => ({
         ...variant,
-        productId: product.id,
+        productId: createProduct.id,
       }));
       console.log("variant")
       await variants.bulkCreate(variantInstances);

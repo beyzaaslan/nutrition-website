@@ -31,7 +31,7 @@ export const ProductListPage: React.FC = () => {
     [loading, hasMore]
   );
 
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
     try {
       setLoading(true);
       const data = await getProducts(page, ITEMS_PER_PAGE);
@@ -47,18 +47,17 @@ export const ProductListPage: React.FC = () => {
       setHasMore(data.length === ITEMS_PER_PAGE);
     } catch (error) {
       console.error("Ürünler yüklenirken hata oluştu:", error);
-      setError(
-        "Ürünler yüklenirken bir hata oluştu. Lütfen daha sonra tekrar deneyin."
-      );
+      setError("Ürünler yüklenirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
     } finally {
       setLoading(false);
     }
-  };
+  }, [page]);
+  
 
   useEffect(() => {
     fetchProducts();
-  }, [page]);
-
+  }, [fetchProducts]);
+  
   if (error) {
     return <div className="text-center py-8 text-red-600">{error}</div>;
   }
@@ -86,5 +85,4 @@ export const ProductListPage: React.FC = () => {
     </Container>
   );
 };
-
 export default ProductListPage;

@@ -4,7 +4,7 @@ const db = require('./models');
 
 async function seedDatabase() {
     try {
-        await db.sequelize.sync({ force: false });
+        await db.sequelize.sync({ force: true });
 
         // Kategorileri oluştur
         const categories = [
@@ -56,8 +56,9 @@ async function seedDatabase() {
                         const createdVariant = await db.Variant.create({
                             flavor: variant.aroma,
                             photo_src: variant.photo_src,
+                            aroma_photo:variant.aroma_photo,
                             is_available: variant.is_available,
-                            ProductId: createdProduct.id
+                            ProductId: product.id
                         });
 
                         // Variant için Size ekle

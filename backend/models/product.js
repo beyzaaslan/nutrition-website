@@ -12,10 +12,14 @@ module.exports = (sequelize, DataTypes) => {
     });
   
     Product.associate = function(models) {
+      //one-to-many
       Product.hasMany(models.Review, { foreignKey: 'ProductId' });
+      //many-to-many
       Product.belongsToMany(models.Category, { through: 'ProductCategory' });
+      //one-to-one
       Product.hasOne(models.PriceInfo, { foreignKey: 'ProductId' });
-      Product.hasMany(models.Variant, { foreignKey: 'productId' });
+      //one-to-many
+      Product.hasMany(models.Variant, { foreignKey: 'ProductId' });
     };
 
     return Product;
