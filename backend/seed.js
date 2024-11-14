@@ -4,9 +4,10 @@ const db = require('./models');
 
 async function seedDatabase() {
     try {
+        // Drop and recreate all tables
         await db.sequelize.sync({ force: true });
 
-        // Kategorileri oluştur
+        // Categories to be created
         const categories = [
             { id: 1, name: 'PROTEİN' },
             { id: 2, name: 'SPOR GIDALARI' },
@@ -17,17 +18,17 @@ async function seedDatabase() {
         ];
 
         for (const category of categories) {
-            await db.Category.upsert(category); // Önceden var olan kategorileri güncelle
+            await db.Category.upsert(category); // Upsert categories
         }
 
-        // JSON dosyasını oku
+        // Read JSON data
         const productData = JSON.parse(
             fs.readFileSync(path.resolve(__dirname, 'productdata.json'), 'utf-8')
         );
 
         for (const product of productData) {
             try {
-                // Ürünü oluştur
+                // Create product
                 const createdProduct = await db.Product.create({
                     name: product.name,
                     short_explanation: product.short_explanation,
@@ -40,7 +41,7 @@ async function seedDatabase() {
                     average_star: product.average_star
                 });
 
-                // Kategorileri ekle
+                // Associate categories
                 if (product.categories && Array.isArray(product.categories)) {
                     await Promise.all(product.categories.map(async (category) => {
                         const foundCategory = await db.Category.findByPk(category.id);
@@ -50,33 +51,36 @@ async function seedDatabase() {
                     }));
                 }
 
-                // Variantları ekle
+                // Add variants
                 if (product.variants && Array.isArray(product.variants)) {
                     await Promise.all(product.variants.map(async (variant) => {
                         const createdVariant = await db.Variant.create({
                             flavor: variant.aroma,
                             photo_src: variant.photo_src,
-                            aroma_photo:variant.aroma_photo,
+                            aroma_photo: variant.aroma_photo,
                             is_available: variant.is_available,
-                            ProductId: product.id
+                            ProductId: createdProduct.id
                         });
 
-                        // Variant için Size ekle
-                        const createdSize = await db.Size.create({
-                            gram: variant.size.gram,
-                            pieces: variant.size.pieces,
-                            total_services: variant.size.total_services,
-                            variantId: createdVariant.id
-                        });
-
-                        // Fiyat bilgisini ekle
+                        if (variant.size) {
+                            await db.Size.create({
+                                gram: variant.size.gram || null, 
+                                pieces: variant.size.pieces || null,
+                                total_services: variant.size.total_services || null,
+                                VariantId: createdVariant.id,
+                                ProductId: createdProduct.id
+                            });
+                        }
+                
+                    
+                        // Add price info
                         await db.PriceInfo.create({
                             profit: variant.price.profit,
                             total_price: variant.price.total_price,
                             discounted_price: variant.price.discounted_price,
                             price_per_servings: variant.price.price_per_servings,
                             discount_percentage: variant.price.discount_percentage,
-                            variantId: createdVariant.id,
+                            VariantId: createdVariant.id,
                             ProductId: createdProduct.id
                         });
                     }));
@@ -94,5 +98,5 @@ async function seedDatabase() {
     }
 }
 
-// Seed işlemini başlat
+// Run the seed process
 seedDatabase();

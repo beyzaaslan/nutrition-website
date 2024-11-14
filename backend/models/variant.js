@@ -9,7 +9,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    aroma_photo: { type: DataTypes.STRING, allowNull: true, defaultValue: '' },
+    aroma_photo: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: ''
+    },
     photo_src: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -21,9 +25,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Variant.associate = function (models) {
-    Variant.belongsTo(db.Product, { foreignKey: 'ProductId' });
-    Variant.belongsTo(models.Size);
+    Variant.belongsTo(models.Product, { foreignKey: 'ProductId' });
     Variant.hasOne(models.PriceInfo);
+    Variant.hasMany(models.Size, { foreignKey: 'VariantId' });
   };
 
   return Variant;

@@ -5,28 +5,31 @@ const getProductById = async (req, res) => {
   try {
     const { product_id } = req.params;
 
-    console.log(product_id);
-
     const product = await db.Product.findOne({
       where: { id: product_id },
-      include: [{ model: db.Review },],
-      include: [{model:db.Category}],
-      include: [{model:db.PriceInfo}],
-      include: [{ model: Variant }],
+      include: [
+        { model: db.Review },
+        { model: db.Category },
+        { model: db.PriceInfo },
+        {
+          model: db.Variant,
+          include: [{ model: db.Size }], // Including Size within Variant to get nested relationship
+        },
+      ],
     });
 
     if (!product) {
       return res.status(404).send("Product not found");
     }
-
+    console.log("beyza", product);
     return res.json(product);
   } catch (err) {
+    console.log(err);
     return res.status(500).send(err.message);
   }
 };
 
 const getProductByName = async (req, res) => {
-
   try {
     const products = await db.Product.findAll({
       where: {
@@ -47,7 +50,7 @@ const getProductByName = async (req, res) => {
 };
 const createProduct = async (req, res) => {
   try {
-   // Önce ürünü kaydedin
+    // Önce ürünü kaydedin
     const {
       name,
       short_explanation,
@@ -56,11 +59,12 @@ const createProduct = async (req, res) => {
       comment_count,
       average_star,
       usage,
-      features, 
+      features,
       description,
-      variants 
+      variants,
+      sizes,
     } = req.body;
-    
+
     const createProduct = await db.Product.create({
       name,
       short_explanation,
@@ -69,7 +73,7 @@ const createProduct = async (req, res) => {
       comment_count,
       average_star,
       usage,
-      features, 
+      features,
       description,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -78,14 +82,22 @@ const createProduct = async (req, res) => {
     if (!createProduct) {
       return res.status(400).send("Product not created");
     }
-     // Varyantları ürüne ekleyin
-     if (variants && variants.length > 0) {
+    // Varyantları ürüne ekleyin
+    if (variants && variants.length > 0) {
       const variantInstances = variants.map((variant) => ({
         ...variant,
         productId: createProduct.id,
       }));
-      console.log("variant")
+      console.log("variant");
       await variants.bulkCreate(variantInstances);
+    }
+    // Handle Size creation
+    if (sizes && sizes.length > 0) {
+      const sizeInstances = sizes.map((size) => ({
+        ...size,
+        productId: createProduct.id, // Associate the size with the created product
+      }));
+      await db.Size.bulkCreate(sizeInstances); // Create Size instances in the database
     }
 
     return res.status(201).send("Product Created Successfully");
@@ -96,19 +108,19 @@ const createProduct = async (req, res) => {
 
 const getAllProduct = async (req, res) => {
   try {
-      const { limit = 12, offset = 0 } = req.query; // limit ve offset değerlerini istekte alıyoruz, varsayılan değerler atıyoruz
-      const products = await db.Product.findAll({
-          limit: parseInt(limit), // limit değeri isteğe bağlı
-          offset: parseInt(offset) // offset değeri isteğe bağlı
-      });
-      res.json(products);
+    const { limit = 12, offset = 0 } = req.query; // limit ve offset değerlerini istekte alıyoruz, varsayılan değerler atıyoruz
+    const products = await db.Product.findAll({
+      limit: parseInt(limit), // limit değeri isteğe bağlı
+      offset: parseInt(offset), // offset değeri isteğe bağlı
+    });
+    res.json(products);
   } catch (err) {
-      res.status(500).send(err.message);
+    res.status(500).send(err.message);
   }
-}
+};
 
 module.exports = {
- getProductByName,
+  getProductByName,
   getProductById,
   createProduct,
   getAllProduct,

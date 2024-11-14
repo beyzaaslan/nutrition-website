@@ -1,12 +1,15 @@
 import { PriceInfo } from './PriceInfo';
+import { Product } from './Product';
 import { Size } from './Size';
+
+// Define the Variant interface
 export interface Variant {
-  id: string;
+  id: string; // UUID
   flavor: string;
-  photo_src: string | null;
+  aroma_photo?: string;
+  photo_src?: string;
   is_available: boolean;
-  productId: number;
-  sizeId: number;
-  PriceInfo: PriceInfo;
-  Size: Size;
+  Product?: Product; // Association with Product model (optional)
+  Size?: Size;       // Association with Size model (optional)
+  PriceInfo?: PriceInfo; // Association with PriceInfo model (optional)
 }

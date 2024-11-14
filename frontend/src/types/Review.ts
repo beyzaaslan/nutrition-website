@@ -1,9 +1,8 @@
 export interface Review {
-    id?: number;
-    comment: string;
-    rating: number;
-    description: string;
-    UserId?: number; // Foreign key
-    ProductId?: number; // Foreign key
-    createdAt: string;
-}
+    id: number; // Primary key, Sequelize will add this automatically
+    rating: number; // Rating, required and non-null
+    description: string; // Description, required and non-null
+    createdAt: string; // Sequelize automatically manages these
+    updatedAt: string; // Sequelize automatically manages these
+  }
+  

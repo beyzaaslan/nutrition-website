@@ -87,7 +87,7 @@ const CategoryProductsPage = () => {
                     }}
                     component="img"
                     image={product.photo_src}
-                    alt={product.name}
+                    alt={product.name ||"resim işte uzatma"}
                   />
                   <CardContent sx={{
                     textAlign: "center",

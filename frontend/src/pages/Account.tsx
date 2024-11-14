@@ -1,10 +1,10 @@
+import AccountPage from '../components/AccountInfo/AccountPage';
 
 const Account = () => {
   return (
     <div>
-      Account
+      <AccountPage />
     </div>
   )
 }
-
 export default Account

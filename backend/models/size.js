@@ -1,18 +1,27 @@
-// Öncelikle Size modelini güncelleyelim (models/size.js):
 module.exports = (sequelize, DataTypes) => {
   const Size = sequelize.define("Size", {
-      gram: {
-          type: DataTypes.INTEGER,
-          allowNull: true, // gram alanını opsiyonel yapalım
-      },
-      pieces: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-      },
-      total_services: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-      },
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
+    },
+    gram: {
+      type: DataTypes.INTEGER,
+      allowNull: true, 
+    },
+    pieces: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    total_services: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   });
+
+  Size.associate = function (models) {
+    Size.belongsTo(models.Variant, { foreignKey: "VariantId" });
+  };
+
   return Size;
 };

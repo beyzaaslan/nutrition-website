@@ -1,8 +1,16 @@
+import { Review } from './Review';
+
 export interface User {
-    id?: number;
-    name: string;
-    last_name: string;
-    email: string;
-    password: string; 
-    role: 'admin' | 'user';
+  id: number; // Typically the primary key in Sequelize models
+  name: string;
+  lastName: string;
+  email: string;
+  password: string;
+  isVerified: boolean;
+  role: 'admin' | 'user'; // Limited to 'admin' or 'user' due to the validation rule in the model
+  createdAt: string; // Automatically added by Sequelize
+  updatedAt: string; // Automatically added by Sequelize
+
+  // Optional association with Review
+  Reviews?: Review[];
 }
