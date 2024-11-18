@@ -8,10 +8,9 @@ export interface PriceInfo {
   discounted_price: number | null; // Discounted price, optional
   price_per_servings: number; // Price per serving, required
   discount_percentage: number | null; // Discount percentage, optional
-  variantId?: string; // Foreign key referencing Variant (UUID type)
+  VariantId?: string; // Foreign key referencing Variant (UUID type)
   ProductId?: number; // Foreign key referencing Product (integer type)
-  Variant?: Variant; // Associated Variant, optional
+  Variant?: Variant[]; // Associated Variant, optional
   Product?: Product; // Associated Product, optional
-  VariantId: string;
 
 }

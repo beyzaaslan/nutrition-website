@@ -6,7 +6,11 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());  // fonksiyonu çağırarak middleware'ı ekleyin
-app.use(express.json());
+app.use(express.json()); /* json parse */
+
+
+
+
 
 app.get('/', (req, res) => {
     res.json({ message: 'Uygulamaya Hosgeldiinn.' });
@@ -16,7 +20,6 @@ app.get('/', (req, res) => {
 app.use('/api', routes);
 
 app.use(errorHandler);
-
 
 
 db.sequelize.sync({force: false}).then(() => {

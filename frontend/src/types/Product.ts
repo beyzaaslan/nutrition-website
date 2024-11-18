@@ -5,7 +5,7 @@ import { Variant } from './Variant';
 
 export interface Product {
   id: number; 
-  name: string | null; 
+  name: string; 
   short_explanation: string; 
   slug: string; 
   photo_src: string; 

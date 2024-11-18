@@ -1,5 +1,6 @@
 const sql = require('mssql');
 require('dotenv').config();
+const { poolPromise } = require('./db'); // poolPromise'i dahil ediyoruz
 
 const config = {
     user: process.env.DB_USER,

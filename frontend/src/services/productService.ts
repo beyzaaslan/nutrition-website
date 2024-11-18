@@ -26,7 +26,7 @@ export const searchProducts = async (searchTerm: string) => {
 export const getProductById = async (productId: number) => {
     try {
         const response = await apiRequest<Product>('GET', `/product/${productId}`);
-        console.log("beyza",response);
+        console.log("response",response);
         return response;
     } catch (error) {
         console.error(`Error fetching product with id ${productId}:`, error);
