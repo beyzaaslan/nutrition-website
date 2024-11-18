@@ -4,7 +4,6 @@ const db = require('./models');
 
 async function seedDatabase() {
     try {
-        // Drop and recreate all tables
         await db.sequelize.sync({ force: true });
 
         // Categories to be created
@@ -38,7 +37,8 @@ async function seedDatabase() {
                     description: product.description,
                     photo_src: product.photo_src,
                     comment_count: product.comment_count,
-                    average_star: product.average_star
+                    average_star: product.average_star,
+                    tags: JSON.stringify(product.tags || []), 
                 });
 
                 // Associate categories

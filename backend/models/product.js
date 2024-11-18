@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
       features: { type: DataTypes.TEXT, allowNull: true },
       description: { type: DataTypes.TEXT, allowNull: true },
       comment_count: { type: DataTypes.INTEGER, allowNull: true, defaultValue: 0 },
-      average_star: { type: DataTypes.DECIMAL(10, 2), allowNull: true, defaultValue: 0 },     
+      average_star: { type: DataTypes.DECIMAL(10, 2), allowNull: true, defaultValue: 0 },  
+      tags: { type: DataTypes.TEXT, allowNull: true, defaultValue: JSON.stringify([]) },
     });
   
     Product.associate = function(models) {

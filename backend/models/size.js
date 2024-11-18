@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Size.associate = function (models) {
     Size.belongsTo(models.Variant, { foreignKey: "VariantId" });
+
   };
 
   return Size;

@@ -27,7 +27,7 @@ const AppRouter = () => {
                 <Route path="/payment" element={<MainLayout><Payment /></MainLayout>} />
                 <Route path="/404" element={<MainLayout><Page404 /></MainLayout>} />
                 <Route path="/sss" element={<MainLayout><SSS /></MainLayout>} />
-                <Route path="/detail/:productId" element={<MainLayout><Detail /></MainLayout>} />
+                <Route path="/:productId" element={<MainLayout><Detail /></MainLayout>} />
                 <Route path="/all-products" element={<MainLayout><ProductList /></MainLayout>} />
                 <Route path="/:categoryName" element={<MainLayout><CategoryProductsPage /></MainLayout>} />
                 <Route path="*" element={<MainLayout><Page404 /></MainLayout>} /> {/* Catch-all route for 404 */}

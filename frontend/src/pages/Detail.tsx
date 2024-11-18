@@ -1,19 +1,14 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { getProductById } from '../services/productService';
-
-interface Product {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  photo_src: string;
-  // Add other product fields as needed
-}
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Product } from "../types/Product";
+import { ProductDetails } from "../components/ProductDetail/ProductDetail";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import { getProductById } from "../services/productService";
 
 const Detail: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
-  const [product, setProduct] = useState<Product | null>(null);
+  const [product, setProduct] = useState<Product>();
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
@@ -21,7 +16,6 @@ const Detail: React.FC = () => {
       try {
         if (productId) {
           const productData = await getProductById(Number(productId));
-          console.log("Product data:", productData);
           setProduct(productData);
         }
       } catch (err) {
@@ -41,12 +35,20 @@ const Detail: React.FC = () => {
   }
 
   return (
-    <div>
-      <h1>{product.name}</h1>
-      <p>{product.description}</p>
-      <p><strong>Price:</strong> {product.price}</p>
-      <img src={product.photo_src} alt={product.name} />
-    </div>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        padding: "20px",
+        backgroundColor: "#fff",
+      }}
+    >
+ 
+
+          <ProductDetails product={product} />
+
+    </Box>
   );
 };
 

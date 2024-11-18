@@ -1,6 +1,6 @@
 export interface Size {
-    id: number;
-    gram: number | null;
+    id: string;
+    gram?: number;
     pieces: number;
     total_services: number;
     createdAt: string;

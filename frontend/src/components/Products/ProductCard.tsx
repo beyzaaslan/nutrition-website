@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 interface ProductCardProps {
     product: Product;
 }
-
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
       <Card sx={{
@@ -34,8 +33,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     objectFit: "fill", // Görseli tam olarak doldurur
   }}
   component="img"
-  image={product.photo_src}
-  alt={product.name}
+  image={product.photo_src || "" }
+  alt={product.name || "product"}
 />
 
         <CardContent sx={{

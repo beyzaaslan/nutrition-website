@@ -11,6 +11,11 @@
     "average_star": 0.0,
     "id": "1",
     "categories": [{ "id": 3 }, { "id": 4 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -19,7 +24,7 @@
           "total_services": 20
         },
         "aroma": "Çikolata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -37,10 +42,11 @@
           "total_services": 60
         },
         "aroma": "Çikolata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
+
           "discounted_price": 649.0,
           "price_per_servings": 10.82,
           "discount_percentage": 9.0
@@ -55,7 +61,7 @@
           "total_services": 20
         },
         "aroma": "Muz",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -73,7 +79,7 @@
           "total_services": 60
         },
         "aroma": "Muz",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
@@ -91,7 +97,7 @@
           "total_services": 20
         },
         "aroma": "Lemon Cheesecake",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/73819501-fa0c-4eee-b462-778d11b4b64a/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/73819501-fa0c-4eee-b462-778d11b4b64a/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -104,12 +110,12 @@
       },
       {
         "size": {
-          "gram": 1000,
+          "gram": 500,
           "pieces": 3,
           "total_services": 60
         },
         "aroma": "Lemon Cheesecake",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/73819501-fa0c-4eee-b462-778d11b4b64a/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/73819501-fa0c-4eee-b462-778d11b4b64a/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
@@ -127,7 +133,7 @@
           "total_services": 20
         },
         "aroma": "Muhallebi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/5d97d644-a60e-4bf4-8e88-e42929f4745e/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/5d97d644-a60e-4bf4-8e88-e42929f4745e/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -145,7 +151,7 @@
           "total_services": 60
         },
         "aroma": "Muhallebi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/5d97d644-a60e-4bf4-8e88-e42929f4745e/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/5d97d644-a60e-4bf4-8e88-e42929f4745e/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
@@ -163,7 +169,7 @@
           "total_services": 20
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -181,7 +187,7 @@
           "total_services": 60
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
@@ -199,7 +205,7 @@
           "total_services": 20
         },
         "aroma": "Hindistan Cevizi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/6a92a294-231f-4326-9533-9ad0b85e1a50/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/6a92a294-231f-4326-9533-9ad0b85e1a50/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -217,7 +223,7 @@
           "total_services": 60
         },
         "aroma": "Hindistan Cevizi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/6a92a294-231f-4326-9533-9ad0b85e1a50/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/6a92a294-231f-4326-9533-9ad0b85e1a50/image_180.webp",
         "price": {
           "profit": 68,
           "total_price": 717.0,
@@ -229,7 +235,7 @@
         "is_available": true
       }
     ]
-    },
+  },
   {
     "name": "DEXTROSE",
     "short_explanation": "KASLARDAKİ GLİKOJEN DEPOLARINI HIZLICA DOLDURUR",
@@ -243,6 +249,11 @@
     "average_star": 0.0,
     "id": "2",
     "categories": [{ "id": 1 }, { "id": 3 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "LAKTOZSUZ"
+        ],
     "variants": [
       {
         "size": {
@@ -251,7 +262,7 @@
           "total_services": 40
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 349.0,
@@ -269,7 +280,7 @@
           "total_services": 80
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -296,6 +307,11 @@
     "average_star": 0.0,
     "id": "3",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -303,7 +319,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -321,7 +337,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 49,
@@ -348,6 +364,11 @@
     "average_star": 0.0,
     "id": "4",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -355,7 +376,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -373,7 +394,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59,
@@ -400,6 +421,10 @@
     "average_star": 0.0,
     "id": "5",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -408,7 +433,7 @@
           "total_services": 20
         },
         "aroma": "Şeftali",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -426,7 +451,7 @@
           "total_services": 20
         },
         "aroma": "Şeftali",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
         "price": {
           "profit": 119,
           "total_price": 798.0,
@@ -446,12 +471,15 @@
     "usage": "1 ölçek (yaklaşık 15g) ürünü 300ml su ile karıştırınız. Antrenmandan 15-30 dakika önce tercihen aç karna tüketebilirsiniz. Ürünü ilk bir kaç kullanımda yarım servis kullanmanız tavsiye edilir.",
     "features": "Heavy Duty Pre-Workout içeriğindeki 17 farklı etken maddenin sinerjik bir şekilde çalışması için tasarlanmış ve daha enerjik, daha odaklı olmanıza destek olması için etken maddeler maksimum dozajlarda formülize edilmiştir. Türkiye'de benzeri görülmemiş bir antrenman öncesi ürünüdür.\n\nZengin içeriğe sahip yeni Heavy Duty Pre-workout ile antrenmanlarınızda daha enerjik ve daha odaklı olacaksınız ve istediğiniz pump etkisini tam anlamı ile yaşayacaksınız.",
     "description": "Sert ve uzun antrenmanlar öncesinde kullanım için etken maddeler maksimum dozajlarda formülize edilmiştir.\n\n-   Sinerjik çalışan 17 etken madde içerir.\n-   Kognitif fonksiyonlar için Alpha GPC, Nootropic etkiye sahip Huperzine içerir (Türkiye'de tek). Buna ek olarak Kolin ve Teanin içerikleriyle desteklenmiştir.\n-   Sinefrin ve Kafein içerir, doğal bitki ekstresi Rhodiola Rosea eklenmiştir.\n-   Betain, Beta Alanin, Arginine, Citrulline Malate içeriğine sahiptir.",
-
     "photo_src": "https://fe1111.projects.academy.onlyjs.com//media/heavy-duty-preworkout_300_apple.webp",
     "comment_count": 0,
     "average_star": 0.0,
     "id": "6",
     "categories": [{ "id": 1 }, { "id": 2 }, { "id": 3 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -460,7 +488,7 @@
           "total_services": 20
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 599.0,
@@ -478,7 +506,7 @@
           "total_services": 40
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
 
         "price": {
           "profit": 199,
@@ -504,6 +532,11 @@
     "average_star": 0.0,
     "id": "7",
     "categories": [{ "id": 1 }, { "id": 5 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -512,7 +545,7 @@
           "total_services": 25
         },
         "aroma": "Ahududu",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 399.0,
@@ -530,7 +563,7 @@
           "total_services": 50
         },
         "aroma": "Ahududu",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
         "price": {
           "profit": 99,
           "total_price": 798.0,
@@ -556,6 +589,9 @@
     "average_star": 0.0,
     "id": "8",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -563,7 +599,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -581,7 +617,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59,
@@ -608,6 +644,11 @@
     "average_star": 0.0,
     "id": "9",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -616,7 +657,7 @@
           "total_services": 75
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -635,7 +676,7 @@
           "total_services": 150
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -662,6 +703,10 @@
     "average_star": 0.0,
     "id": "5",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "SOYA İÇERMEZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -670,7 +715,7 @@
           "total_services": 16
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": null,
@@ -689,7 +734,7 @@
           "total_services": 32
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -716,6 +761,10 @@
     "average_star": 0.0,
     "id": "11",
     "categories": [{ "id": 1 }, { "id": 3 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ"
+        ],
     "variants": [
       {
         "size": {
@@ -724,7 +773,7 @@
           "total_services": 75
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -743,7 +792,7 @@
           "total_services": 150
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -770,6 +819,11 @@
     "average_star": 0.0,
     "id": "12",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -778,7 +832,7 @@
           "total_services": 24
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -797,7 +851,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -815,8 +869,8 @@
           "pieces": 2,
           "total_services": 120
         },
-        "aroma": "Aromasız",     
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma": "Aromasız",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -843,6 +897,12 @@
     "average_star": 0.0,
     "id": "13",
     "categories": [{ "id": 1 }, { "id": 2 }, { "id": 3 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN",
+            "LAKTOZSUZ"
+        ],
     "variants": [
       {
         "size": {
@@ -851,7 +911,7 @@
           "total_services": 40
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -870,7 +930,7 @@
           "total_services": 100
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -889,7 +949,7 @@
           "total_services": 200
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 139,
@@ -908,7 +968,7 @@
           "total_services": 40
         },
         "aroma": "Karpuz",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
         "price": {
           "profit": null,
           "total_price": 239.0,
@@ -926,7 +986,7 @@
           "total_services": 100
         },
         "aroma": "Karpuz",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -945,7 +1005,7 @@
           "total_services": 200
         },
         "aroma": "Karpuz",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 139,
@@ -964,7 +1024,7 @@
           "total_services": 40
         },
         "aroma": "Limonata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
 
         "price": {
           "profit": null,
@@ -983,7 +1043,7 @@
           "total_services": 100
         },
         "aroma": "Limonata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1002,7 +1062,7 @@
           "total_services": 200
         },
         "aroma": "Limonata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
 
         "price": {
           "profit": 139,
@@ -1021,7 +1081,7 @@
           "total_services": 100
         },
         "aroma": "Fruit Fusion",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/d0875d69-b546-4714-89f0-bd382df23a3b/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/d0875d69-b546-4714-89f0-bd382df23a3b/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1040,7 +1100,7 @@
           "total_services": 200
         },
         "aroma": "Fruit Fusion",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/d0875d69-b546-4714-89f0-bd382df23a3b/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/d0875d69-b546-4714-89f0-bd382df23a3b/image_180.webp",
 
         "price": {
           "profit": 139,
@@ -1067,6 +1127,11 @@
     "average_star": 0.0,
     "id": "14",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -1074,7 +1139,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 23.88,
@@ -1092,7 +1157,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 47.76,
@@ -1119,6 +1184,11 @@
     "average_star": 0.0,
     "id": "15",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -1126,7 +1196,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1144,7 +1214,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 49,
@@ -1171,6 +1241,11 @@
     "average_star": 0.0,
     "id": "16",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -1179,7 +1254,7 @@
           "total_services": 18
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1198,7 +1273,7 @@
           "total_services": 18
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 199,
@@ -1225,6 +1300,10 @@
     "average_star": 0.0,
     "id": "17",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -1232,7 +1311,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 35.82,
@@ -1250,7 +1329,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 71.64,
@@ -1277,6 +1356,11 @@
     "average_star": 0.0,
     "id": "18",
     "categories": [{ "id": 1 }, { "id": 5 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -1285,7 +1369,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 55.86,
@@ -1304,7 +1388,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 111.72,
@@ -1331,6 +1415,10 @@
     "average_star": 0.0,
     "id": "19",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "GLUTENSİZ",
+            "LAKTOZSUZ"
+        ],
     "variants": [
       {
         "size": {
@@ -1338,7 +1426,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1356,7 +1444,7 @@
           "total_services": 120
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59,
@@ -1383,6 +1471,11 @@
     "average_star": 0.0,
     "id": "20",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -1390,7 +1483,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1408,7 +1501,7 @@
           "total_services": 120
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 49,
@@ -1435,6 +1528,11 @@
     "average_star": 0.0,
     "id": "21",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -1442,7 +1540,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1460,7 +1558,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59,
@@ -1487,6 +1585,11 @@
     "average_star": 0.0,
     "id": "22",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "LAKTOZSUZ"
+        ],
     "variants": [
       {
         "size": {
@@ -1495,7 +1598,7 @@
           "total_services": 24
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1514,7 +1617,7 @@
           "total_services": 60
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1533,7 +1636,7 @@
           "total_services": 120
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
 
         "price": {
           "profit": 129,
@@ -1552,7 +1655,7 @@
           "total_services": 60
         },
         "aroma": "Limonata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1571,7 +1674,7 @@
           "total_services": 120
         },
         "aroma": "Limonata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
 
         "price": {
           "profit": 129,
@@ -1598,6 +1701,11 @@
     "average_star": 0.0,
     "id": "23",
     "categories": [{ "id": 1 }, { "id": 5 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -1606,7 +1714,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1625,7 +1733,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -1652,6 +1760,11 @@
     "average_star": 0.0,
     "id": "24",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -1659,7 +1772,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1677,7 +1790,7 @@
           "total_services": 120
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59,
@@ -1704,6 +1817,11 @@
     "average_star": 0.0,
     "id": "25",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -1711,7 +1829,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1729,7 +1847,7 @@
           "total_services": 120
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59,
@@ -1756,6 +1874,10 @@
     "average_star": 0.0,
     "id": "26",
     "categories": [{ "id": 1 }, { "id": 2 }, { "id": 3 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -1764,7 +1886,7 @@
           "total_services": 20
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1783,7 +1905,7 @@
           "total_services": 40
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
 
         "price": {
           "profit": 119,
@@ -1802,7 +1924,7 @@
           "total_services": 20
         },
         "aroma": "Tigers Blood",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/64f1c508-1c43-4368-869b-4923d835ae28/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/64f1c508-1c43-4368-869b-4923d835ae28/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1821,7 +1943,7 @@
           "total_services": 40
         },
         "aroma": "Tigers Blood",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/64f1c508-1c43-4368-869b-4923d835ae28/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/64f1c508-1c43-4368-869b-4923d835ae28/image_180.webp",
 
         "price": {
           "profit": 119,
@@ -1840,7 +1962,7 @@
           "total_services": 20
         },
         "aroma": "Şeftali",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1859,7 +1981,7 @@
           "total_services": 40
         },
         "aroma": "Şeftali",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
 
         "price": {
           "profit": 119,
@@ -1878,7 +2000,7 @@
           "total_services": 20
         },
         "aroma": "Limonata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1897,7 +2019,7 @@
           "total_services": 40
         },
         "aroma": "Limonata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
 
         "price": {
           "profit": 119,
@@ -1924,6 +2046,11 @@
     "average_star": 0.0,
     "id": "27",
     "categories": [{ "id": 1 }, { "id": 5 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -1932,7 +2059,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -1951,7 +2078,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -1977,6 +2104,11 @@
     "average_star": 0.0,
     "id": "28",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -1984,7 +2116,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -2002,7 +2134,7 @@
           "total_services": 120
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59,
@@ -2029,6 +2161,10 @@
     "average_star": 0.0,
     "id": "29",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -2037,7 +2173,7 @@
           "total_services": 40
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 58.37,
@@ -2064,6 +2200,11 @@
     "average_star": 0.0,
     "id": "30",
     "categories": [{ "id": 1 }, { "id": 5 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -2072,7 +2213,7 @@
           "total_services": 80
         },
         "aroma": "Şeftali",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
 
         "price": {
           "profit": 69.8,
@@ -2091,7 +2232,7 @@
           "total_services": 80
         },
         "aroma": "Şeftali",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
 
         "price": {
           "profit": 139.6,
@@ -2118,6 +2259,10 @@
     "average_star": 0.0,
     "id": "31",
     "categories": [{ "id": 6 }, { "id": 5 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -2125,7 +2270,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -2143,7 +2288,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 49,
@@ -2170,6 +2315,11 @@
     "average_star": 0.0,
     "id": "32",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -2177,7 +2327,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 27.48,
@@ -2195,7 +2345,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 54.96,
@@ -2222,6 +2372,11 @@
     "average_star": 0.0,
     "id": "33",
     "categories": [{ "id": 1 }, { "id": 5 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -2230,7 +2385,7 @@
           "total_services": 100
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 69.8,
@@ -2249,7 +2404,7 @@
           "total_services": 200
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 139.6,
@@ -2276,6 +2431,10 @@
     "average_star": 0.0,
     "id": "34",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -2284,7 +2443,7 @@
           "total_services": 12
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
 
         "price": {
           "profit": null,
@@ -2303,7 +2462,7 @@
           "total_services": 30
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
 
         "price": {
           "profit": null,
@@ -2322,7 +2481,7 @@
           "total_services": 60
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/617fc499-bec0-4b31-826d-5aa70e309340/image_180.webp",
 
         "price": {
           "profit": 129,
@@ -2349,6 +2508,9 @@
     "average_star": 0.0,
     "id": "9",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -2357,7 +2519,7 @@
           "total_services": 25
         },
         "aroma": "Ahududu",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
 
         "price": {
           "profit": null,
@@ -2376,7 +2538,7 @@
           "total_services": 50
         },
         "aroma": "Ahududu",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e18e85ce-8221-43d6-9575-7de512448d08/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -2403,6 +2565,10 @@
     "average_star": 0.0,
     "id": "3",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ"
+        ],
     "variants": [
       {
         "size": {
@@ -2411,7 +2577,7 @@
           "total_services": 16
         },
         "aroma": "Bisküvi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/59ea1641-2678-48cb-a0de-f0045732653f/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/59ea1641-2678-48cb-a0de-f0045732653f/image_180.webp",
         "price": {
           "profit": 54.9,
           "total_price": 549.0,
@@ -2429,7 +2595,7 @@
           "total_services": 64
         },
         "aroma": "Bisküvi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/59ea1641-2678-48cb-a0de-f0045732653f/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/59ea1641-2678-48cb-a0de-f0045732653f/image_180.webp",
 
         "price": {
           "profit": 169.9,
@@ -2448,7 +2614,7 @@
           "total_services": 128
         },
         "aroma": "Bisküvi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/59ea1641-2678-48cb-a0de-f0045732653f/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/59ea1641-2678-48cb-a0de-f0045732653f/image_180.webp",
 
         "price": {
           "profit": 339.8,
@@ -2467,7 +2633,7 @@
           "total_services": 16
         },
         "aroma": "Çikolata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
 
         "price": {
           "profit": 54.9,
@@ -2486,7 +2652,7 @@
           "total_services": 64
         },
         "aroma": "Çikolata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
 
         "price": {
           "profit": 169.9,
@@ -2505,7 +2671,7 @@
           "total_services": 128
         },
         "aroma": "Çikolata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
 
         "price": {
           "profit": 339.8,
@@ -2524,7 +2690,7 @@
           "total_services": 64
         },
         "aroma": "Muz",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
 
         "price": {
           "profit": 169.9,
@@ -2543,7 +2709,7 @@
           "total_services": 128
         },
         "aroma": "Muz",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
 
         "price": {
           "profit": 339.8,
@@ -2562,7 +2728,7 @@
           "total_services": 16
         },
         "aroma": "Salted Caramel",
-         "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e9368046-7128-474e-b4f2-0784506af5d5/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e9368046-7128-474e-b4f2-0784506af5d5/image_180.webp",
         "price": {
           "profit": 54.9,
           "total_price": 549.0,
@@ -2580,7 +2746,7 @@
           "total_services": 64
         },
         "aroma": "Salted Caramel",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e9368046-7128-474e-b4f2-0784506af5d5/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e9368046-7128-474e-b4f2-0784506af5d5/image_180.webp",
         "price": {
           "profit": 169.9,
           "total_price": 1699.0,
@@ -2598,7 +2764,7 @@
           "total_services": 128
         },
         "aroma": "Salted Caramel",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e9368046-7128-474e-b4f2-0784506af5d5/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/e9368046-7128-474e-b4f2-0784506af5d5/image_180.webp",
 
         "price": {
           "profit": 339.8,
@@ -2617,7 +2783,7 @@
           "total_services": 16
         },
         "aroma": "Choco Nut",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/6a92a294-231f-4326-9533-9ad0b85e1a50/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/6a92a294-231f-4326-9533-9ad0b85e1a50/image_180.webp",
         "price": {
           "profit": 54.9,
           "total_price": 549.0,
@@ -2635,7 +2801,7 @@
           "total_services": 16
         },
         "aroma": "Hindistan Cevizi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 54.9,
@@ -2654,7 +2820,7 @@
           "total_services": 64
         },
         "aroma": "Hindistan Cevizi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 169.9,
@@ -2673,7 +2839,7 @@
           "total_services": 128
         },
         "aroma": "Hindistan Cevizi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 339.8,
@@ -2692,7 +2858,7 @@
           "total_services": 16
         },
         "aroma": "Raspberry Cheesecake",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 54.9,
@@ -2711,7 +2877,7 @@
           "total_services": 64
         },
         "aroma": "Raspberry Cheesecake",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 169.9,
@@ -2730,7 +2896,7 @@
           "total_services": 128
         },
         "aroma": "Raspberry Cheesecake",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 339.8,
@@ -2749,7 +2915,7 @@
           "total_services": 16
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 54.9,
@@ -2768,7 +2934,7 @@
           "total_services": 64
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 169.9,
@@ -2787,7 +2953,7 @@
           "total_services": 128
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 339.8,
@@ -2814,6 +2980,10 @@
     "average_star": 0.0,
     "id": "37",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -2821,7 +2991,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -2839,7 +3009,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -2866,6 +3036,11 @@
     "average_star": 0.0,
     "id": "38",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -2874,7 +3049,7 @@
           "total_services": 100
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -2893,7 +3068,7 @@
           "total_services": 200
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 49,
@@ -2920,6 +3095,11 @@
     "average_star": 0.0,
     "id": "39",
     "categories": [{ "id": 1 }, { "id": 5 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -2928,7 +3108,7 @@
           "total_services": 40
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 66.31,
@@ -2947,7 +3127,7 @@
           "total_services": 80
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 132.62,
@@ -2974,6 +3154,11 @@
     "average_star": 0.0,
     "id": "4",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -2982,7 +3167,7 @@
           "total_services": 16
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 66.31,
@@ -3001,7 +3186,7 @@
           "total_services": 64
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 189.81,
@@ -3020,7 +3205,7 @@
           "total_services": 128
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 379.62,
@@ -3039,7 +3224,7 @@
           "total_services": 16
         },
         "aroma": "Çikolata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
 
         "price": {
           "profit": 66.31,
@@ -3058,7 +3243,7 @@
           "total_services": 64
         },
         "aroma": "Çikolata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
 
         "price": {
           "profit": 189.81,
@@ -3077,7 +3262,7 @@
           "total_services": 128
         },
         "aroma": "Çikolata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/b4e98605-027e-458a-b6b4-ea110bd8c4ab/image_180.webp",
 
         "price": {
           "profit": 379.62,
@@ -3096,7 +3281,7 @@
           "total_services": 16
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 66.31,
@@ -3115,7 +3300,7 @@
           "total_services": 64
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 189.81,
@@ -3134,7 +3319,7 @@
           "total_services": 128
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 379.62,
@@ -3161,6 +3346,11 @@
     "average_star": 0.0,
     "id": "41",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -3168,7 +3358,7 @@
           "pieces": 1
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3186,7 +3376,7 @@
           "pieces": 2
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 69,
@@ -3213,6 +3403,10 @@
     "average_star": 0.0,
     "id": "7",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "SOYA İÇERMEZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -3221,7 +3415,7 @@
           "total_services": 16
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3240,7 +3434,7 @@
           "total_services": 32
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 199,
@@ -3259,7 +3453,7 @@
           "total_services": 16
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3278,7 +3472,7 @@
           "total_services": 32
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 199,
@@ -3305,6 +3499,11 @@
     "average_star": 0.0,
     "id": "43",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -3313,7 +3512,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59.88,
@@ -3332,7 +3531,7 @@
           "total_services": 120
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 119.76,
@@ -3359,6 +3558,11 @@
     "average_star": 0.0,
     "id": "44",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -3366,7 +3570,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3384,7 +3588,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 49,
@@ -3411,6 +3615,10 @@
     "average_star": 0.0,
     "id": "45",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -3418,7 +3626,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 66.31,
@@ -3436,7 +3644,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 132.62,
@@ -3463,6 +3671,10 @@
     "average_star": 0.0,
     "id": "46",
     "categories": [{ "id": 1 }, { "id": 4 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ"
+        ],
     "variants": [
       {
         "size": {
@@ -3470,7 +3682,7 @@
           "pieces": 1
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3488,7 +3700,7 @@
           "pieces": 2
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 49,
@@ -3515,6 +3727,9 @@
     "average_star": 0.0,
     "id": "47",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN"
+  ],
     "variants": [
       {
         "size": {
@@ -3523,7 +3738,7 @@
           "total_services": 24
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3542,7 +3757,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3561,7 +3776,7 @@
           "total_services": 120
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -3588,6 +3803,10 @@
     "average_star": 0.0,
     "id": "48",
     "categories": [{ "id": 6 }, { "id": 5 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ"
+        ],
     "variants": [
       {
         "size": {
@@ -3595,7 +3814,7 @@
           "total_services": 20
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 22.26,
@@ -3613,7 +3832,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 66.78,
@@ -3640,6 +3859,10 @@
     "average_star": 0.0,
     "id": "6",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+            "SOYA İÇERMEZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -3648,7 +3871,7 @@
           "total_services": 16
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3667,7 +3890,7 @@
           "total_services": 32
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -3694,6 +3917,11 @@
     "average_star": 0.0,
     "id": "50",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -3701,7 +3929,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 25.87,
@@ -3719,7 +3947,7 @@
           "total_services": 120
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 51.74,
@@ -3746,6 +3974,11 @@
     "average_star": 0.0,
     "id": "51",
     "categories": [{ "id": 5 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -3753,7 +3986,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3771,7 +4004,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -3798,6 +4031,10 @@
     "average_star": 0.0,
     "id": "52",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "GLUTENSİZ",
+            "LAKTOZSUZ"
+        ],
     "variants": [
       {
         "size": {
@@ -3805,7 +4042,7 @@
           "total_services": 20
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3823,7 +4060,7 @@
           "total_services": 40
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -3850,6 +4087,11 @@
     "average_star": 0.0,
     "id": "53",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -3858,7 +4100,7 @@
           "total_services": 120
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3877,7 +4119,7 @@
           "total_services": 300
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3896,7 +4138,7 @@
           "total_services": 600
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
         "price": {
           "profit": 99,
           "total_price": 898.0,
@@ -3922,6 +4164,11 @@
     "average_star": 0.0,
     "id": "54",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -3930,7 +4177,7 @@
           "total_services": 25
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": null,
@@ -3949,7 +4196,7 @@
           "total_services": 50
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 199,
@@ -3976,6 +4223,9 @@
     "average_star": 0.0,
     "id": "55",
     "categories": [{ "id": 5 }, { "id": 3 }, { "id": 6 }],
+    "tags": [
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -3983,7 +4233,7 @@
           "total_services": 15
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4001,7 +4251,7 @@
           "total_services": 15
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59,
@@ -4028,6 +4278,9 @@
     "average_star": 0.0,
     "id": "56",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "GLUTENSİZ"
+        ],
     "variants": [
       {
         "size": {
@@ -4035,7 +4288,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 47.84,
@@ -4053,7 +4306,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 95.68,
@@ -4080,6 +4333,11 @@
     "average_star": 0.0,
     "id": "57",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -4087,7 +4345,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4105,7 +4363,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 49,
@@ -4132,6 +4390,11 @@
     "average_star": 0.0,
     "id": "58",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -4139,7 +4402,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4157,7 +4420,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 49,
@@ -4184,6 +4447,11 @@
     "average_star": 0.0,
     "id": "59",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -4191,7 +4459,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4209,7 +4477,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59,
@@ -4236,6 +4504,11 @@
     "average_star": 0.0,
     "id": "60",
     "categories": [{ "id": 1 }, { "id": 5 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -4244,7 +4517,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4263,7 +4536,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -4290,6 +4563,11 @@
     "average_star": 0.0,
     "id": "61",
     "categories": [{ "id": 1 }, { "id": 3 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -4298,7 +4576,7 @@
           "total_services": 20
         },
         "aroma": "Berry Blast",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 79.8,
@@ -4317,7 +4595,7 @@
           "total_services": 40
         },
         "aroma": "Berry Blast",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 159.6,
@@ -4344,6 +4622,11 @@
     "average_star": 0.0,
     "id": "62",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -4351,7 +4634,7 @@
           "total_services": 20
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4369,7 +4652,7 @@
           "total_services": 40
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -4396,6 +4679,11 @@
     "average_star": 0.0,
     "id": "63",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -4403,7 +4691,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4421,7 +4709,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 49,
@@ -4448,6 +4736,10 @@
     "average_star": 0.0,
     "id": "64",
     "categories": [{ "id": 1 }, { "id": 5 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -4456,7 +4748,7 @@
           "total_services": 40
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4475,7 +4767,7 @@
           "total_services": 80
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -4502,6 +4794,10 @@
     "average_star": 0.0,
     "id": "65",
     "categories": [{ "id": 1 }, { "id": 3 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -4510,7 +4806,7 @@
           "total_services": 25
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 159.84,
@@ -4529,7 +4825,7 @@
           "total_services": 50
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 319.68,
@@ -4556,6 +4852,10 @@
     "average_star": 0.0,
     "id": "66",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -4564,7 +4864,7 @@
           "total_services": 100
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4583,7 +4883,7 @@
           "total_services": 200
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -4610,6 +4910,11 @@
     "average_star": 0.0,
     "id": "67",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -4617,7 +4922,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4635,7 +4940,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59,
@@ -4662,6 +4967,12 @@
     "average_star": 0.0,
     "id": "68",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN",
+      "LAKTOZSUZ"
+  ],
     "variants": [
       {
         "size": {
@@ -4670,7 +4981,7 @@
           "total_services": 83
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59.9,
@@ -4689,7 +5000,7 @@
           "total_services": 166
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 119.8,
@@ -4716,6 +5027,11 @@
     "average_star": 0.0,
     "id": "2",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "SOYA İÇERMEZ"
+  ],
     "variants": [
       {
         "size": {
@@ -4724,7 +5040,7 @@
           "total_services": 16
         },
         "aroma": "Bisküvi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4743,7 +5059,7 @@
           "total_services": 64
         },
         "aroma": "Bisküvi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4762,7 +5078,7 @@
           "total_services": 128
         },
         "aroma": "Bisküvi",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 299,
@@ -4781,7 +5097,7 @@
           "total_services": 16
         },
         "aroma": "Muz",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4800,7 +5116,7 @@
           "total_services": 64
         },
         "aroma": "Muz",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4819,7 +5135,7 @@
           "total_services": 128
         },
         "aroma": "Muz",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/cec91048-bda1-4746-be6f-73a6b03d26e1/image_180.webp",
 
         "price": {
           "profit": 299,
@@ -4846,6 +5162,11 @@
     "average_star": 0.0,
     "id": "70",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -4853,7 +5174,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4871,7 +5192,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 49,
@@ -4898,6 +5219,10 @@
     "average_star": 0.0,
     "id": "71",
     "categories": [{ "id": 1 }, { "id": 3 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ"
+        ],
     "variants": [
       {
         "size": {
@@ -4906,7 +5231,7 @@
           "total_services": 20
         },
         "aroma": "Şeftali",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
 
         "price": {
           "profit": null,
@@ -4925,7 +5250,7 @@
           "total_services": 40
         },
         "aroma": "Şeftali",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/31bf0eb1-9f8f-4f6b-9ab0-2641e6eca4d9/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -4952,6 +5277,9 @@
     "average_star": 0.0,
     "id": "72",
     "categories": [{ "id": 1 }, { "id": 6 }, { "id": 5 }],
+    "tags": [
+            "GLUTENSİZ"
+        ],
     "variants": [
       {
         "size": {
@@ -4959,7 +5287,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 21.89,
@@ -4977,7 +5305,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 43.78,
@@ -4995,7 +5323,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 65.67,
@@ -5022,6 +5350,11 @@
     "average_star": 0.0,
     "id": "73",
     "categories": [{ "id": 1 }, { "id": 5 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -5030,7 +5363,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5049,7 +5382,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -5076,6 +5409,11 @@
     "average_star": 0.0,
     "id": "74",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -5083,7 +5421,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 56.81,
@@ -5101,7 +5439,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 113.62,
@@ -5128,6 +5466,11 @@
     "average_star": 0.0,
     "id": "75",
     "categories": [{ "id": 1 }, { "id": 2 }, { "id": 5 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -5136,7 +5479,7 @@
           "total_services": 50
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5155,7 +5498,7 @@
           "total_services": 100
         },
         "aroma": "Yeşil Elma",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -5174,7 +5517,7 @@
           "total_services": 50
         },
         "aroma": "Limonata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5193,7 +5536,7 @@
           "total_services": 100
         },
         "aroma": "Limonata",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/f3fe320b-380b-4661-a0be-9c9b57dd41f1/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -5220,6 +5563,11 @@
     "average_star": 0.0,
     "id": "76",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -5227,7 +5575,7 @@
           "total_services": 20
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5245,7 +5593,7 @@
           "total_services": 40
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -5272,6 +5620,11 @@
     "average_star": 0.0,
     "id": "77",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -5279,7 +5632,7 @@
           "total_services": 25
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5297,7 +5650,7 @@
           "total_services": 50
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -5324,6 +5677,10 @@
     "average_star": 0.0,
     "id": "78",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+            "VEJETARYEN",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -5331,7 +5688,7 @@
           "total_services": 20
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 55.86,
@@ -5349,7 +5706,7 @@
           "total_services": 40
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 111.72,
@@ -5376,6 +5733,12 @@
     "average_star": 0.0,
     "id": "79",
     "categories": [{ "id": 1 }, { "id": 3 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN",
+      "LAKTOZSUZ"
+  ],
     "variants": [
       {
         "size": {
@@ -5384,7 +5747,7 @@
           "total_services": 100
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 101.83,
@@ -5403,7 +5766,7 @@
           "total_services": 200
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 203.66,
@@ -5430,6 +5793,11 @@
     "average_star": 0.0,
     "id": "80",
     "categories": [{ "id": 1 }, { "id": 5 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -5438,7 +5806,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5457,7 +5825,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -5484,6 +5852,10 @@
     "average_star": 0.0,
     "id": "81",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ"
+  ],
     "variants": [
       {
         "size": {
@@ -5491,7 +5863,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5509,7 +5881,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -5536,6 +5908,11 @@
     "average_star": 0.0,
     "id": "8",
     "categories": [{ "id": 1 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "SOYA İÇERMEZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -5544,7 +5921,7 @@
           "total_services": 16
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5563,7 +5940,7 @@
           "total_services": 32
         },
         "aroma": "Çilek",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/c4d8b51f-59f4-4c57-82c1-07738ffb9633/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -5582,7 +5959,7 @@
           "total_services": 16
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5601,7 +5978,7 @@
           "total_services": 32
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -5628,6 +6005,11 @@
     "average_star": 0.0,
     "id": "83",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -5635,7 +6017,7 @@
           "total_services": 45
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5653,7 +6035,7 @@
           "total_services": 90
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 59,
@@ -5680,6 +6062,11 @@
     "average_star": 0.0,
     "id": "84",
     "categories": [{ "id": 6 }, { "id": 2 }],
+    "tags": [
+      "VEJETARYEN",
+      "GLUTENSİZ",
+      "VEGAN"
+  ],
     "variants": [
       {
         "size": {
@@ -5687,7 +6074,7 @@
           "total_services": 20
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5705,7 +6092,7 @@
           "total_services": 40
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": 99,
@@ -5731,6 +6118,11 @@
     "average_star": 0.0,
     "id": "85",
     "categories": [{ "id": 5 }, { "id": 2 }, { "id": 3 }, { "id": 6 }],
+    "tags": [
+            "VEJETARYEN",
+            "GLUTENSİZ",
+            "VEGAN"
+        ],
     "variants": [
       {
         "size": {
@@ -5738,7 +6130,7 @@
           "total_services": 30
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
 
         "price": {
           "profit": null,
@@ -5756,8 +6148,7 @@
           "total_services": 60
         },
         "aroma": "Aromasız",
-        "aroma_photo":"https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
-
+        "aroma_photo": "https://cdn.myikas.com/images/00b6c111-71dc-4400-932f-8db87e5da64c/05785641-6e9b-4d64-b1c1-fbb6c9b94dea/image_180.webp",
         "price": {
           "profit": 99,
           "total_price": 698.0,
