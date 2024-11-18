@@ -11,10 +11,10 @@ const getProductById = async (req, res) => {
         { model: db.Review },
         { model: db.Category },
         { model: db.PriceInfo },
-        {
-          model: db.Variant,
-          include: [{ model: db.Size }], // Including Size within Variant to get nested relationship
-        },
+        {model: db.Variant, include: [
+          { model: db.Size },
+          { model: db.PriceInfo }
+        ] },
       ],
     });
 

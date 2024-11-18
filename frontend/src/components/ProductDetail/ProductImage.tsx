@@ -15,18 +15,23 @@ export const ProductImage: React.FC<ProductImageProps> = ({
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "20px",
-        borderRadius: "10px",
+        borderRadius: "20px",
+        width: "400px",
+        height: "500px",
+        overflow: "hidden", // Taşan resimleri gizle
+        padding:'20px',
+        margin:'10px'
       }}
     >
       <img
         src={selectedPhoto}
         alt={product.name || "Product"}
         style={{
-          width: "100%",
-          maxWidth: "400px",
-          height: "auto",
-          objectFit: "contain",
+          width: "160%",
+          height: "100%", // Kapsayıcıyı tamamen doldur
+          objectFit: "fill", // Resmi orantılı bir şekilde doldur
+          borderRadius: "10px",
+          background: "yellow", // Resmin sarı arka planı
         }}
       />
     </div>
