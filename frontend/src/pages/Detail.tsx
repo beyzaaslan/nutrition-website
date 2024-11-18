@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Product } from "../types/Product";
 import { ProductDetails } from "../components/ProductDetail/ProductDetail";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { getProductById } from "../services/productService";
 
@@ -35,20 +34,15 @@ const Detail: React.FC = () => {
   }
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "flex-start",
-        padding: "20px",
-        backgroundColor: "#fff",
-      }}
-    >
- 
-
-          <ProductDetails product={product} />
-
+    <>
+    <Box sx={{
+      display:'flex',
+      justifyContent:'center',
+      alignItems:'center'
+    }}>
+    <ProductDetails product={product} />
     </Box>
+    </>
   );
 };
 

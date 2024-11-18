@@ -16,7 +16,7 @@ export interface Product {
   average_star: number; 
   Reviews?: Review[]; 
   Categories?: Category[]; 
-  PriceInfo?: PriceInfo;
+  PriceInfo?: PriceInfo[];
   Variants?: Variant[]; 
   tags: string;
   createdAt: string; 

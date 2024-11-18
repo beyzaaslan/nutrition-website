@@ -12,4 +12,6 @@ export interface PriceInfo {
   ProductId?: number; // Foreign key referencing Product (integer type)
   Variant?: Variant; // Associated Variant, optional
   Product?: Product; // Associated Product, optional
+  VariantId: string;
+
 }

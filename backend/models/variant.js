@@ -25,10 +25,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Variant.associate = function (models) {
-    Variant.belongsTo(models.Product, { foreignKey: 'ProductId' });
-    Variant.belongsTo(models.PriceInfo);
     Variant.belongsTo(models.Size);
     Variant.hasMany(models.Size, { foreignKey: 'VariantId' });
+    Variant.hasMany(models.PriceInfo, { foreignKey: "VariantId" }); 
   };
 
   return Variant;

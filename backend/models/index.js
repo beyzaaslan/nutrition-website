@@ -76,6 +76,7 @@ db.Review.belongsTo(db.User, { foreignKey: "UserId" });
 // Product ve Variant arasındaki ilişki
 db.Product.hasMany(db.Variant, { foreignKey: "ProductId" });
 db.Variant.belongsTo(db.Product, { foreignKey: "ProductId" });
+db.Variant.hasMany(db.PriceInfo, { foreignKey: "VariantId" });
 
 // PriceInfo and Variant ilişki
 db.PriceInfo.belongsTo(db.Variant, { foreignKey: "VariantId" });
