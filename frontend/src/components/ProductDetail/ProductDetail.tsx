@@ -12,6 +12,8 @@ import { ProductImage } from "./ProductImage";
 
 interface ProductDetailsProps {
   product: Product;
+  discountPercentage?:number;
+  
 }
 
 export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
@@ -77,7 +79,8 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
             height: "100%",
           }}
         >
-          <ProductImage product={product} selectedPhoto={selectedPhoto} />
+          <ProductImage product={product} selectedPhoto={selectedPhoto}     discountPercentage={selectedVariant?.PriceInfos[0]?.discount_percentage ?? null } 
+          />
         </Box>
       </Grid>
 
@@ -117,7 +120,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
             />
           )}
 
-          {selectedFlavor && selectedSize && selectedVariant && (
+{selectedFlavor && selectedSize && selectedVariant && (
             <Box sx={{ position: "relative" }}>
               <SelectedInfo
                 selectedFlavor={selectedFlavor}

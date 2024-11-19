@@ -1,8 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { Size } from '../../types/Size';
-import { PriceInfo } from '../../types/PriceInfo';
-
+import { Size } from "../../types/Size";
+import { PriceInfo } from "../../types/PriceInfo";
 
 interface SelectedInfoProps {
   selectedFlavor: string;
@@ -11,12 +10,12 @@ interface SelectedInfoProps {
 }
 
 export const SelectedInfo: React.FC<SelectedInfoProps> = ({
-  selectedFlavor,
-  selectedSize,
-  priceInfo
+  /*   selectedFlavor,
+  selectedSize, */
+  priceInfo,
 }) => (
   <Box sx={{ marginTop: "16px" }}>
-    <Typography>
+    {/*     <Typography>
       Seçili Aroma: <strong>{selectedFlavor}</strong>
     </Typography>
     <Typography>
@@ -25,41 +24,61 @@ export const SelectedInfo: React.FC<SelectedInfoProps> = ({
     <Typography>
       Adet: <strong>{selectedSize.pieces}</strong>
     </Typography>
+ */}
     {priceInfo && (
-      <Box sx={{ mt: 1 }}>
-        <Typography
-          component="span"
-          sx={{
-            textDecoration: priceInfo.discount_percentage ? "line-through" : "none",
-            color: priceInfo.discount_percentage ? "text.secondary" : "text.primary",
-            mr: 1,
-          }}
-        >
-          {priceInfo.total_price.toFixed(2)} TL
-        </Typography>
-        {priceInfo.discount_percentage && priceInfo.discounted_price && (
-          <>
+      <Box sx={{ mt: 2 }}>
+        {/* Fiyat kısmı */}
+        <Box sx={{ display: "flex", alignItems: "baseline", gap: 1 }}>
+          {/* İndirimli fiyat */}
+          {priceInfo.discount_percentage && priceInfo.discounted_price && (
             <Typography
               component="span"
               sx={{
                 fontWeight: "bold",
-                mr: 1,
+                fontSize: "2rem",
               }}
             >
               {priceInfo.discounted_price.toFixed(2)} TL
             </Typography>
-            <Typography
-              component="span"
-              sx={{
-                color: "success.main",
-                fontSize: "0.875rem",
-              }}
-            >
-              ({priceInfo.discount_percentage}% İndirim)
-            </Typography>
-          </>
+          )}
+          {/* İndirimli fiyat çizgisi */}
+          <Typography
+            component="span"
+            sx={{
+              textDecoration: priceInfo.discount_percentage
+                ? "line-through"
+                : "none",
+              color: priceInfo.discount_percentage ? "red" : "black",
+              fontWeight: priceInfo.discount_percentage ? "900" : "600",
+              fontSize: "1.25rem",
+            }}
+          >
+            {priceInfo.total_price.toFixed(2)} TL
+          </Typography>
+        </Box>
+
+        {/* Kazanç kısmı */}
+        {priceInfo.discount_percentage && (
+          <Box
+            sx={{
+              backgroundColor: "#d8f5d8",
+              color: "#1a8e1a",
+              padding: "8px",
+              fontWeight: "bold",
+              fontSize: "1rem",
+              marginTop: "8px",
+              display: "inline-block",
+            }}
+          >
+            Kazancınız:{" "}
+            {(priceInfo.total_price - priceInfo.discounted_price!).toFixed(2)}{" "}
+            TL
+          </Box>
         )}
       </Box>
     )}
+
+
+
   </Box>
 );
