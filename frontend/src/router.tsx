@@ -1,23 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import CategoryProductsPage from './components/Categories/CategoryProductsPage';
-import { 
-    About, 
-    Account, 
-    Cart, 
-    Contact, 
-    Homepage, 
-    Page404, 
-    Payment, 
-    SSS ,
-    Login,
-    ProductList,
-    Detail,
-} from './pages'; 
+import { ShoppingCartProvider } from './context/ShoppingCartContext';
+import { About,Account,Cart,Contact,Homepage,Page404,Payment,SSS,Login,ProductList,Detail,} from './pages'; 
 
 const AppRouter = () => {
   return (
-            <Routes>
+    //alısveris sepeti artık tumune erişebilir demek bu 
+    <ShoppingCartProvider>
+        <Routes>
                 <Route path="/" element={<MainLayout><Homepage /></MainLayout>} />
                 <Route path="/about" element={<MainLayout><About /></MainLayout>} />
                 <Route path="/login" element={<MainLayout><Login/></MainLayout>} />
@@ -31,7 +22,9 @@ const AppRouter = () => {
                 <Route path="/all-products" element={<MainLayout><ProductList /></MainLayout>} />
                 <Route path="/:categoryName" element={<MainLayout><CategoryProductsPage /></MainLayout>} />
                 <Route path="*" element={<MainLayout><Page404 /></MainLayout>} /> {/* Catch-all route for 404 */}
-            </Routes>
+        </Routes>
+    </ShoppingCartProvider>
+           
   )
 }
 export default AppRouter

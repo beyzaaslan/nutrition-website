@@ -1,21 +1,5 @@
 import React, { useState } from "react";
-import {
-  AppBar,
-  Toolbar,
-  InputBase,
-  IconButton,
-  Box,
-  Button,
-  Menu,
-  MenuItem,
-  Typography,
-  Link,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  Modal,
-} from "@mui/material";
+import {AppBar,Toolbar,InputBase,IconButton,Box,Button,Menu,MenuItem,Typography,Link,Drawer,List,ListItem,ListItemText,Modal} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -27,6 +11,7 @@ import "./style.css";
 import { useNavigate } from "react-router-dom";
 import { Product } from "../../types/Product";
 import { searchProducts } from '../../services/productService';
+import { useShoppingCart } from "../../context/ShoppingCartContext";
 
 
 const modalStyle = {
@@ -59,6 +44,7 @@ const Header: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Product[]>([]);
   const [open, setOpen] = useState(false);
+  
   const navigate = useNavigate();
 
   const handleSearch = async (term: string) => {
@@ -111,6 +97,9 @@ const Header: React.FC = () => {
   const handleMobileMenuToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+
+  const {openCart,CartAmount} = useShoppingCart()
 
   return (
     <>
@@ -307,6 +296,7 @@ const Header: React.FC = () => {
                 <MenuItem onClick={handleClose}>Çıkış</MenuItem>
               </Menu>
               <Button
+              onClick={openCart}
                 variant="contained"
                 sx={{
                   backgroundColor: "#919191",
@@ -321,8 +311,10 @@ const Header: React.FC = () => {
                   padding: "0 12px",
                 }}
               >
-                <StyledBadge badgeContent={1} color="secondary">
-                  <ShoppingCartIcon />
+                <StyledBadge badgeContent={CartAmount} color="secondary">
+                  <ShoppingCartIcon>
+                  {CartAmount}
+                  </ShoppingCartIcon>
                 </StyledBadge>
                 <Typography sx={{ ml: 1 }}>SEPET</Typography>
               </Button>

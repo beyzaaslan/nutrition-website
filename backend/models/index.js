@@ -8,6 +8,7 @@ const sequelize = new Sequelize(
   {
     host: process.env.DB_SERVER,
     dialect: "mssql",
+
     dialectOptions: {
       options: {
         encrypt: true,

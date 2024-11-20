@@ -57,8 +57,8 @@ export const ProductImage: React.FC<ProductImageProps> = ({
         alt={product.name || "Product"}
         style={{
           width: "120%",
-          height: "100%", // Kapsayıcıyı tamamen doldur
-          objectFit: "fill", // Resmi orantılı bir şekilde doldur
+          height: "100%", 
+          objectFit: "fill", 
         }}
       />
     </Box>

@@ -18,7 +18,8 @@ export const apiRequest = async <T>(
     };
     try {
         const response = await axios(config);
-        return response.data; // Yanıtın içeriğini döndür
+        console.log(response.data,"responseApiHelper");
+        return response; // Yanıtın içeriğini döndür
     } catch (error) {
         // Hata yönetimi
         console.error(`Error with ${method} request to ${url}:`, error);

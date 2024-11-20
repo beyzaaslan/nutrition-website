@@ -4,7 +4,7 @@ const db = require('./models');
 
 async function seedDatabase() {
     try {
-        await db.sequelize.sync({ force: true });
+        await db.sequelize.sync({ force: false });
 
         // Categories to be created
         const categories = [

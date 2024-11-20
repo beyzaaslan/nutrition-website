@@ -2,10 +2,11 @@ import { apiRequest } from './apiHelper';
 import { Product } from '../types/Product';
 
 // Tüm ürünleri almak için
-export const getProducts = async (page: number = 1, limit: number = 12) => {
+export const getProducts = async (page: number = 1, limit: number = 12):Promise<Product[]>  => {
     try {
         const offset = (page - 1) * limit;
-        return await apiRequest<Product[]>('GET', `/product?limit=${limit}&offset=${offset}`);
+        const response = await apiRequest<Product[]>('GET', `/product?limit=${limit}&offset=${offset}`);
+        return response.data;
     } catch (error) {
         console.error('Error fetching products:', error);
         throw error;
@@ -23,11 +24,13 @@ export const searchProducts = async (searchTerm: string) => {
 };
 
 // Belirli bir ürünü almak için
-export const getProductById = async (productId: number) => {
+export const getProductById = async (productId: number): Promise<Product | null>  => {
     try {
         const response = await apiRequest<Product>('GET', `/product/${productId}`);
-        console.log("response",response);
-        return response;
+        console.log("getProductById",response);
+        console.log("getProductById2",response.data);
+        console.log("bıktım valla",response.data);
+        return response.data;
     } catch (error) {
         console.error(`Error fetching product with id ${productId}:`, error);
         throw error;
@@ -40,7 +43,7 @@ export const createProduct = async (productData: Product) => {
     try {
         const response = await apiRequest<Product>('POST', '/product', productData);
         console.log('Product created:', response);
-        return response;
+        return response.data;
     } catch (error) {
         console.error('Error creating product:', error);
         throw error;

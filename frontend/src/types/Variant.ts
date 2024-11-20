@@ -5,7 +5,7 @@ import { Size } from './Size';
 // Define the Variant interface
 export interface Variant {
   Sizes: Size[];
-  id: string; // UUID
+  id: string | number; // UUID
   flavor: string;
   aroma_photo?: string;
   photo_src?: string;

@@ -20,8 +20,9 @@ const getProductById = async (req, res) => {
 
     if (!product) {
       return res.status(404).send("Product not found");
-    }
+    } 
     console.log("beyza", product);
+    console.log('Product ID:', req.params.id);
     return res.json(product);
   } catch (err) {
     console.log(err);
