@@ -13,7 +13,7 @@ export const ShoppingCart: React.FC = () => {
       open={isOpen}
       onClose={() => setIsOpen(false)}
     >
-      <Box sx={{ width: 400, p: 2 }}>
+      <Box sx={{ width: 450, p: 2 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
           <Typography variant="h6">Sepetim</Typography>
           <IconButton onClick={() => setIsOpen(false)}>
@@ -21,7 +21,19 @@ export const ShoppingCart: React.FC = () => {
           </IconButton>
         </Box>
         {cartItems.map(item => (
-          <CartItem key={item.id} {...item} />
+          <CartItem 
+          key={`${item.flavor}`} 
+          item={{
+            id: item.id,
+            variantId: item.variantId,
+            quantity: item.quantity,
+            name: item.name,
+            photo_src: item.photo_src,
+            price: item.price,
+            flavor: item.flavor,
+            size: item.size
+          }} 
+        />
         ))}
       </Box>
     </Drawer>

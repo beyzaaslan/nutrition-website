@@ -1,31 +1,98 @@
-// components/CartItem.tsx
-import React from 'react';
-import { Box} from '@mui/material';
-
+import { Box, Typography, IconButton } from "@mui/material";
+import { Add as AddIcon, Remove as RemoveIcon, Delete as DeleteIcon } from '@mui/icons-material';
+import { CartItem as CartItemType } from '../../../types/CartItem';
+import { useShoppingCart } from '../../../context/ShoppingCartContext';
 
 interface CartItemProps {
-  id: number;
-  quantity: number;
-  name: string;
-  photo_src: string;
-  price: number;
-  flavor: string;
-  size: string;
+  item: CartItemType;
 }
 
-export const CartItem: React.FC<CartItemProps> = () => {
-    
+export const CartItem: React.FC<CartItemProps> = ({ item }) => {
+  const { removeFromCart, increaseCartAmount, decreaseCartAmount } = useShoppingCart();
+
+  const handleIncrease = () => {
+    const cartItemData: CartItemType = {
+      id: item.id,
+      variantId: item.variantId,
+      quantity: 1,
+      name: item.name,
+      photo_src: item.photo_src,
+      price: item.price,
+      flavor: item.flavor,
+      size: item.size,
+    };
+    increaseCartAmount(item.id,cartItemData);
+  };
+
   return (
-    <Box sx={{ 
-      display: 'flex', 
-      alignItems: 'center', 
-      gap: 2, 
-      mb: 2,
-      p: 2,
-      border: '1px solid #eee',
-      borderRadius: 2
-    }}>
-    ssepette ürünler  yuppp 
+    <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        borderBottom: '1px solid #eee',
+
+      }}
+    >
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+        <img
+          src={item.photo_src}
+          alt={item.name}
+          style={{
+            width: '80px',
+            height: '80px',
+            objectFit: 'fill',
+          }}
+        />
+        
+        <Box>
+          <Typography fontWeight="bold">
+            {item.name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {item.flavor} {item.size}
+          </Typography>
+        </Box>
+      </Box>
+
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            border: '1px solid #eee',
+            borderRadius: '4px',
+            overflow: 'hidden'
+          }}
+        >
+          <IconButton
+            size="small"
+            onClick={() => decreaseCartAmount(item.id)}
+          >
+            <RemoveIcon />
+          </IconButton>
+          <Typography sx={{ px: 2 }}>
+            {item.quantity}
+          </Typography>
+          <IconButton
+            size="small"
+            onClick={handleIncrease}
+          >
+            <AddIcon />
+          </IconButton>
+        </Box>
+
+        <Typography fontWeight="bold">
+          {(item.price * item.quantity).toFixed(2)}TL
+        </Typography>
+
+        <IconButton
+          onClick={() => removeFromCart(item.id)}
+          color="error"
+        >
+          <DeleteIcon />
+        </IconButton>
+      </Box>
     </Box>
   );
 };
