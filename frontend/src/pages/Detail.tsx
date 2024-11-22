@@ -7,7 +7,7 @@ import { getProductById } from "../services/productService";
 
 const Detail: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
-  const [product, setProduct] = useState<Product>();
+  const [product, setProduct] = useState<Product | null>(null);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {

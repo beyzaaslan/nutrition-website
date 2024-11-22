@@ -28,8 +28,6 @@ export const getProductById = async (productId: number): Promise<Product | null>
     try {
         const response = await apiRequest<Product>('GET', `/product/${productId}`);
         console.log("getProductById",response);
-        console.log("getProductById2",response.data);
-        console.log("bıktım valla",response.data);
         return response.data;
     } catch (error) {
         console.error(`Error fetching product with id ${productId}:`, error);

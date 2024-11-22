@@ -127,7 +127,8 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                 selectedSize={selectedSize}
                 priceInfo={selectedVariant.PriceInfos[0]} // PriceInfos olarak düzeltildi
                 selectedVariant={selectedVariant} // Eksik alan düzeltildi
-
+                id={product.id}
+                productName={product.name}
               />
             </Box>
           )}

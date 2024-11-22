@@ -11,7 +11,7 @@ import "./style.css";
 import { useNavigate } from "react-router-dom";
 import { Product } from "../../types/Product";
 import { searchProducts } from '../../services/productService';
-import { useShoppingCart } from "../../context/ShoppingCartContext";
+import { useShoppingCart } from '../../context/ShoppingCartContext';
 
 
 const modalStyle = {
@@ -39,6 +39,7 @@ const Logo = styled("img")({
 });
 
 const Header: React.FC = () => {
+  const { cartQuantity, setIsOpen } = useShoppingCart();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -47,12 +48,7 @@ const Header: React.FC = () => {
   
   const navigate = useNavigate();
 
-  const handleSearch = async (term: string) => {
-    if (term.trim() === "") {
-      setOpen(false);
-      setSearchResults([]);
-      return;
-    }
+  const handleSearch = async (term: string) => {if (term.trim() === "") {setOpen(false);setSearchResults([]);return;}
 
     try {
       const results = await searchProducts(term);
@@ -99,7 +95,6 @@ const Header: React.FC = () => {
   };
 
 
-  const {openCart,CartAmount} = useShoppingCart()
 
   return (
     <>
@@ -296,8 +291,8 @@ const Header: React.FC = () => {
                 <MenuItem onClick={handleClose}>Çıkış</MenuItem>
               </Menu>
               <Button
-              onClick={openCart}
-                variant="contained"
+              onClick={() => setIsOpen(true)}
+               variant="contained"
                 sx={{
                   backgroundColor: "#919191",
                   color: "#fff",
@@ -311,9 +306,9 @@ const Header: React.FC = () => {
                   padding: "0 12px",
                 }}
               >
-                <StyledBadge badgeContent={CartAmount} color="secondary">
+                <StyledBadge badgeContent={cartQuantity} color="secondary">
                   <ShoppingCartIcon>
-                  {CartAmount}
+                  {cartQuantity}
                   </ShoppingCartIcon>
                 </StyledBadge>
                 <Typography sx={{ ml: 1 }}>SEPET</Typography>

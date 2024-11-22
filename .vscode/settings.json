@@ -1,0 +1,3 @@
+{
+  "dataworkspace.excludedProjects": ["localhost,1433/localhost,1433.sqlproj"]
+}

@@ -7,20 +7,36 @@ import { PriceInfo } from "../../types/PriceInfo";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import { Variant } from '../../types/Variant';
+import { CartItem } from "../../types/CartItem";
 
 interface SelectedInfoProps {
   selectedFlavor: string;
   selectedSize: Size;
   priceInfo?: PriceInfo;
-  id:number;
-  selectedVariant:Variant;
+  id: number;
+  selectedVariant: Variant;
+  productName: string; // Product adını da props olarak alalım
 }
 
-export const SelectedInfo: React.FC<SelectedInfoProps> = ({ priceInfo,id,selectedVariant }) => {
-  const { getItemAmount,increaseCartAmount,decreaseCartAmount} = useShoppingCart()
+export const SelectedInfo: React.FC<SelectedInfoProps> = ({ priceInfo,id,selectedVariant,selectedFlavor,selectedSize,productName}) => {
 
+  const { getItemAmount,increaseCartAmount,decreaseCartAmount} = useShoppingCart()
   const quantity =getItemAmount(id);
 
+  const handleAddToCart = () => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const cartItem: CartItem = {
+      id,
+      variantId: selectedVariant.id,
+      quantity: 1,
+      name: productName,
+      photo_src: selectedVariant.aroma_photo || '',
+      price: priceInfo?.discounted_price || priceInfo?.total_price || 0,
+      flavor: selectedFlavor,
+      size: `${selectedSize.gram}G`,
+    };
+    increaseCartAmount(id);
+  };
 
   return (
     <Box sx={{ marginTop: "16px" }}>
@@ -112,7 +128,7 @@ export const SelectedInfo: React.FC<SelectedInfoProps> = ({ priceInfo,id,selecte
             {quantity}
           </Typography>
           <IconButton 
-            onClick={() => increaseCartAmount(Number(selectedVariant.id))}
+           onClick={() => increaseCartAmount(id)}
             sx={{ borderRight: "1px solid #ccc", backgroundColor: "#f7f7f7",borderRadius:0 ,height:"100%"}}
           >
             <AddIcon />
@@ -121,6 +137,7 @@ export const SelectedInfo: React.FC<SelectedInfoProps> = ({ priceInfo,id,selecte
 
         {/* Sepete ekle butonu */}
         <Button
+        
           variant="contained"
           color="primary"
           size="large"
@@ -129,7 +146,7 @@ export const SelectedInfo: React.FC<SelectedInfoProps> = ({ priceInfo,id,selecte
             height:"50px",
             backgroundColor: "black",
           }}
-          onClick={() => increaseCartAmount(id)}
+          onClick={handleAddToCart}
           >
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <ShoppingCartIcon/>
