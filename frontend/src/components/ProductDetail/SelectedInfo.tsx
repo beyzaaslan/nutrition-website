@@ -1,13 +1,24 @@
 import React from "react";
-import { Box, Typography, Button, IconButton } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Button,
+  IconButton,
+
+} from "@mui/material";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import { Size } from "../../types/Size";
 import { PriceInfo } from "../../types/PriceInfo";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { useShoppingCart } from "../../context/ShoppingCartContext";
 import { Variant } from "../../types/Variant";
 import { CartItem } from "../../types/CartItem";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
+import VerifiedIcon from "@mui/icons-material/Verified";
+
+import { useShoppingCart } from "../../context/ShoppingCartContext";
+
 
 export interface SelectedInfoProps {
   selectedFlavor: string;
@@ -16,22 +27,14 @@ export interface SelectedInfoProps {
   id: number;
   selectedVariant: Variant;
   productName: string; // Product adını da props olarak alalım
+
 }
 
-export const SelectedInfo: React.FC<SelectedInfoProps> = ({
-  priceInfo,
-  id,
-  selectedVariant,
-  selectedFlavor,
-  selectedSize,
-  productName,
-}) => {
-  const { getItemAmount, increaseCartAmount, decreaseCartAmount } =
-    useShoppingCart();
-  const quantity = getItemAmount(id,);
+export const SelectedInfo: React.FC<SelectedInfoProps> = ({ priceInfo,id,selectedVariant,selectedFlavor,selectedSize,productName}) => {
+  const { getItemAmount, increaseCartAmount, decreaseCartAmount } =useShoppingCart();
+  const quantity = getItemAmount(id);
 
   const handleAddToCart = () => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const cartItemData: CartItem = {
       id,
       variantId: selectedVariant.id,
@@ -40,7 +43,7 @@ export const SelectedInfo: React.FC<SelectedInfoProps> = ({
       photo_src: selectedVariant.photo_src || "",
       price: priceInfo?.discounted_price || priceInfo?.total_price || 0,
       flavor: selectedFlavor,
-      size: `${selectedSize.gram}G`,
+      size: `${selectedSize.gram}G `,
     };
     increaseCartAmount(id, cartItemData);
   };
@@ -150,7 +153,7 @@ export const SelectedInfo: React.FC<SelectedInfoProps> = ({
                 price:
                   priceInfo?.discounted_price || priceInfo?.total_price || 0,
                 flavor: selectedFlavor,
-                size: `${selectedSize.gram}G`,
+                size: `${selectedSize.gram}Gram`,
               };
               increaseCartAmount(id, cartItemData);
             }}
@@ -184,6 +187,49 @@ export const SelectedInfo: React.FC<SelectedInfoProps> = ({
             </Typography>
           </Box>
         </Button>
+      </Box>
+
+      {/* icon section */}
+      <Box
+        sx={{
+          mt: 3,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 2,
+          textAlign: "start",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+          }}
+        >
+          <LocalShippingIcon fontSize="large" />
+          <Typography>Aynı Gün Ücretsiz Kargo</Typography>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+          }}
+        >
+          <ShieldOutlinedIcon fontSize="large" />
+          <Typography>750.000+ Mutlu Müşteri</Typography>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+          }}
+        >
+          <VerifiedIcon fontSize="large" />
+          <Typography>Memnuniyet Garantisi</Typography>
+        </Box>
       </Box>
     </Box>
   );

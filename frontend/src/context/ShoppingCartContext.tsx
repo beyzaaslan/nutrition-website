@@ -15,9 +15,7 @@ interface ShoppingCartContextProps {
 
 const ShoppingCartContext = createContext({} as ShoppingCartContextProps);
 
-export const useShoppingCart = () => {
-  return useContext(ShoppingCartContext);
-};
+export const useShoppingCart = () => {return useContext(ShoppingCartContext)};
 
 export const ShoppingCartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>('sepetteki-ürünler', []);

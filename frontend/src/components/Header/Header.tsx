@@ -1,5 +1,21 @@
 import React, { useState } from "react";
-import {AppBar,Toolbar,InputBase,IconButton,Box,Button,Menu,MenuItem,Typography,Link,Drawer,List,ListItem,ListItemText,Modal} from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  InputBase,
+  IconButton,
+  Box,
+  Button,
+  Menu,
+  MenuItem,
+  Typography,
+  Link,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  Modal,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -10,9 +26,8 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 import { Product } from "../../types/Product";
-import { searchProducts } from '../../services/productService';
+import { searchProducts } from "../../services/productService";
 import { useShoppingCart } from '../../context/ShoppingCartContext';
-
 
 const modalStyle = {
   position: "absolute",
@@ -30,7 +45,7 @@ const StyledBadge = styled(Badge)(() => ({
     right: 0,
     top: 0,
     padding: "0px",
-    background: 'red'
+    background: "red",
   },
 }));
 
@@ -45,10 +60,15 @@ const Header: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchResults, setSearchResults] = useState<Product[]>([]);
   const [open, setOpen] = useState(false);
-  
+
   const navigate = useNavigate();
 
-  const handleSearch = async (term: string) => {if (term.trim() === "") {setOpen(false);setSearchResults([]);return;}
+  const handleSearch = async (term: string) => {
+    if (term.trim() === "") {
+      setOpen(false);
+      setSearchResults([]);
+      return;
+    }
 
     try {
       const results = await searchProducts(term);
@@ -57,13 +77,13 @@ const Header: React.FC = () => {
         const bStartsWith = b.name.toLowerCase().startsWith(term.toLowerCase());
         if (aStartsWith && !bStartsWith) return -1;
         if (!aStartsWith && bStartsWith) return 1;
-        
+
         const aMatchIndex = a.name.toLowerCase().indexOf(term.toLowerCase());
         const bMatchIndex = b.name.toLowerCase().indexOf(term.toLowerCase());
 
         return aMatchIndex - bMatchIndex;
       });
-      
+
       setSearchResults(sortedResults);
       setOpen(true);
     } catch (error) {
@@ -94,8 +114,6 @@ const Header: React.FC = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-
-
   return (
     <>
       <AppBar
@@ -105,7 +123,7 @@ const Header: React.FC = () => {
           justifyContent: "center",
           boxShadow: "none",
           height: { xs: "auto", sm: "175px", md: "169px" },
-          background:'#fff'
+          background: "#fff",
         }}
       >
         <Toolbar
@@ -148,7 +166,7 @@ const Header: React.FC = () => {
                 onClick={handleMobileMenuToggle}
                 sx={{ display: { xs: "flex", sm: "none", md: "none" } }}
               >
-                <MenuIcon sx={{color:'black'}} />
+                <MenuIcon sx={{ color: "black" }} />
               </IconButton>
               <Logo
                 src="/assets/blacklogo.png"
@@ -166,7 +184,7 @@ const Header: React.FC = () => {
                 }}
               >
                 <StyledBadge badgeContent={1} color="secondary">
-                  <ShoppingCartIcon sx={{color:'black'}} />
+                  <ShoppingCartIcon sx={{ color: "black" }} />
                 </StyledBadge>
               </Box>
             </Box>
@@ -291,8 +309,8 @@ const Header: React.FC = () => {
                 <MenuItem onClick={handleClose}>Çıkış</MenuItem>
               </Menu>
               <Button
-              onClick={() => setIsOpen(true)}
-               variant="contained"
+                onClick={() => setIsOpen(true)}
+                variant="contained"
                 sx={{
                   backgroundColor: "#919191",
                   color: "#fff",
@@ -307,9 +325,7 @@ const Header: React.FC = () => {
                 }}
               >
                 <StyledBadge badgeContent={cartQuantity} color="secondary">
-                  <ShoppingCartIcon>
-                  {cartQuantity}
-                  </ShoppingCartIcon>
+                  <ShoppingCartIcon>{cartQuantity}</ShoppingCartIcon>
                 </StyledBadge>
                 <Typography sx={{ ml: 1 }}>SEPET</Typography>
               </Button>

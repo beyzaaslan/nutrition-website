@@ -21,7 +21,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
       flavor: item.flavor,
       size: item.size,
     };
-    increaseCartAmount(item.id,cartItemData);
+    increaseCartAmount(item.id, cartItemData);
   };
 
   return (
@@ -50,7 +50,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
             {item.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {item.flavor} {item.size}
+            {item.flavor} {item.size} ||''
           </Typography>
         </Box>
       </Box>

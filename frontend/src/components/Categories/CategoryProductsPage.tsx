@@ -41,7 +41,9 @@ const CategoryProductsPage = () => {
         
         if (categoryId) {
           const productsData = await getProductsByCategoryId(categoryId);
-          setProducts(productsData);
+          setProducts(productsData.data);
+          console.log("API Response:", productsData); // Yanıtı kontrol edin
+
         }
       } catch (error) {
         console.error("Ürünler alınırken hata oluştu:", error);

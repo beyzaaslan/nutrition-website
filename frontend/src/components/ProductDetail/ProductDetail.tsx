@@ -1,38 +1,56 @@
 import React, { useState, useMemo, useEffect } from "react";
-import { Box, Grid, Divider } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Divider,
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+} from "@mui/material";
 import { Product } from "../../types/Product";
 import { Variant } from "../../types/Variant";
-import { Size } from '../../types/Size';
+import { Size } from "../../types/Size";
 import { ProductRating } from "./ProductRating";
 import { ProductHeader } from "./ProductHeader";
 import { FlavorSelector } from "./FlavorSelector";
 import { SizeSelector } from "./SizeSelector";
 import { SelectedInfo } from "./SelectedInfo";
 import { ProductImage } from "./ProductImage";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-interface ProductDetailsProps {
+export interface ProductDetailsProps {
   product: Product;
-  discountPercentage?:number;
-  
+  discountPercentage?: number;
 }
 
 export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
-
-  const [selectedFlavor, setSelectedFlavor] = useState<string>(product.Variants?.[0]?.flavor ?? "");
-  const [selectedSize, setSelectedSize] = useState<Size | null>(product.Variants?.[0]?.Sizes[0] ?? null);
-  const [selectedPhoto, setSelectedPhoto] = useState<string>(product.Variants?.[0]?.photo_src || "");
-  const [selectedVariant, setSelectedVariant] = useState<Variant | null>(product.Variants?.[0] ?? null);
+  const [selectedFlavor, setSelectedFlavor] = useState<string>(
+    product.Variants?.[0]?.flavor ?? ""
+  );
+  const [selectedSize, setSelectedSize] = useState<Size | null>(
+    product.Variants?.[0]?.Sizes[0] ?? null
+  );
+  const [selectedPhoto, setSelectedPhoto] = useState<string>(
+    product.Variants?.[0]?.photo_src || ""
+  );
+  const [selectedVariant, setSelectedVariant] = useState<Variant | null>(
+    product.Variants?.[0] ?? null
+  );
   const tags: string[] = product.tags ? JSON.parse(product.tags) : [];
 
   const groupedVariants = useMemo(() => {
-    return product.Variants?.reduce<Record<string, Variant[]>>((acc, variant) => {
-      const flavor = variant.flavor;
-      if (!acc[flavor]) {
-        acc[flavor] = [];
-      }
-      acc[flavor].push(variant);
-      return acc;
-    }, {});
+    return product.Variants?.reduce<Record<string, Variant[]>>(
+      (acc, variant) => {
+        const flavor = variant.flavor;
+        if (!acc[flavor]) {
+          acc[flavor] = [];
+        }
+        acc[flavor].push(variant);
+        return acc;
+      },
+      {}
+    );
   }, [product.Variants]);
 
   const availableSizes = useMemo(() => {
@@ -44,7 +62,8 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
 
     const uniqueSizes = Array.from(
       new Map(
-        sizes.map((size) => [size.gram, size])
+        sizes
+          .map((size) => [size.gram, size])
           .filter((entry): entry is [number, Size] => entry[0] !== undefined)
       ).values()
     );
@@ -54,16 +73,22 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
 
   const handleFlavorSelect = (flavor: string, firstSize: Size) => {
     setSelectedFlavor(flavor);
-    if (!selectedSize || !availableSizes.some((s) => s.gram === selectedSize.gram)) {
+    if (
+      !selectedSize ||
+      !availableSizes.some((s) => s.gram === selectedSize.gram)
+    ) {
       setSelectedSize(firstSize);
     }
   };
 
   useEffect(() => {
     const currentVariant = product.Variants?.find(
-      (variant) =>variant.flavor === selectedFlavor && variant.Sizes.some((size) => size.gram === selectedSize?.gram));
-      setSelectedVariant(currentVariant || null);
-      const photo = currentVariant?.photo_src || ""; 
+      (variant) =>
+        variant.flavor === selectedFlavor &&
+        variant.Sizes.some((size) => size.gram === selectedSize?.gram)
+    );
+    setSelectedVariant(currentVariant || null);
+    const photo = currentVariant?.photo_src || "";
     setSelectedPhoto(photo);
   }, [selectedFlavor, selectedSize, product.Variants]);
 
@@ -79,7 +104,12 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
             height: "100%",
           }}
         >
-          <ProductImage product={product} selectedPhoto={selectedPhoto}     discountPercentage={selectedVariant?.PriceInfos[0]?.discount_percentage ?? null } 
+          <ProductImage
+            product={product}
+            selectedPhoto={selectedPhoto}
+            discountPercentage={
+              selectedVariant?.PriceInfos[0]?.discount_percentage ?? null
+            }
           />
         </Box>
       </Grid>
@@ -120,7 +150,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
             />
           )}
 
-{selectedFlavor && selectedSize && selectedVariant && (
+          {selectedFlavor && selectedSize && selectedVariant && (
             <Box sx={{ position: "relative" }}>
               <SelectedInfo
                 selectedFlavor={selectedFlavor}
@@ -130,6 +160,53 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                 id={product.id}
                 productName={product.name}
               />
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "start",
+                  flexDirection: "column",
+                  marginTop: "25px",
+                }}
+              >
+                {/* Divider */}
+                <Divider />
+
+                {/* Son Kullanma Tarihi */}
+                <Typography variant="body2" mt={3}>
+                  Son Kullanma Tarihi: 07.2025
+                </Typography>
+
+                {/* Accordion Sections */}
+                <Accordion sx={{ boxShadow: "none" }}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon  />}>
+                    <Typography sx={{fontWeight:600}}  >ÖZELLİKLER</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails
+                  >
+                    <Typography>{product.features}</Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Divider />
+
+                <Accordion sx={{ boxShadow: "none" }}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography sx={{fontWeight:600}}>BESİN İÇERİĞİ</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>{product.description}</Typography>
+                  </AccordionDetails>
+                </Accordion>
+                <Divider />
+
+                <Accordion sx={{ boxShadow: "none" }}>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography sx={{fontWeight:600}}>KULLANIM ŞEKLİ</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>{product.usage}</Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </Box>
             </Box>
           )}
         </Box>
