@@ -80,7 +80,6 @@ export const ProductListPage: React.FC = () => {
           </Grid>
         ))}
       </Grid>
-
       {loading && <div className="text-center py-8">Yükleniyor...</div>}
     </Container>
   );

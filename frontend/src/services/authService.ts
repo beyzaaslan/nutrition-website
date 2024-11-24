@@ -13,8 +13,16 @@ export const register = async (userData: User) => {
 export const getCurrentUser = async () => {
     return await apiRequest('GET', '/auth/me');
 };
+
 // E-posta doğrulama fonksiyonu
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const verifyEmail = async (data: any) => {
-    return await apiRequest('POST', '/auth/verifyemail' , data );
+export const verifyEmail = async () => {
+    const token = localStorage.getItem('verificationToken'); // Token'ı localStorage'den alın
+    if (!token) {
+        throw new Error('Verification token is missing');
+    }
+
+    return await apiRequest('POST', '/auth/verifyemail', { token });
 };
+
+
+

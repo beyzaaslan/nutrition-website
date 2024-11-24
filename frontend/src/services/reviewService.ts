@@ -1,17 +1,23 @@
-import { apiRequest } from './apiHelper';
-import { Review } from '../types/Review';
+import { apiRequest } from "./apiHelper";
+import { Review } from "../types/Review";
 
 // Tüm incelemeleri almak için
 export const getReviews = async () => {
-    return await apiRequest('GET', '/review');
+  return await apiRequest("GET", "/review");
 };
 
 // Belirli bir ürünün incelemelerini almak için
 export const getReviewsForProduct = async (productId: number) => {
-    return await apiRequest('GET', `/product/${productId}?include=review`);
+  const response = await apiRequest(
+    "GET",
+    `/product/${productId}?include=review`
+  );
+  console.log("responseComment",response.data.Reviews);
+  return response.data.Reviews || [];
 };
 
 // Yeni bir inceleme oluşturmak için
 export const createReview = async (reviewData: Review) => {
-    return await apiRequest('POST', '/review', reviewData);
+  const response = await apiRequest("POST", "/review", reviewData);
+  return response.data;
 };

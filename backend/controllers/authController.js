@@ -93,9 +93,8 @@ const me = async (req, res) => {
 
 const verifyEmail = async (req, res) => {
     try {
-        const token = req.body.token;
-        console.log("token","req",token,req);
-        
+        const { token } = req.body;
+
         if (!token) {
             return res.status(400).json({ message: 'Token is required' });
         }
@@ -108,21 +107,18 @@ const verifyEmail = async (req, res) => {
         }
 
         if (user.isVerified) {
-            console.log("beyza1");
             return res.status(400).json({ message: 'User already verified' });
         }
-          
+
         await db.User.update({ isVerified: true }, { where: { id: user.id } });
 
-        
-          console.log("beyza",user.id);
-        // Başarılı doğrulama sonrası login sayfasına yönlendirin
-        return res.redirect(`${process.env.CLIENT_URL}/login?verified=true`);
+        return res.status(200).json({ message: 'Email verified successfully' });
     } catch (err) {
         console.error(err.message);
         return res.status(500).json({ message: 'Server error' });
     }
 };
+
 
 
 

@@ -1,21 +1,5 @@
 import React, { useState } from "react";
-import {
-  AppBar,
-  Toolbar,
-  InputBase,
-  IconButton,
-  Box,
-  Button,
-  Menu,
-  MenuItem,
-  Typography,
-  Link,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  Modal,
-} from "@mui/material";
+import {AppBar,Toolbar,InputBase,IconButton,Box,Button,Menu,MenuItem,Typography,Link,Drawer,List,ListItem,ListItemText} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -23,22 +7,13 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { styled } from "@mui/material/styles";
 import Badge from "@mui/material/Badge";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import "./style.css";
-import { useNavigate } from "react-router-dom";
-import { Product } from "../../types/Product";
-import { searchProducts } from "../../services/productService";
 import { useShoppingCart } from '../../context/ShoppingCartContext';
+import SearchResultsModal from './SearchResultModal';
+import {useEffect} from 'react';
+import useDebounce from '../../hooks/useDebounce';
+import {useRef} from 'react';
+import { searchProducts } from '../../services/productService';
 
-const modalStyle = {
-  position: "absolute",
-  width: "95%",
-  bgcolor: "background.paper",
-  boxShadow: 24,
-  zIndex: 10,
-  borderRadius: "10px",
-  top: "2px",
-  left: "4%",
-};
 
 const StyledBadge = styled(Badge)(() => ({
   "& .MuiBadge-badge": {
@@ -55,59 +30,58 @@ const Logo = styled("img")({
 
 const Header: React.FC = () => {
   const { cartQuantity, setIsOpen } = useShoppingCart();
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [accountMenu, setAccountMenu] = useState<null | HTMLElement>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState<string>("");
-  const [searchResults, setSearchResults] = useState<Product[]>([]);
-  const [open, setOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [showResults, setShowResults] = useState(false);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
-  const navigate = useNavigate();
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
+        setShowResults(false);
+      }
+    };
 
-  const handleSearch = async (term: string) => {
-    if (term.trim() === "") {
-      setOpen(false);
-      setSearchResults([]);
-      return;
-    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
-    try {
-      const results = await searchProducts(term);
-      const sortedResults = results.sort((a: Product, b: Product) => {
-        const aStartsWith = a.name.toLowerCase().startsWith(term.toLowerCase());
-        const bStartsWith = b.name.toLowerCase().startsWith(term.toLowerCase());
-        if (aStartsWith && !bStartsWith) return -1;
-        if (!aStartsWith && bStartsWith) return 1;
+  // Arama terimi değiştiğinde otomatik arama
+  useEffect(() => {
+    const performSearch = async () => {
+      if (debouncedSearchTerm.trim()) {
+        try {
+          const results = await searchProducts(debouncedSearchTerm);
+          setSearchResults(results);
+          setShowResults(true);
+        } catch (error) {
+          console.error('Arama sırasında hata oluştu:', error);
+          setSearchResults([]);
+        }
+      } else {
+        setSearchResults([]);
+        setShowResults(false);
+      }
+    };
 
-        const aMatchIndex = a.name.toLowerCase().indexOf(term.toLowerCase());
-        const bMatchIndex = b.name.toLowerCase().indexOf(term.toLowerCase());
+    performSearch();
+  }, [debouncedSearchTerm]);
 
-        return aMatchIndex - bMatchIndex;
-      });
-
-      setSearchResults(sortedResults);
-      setOpen(true);
-    } catch (error) {
-      console.error("Arama hatası:", error);
-    }
-  };
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const term = event.target.value;
-    handleSearch(term);
-    setSearchTerm(term);
-  };
-
-  const handleProductClick = (product: Product): void => {
-    navigate(`/product/${product.id}`);
-    setOpen(false);
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
   };
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
+    setAccountMenu(event.currentTarget);
   };
 
   const handleClose = () => {
-    setAnchorEl(null);
+    setAccountMenu(null);
   };
 
   const handleMobileMenuToggle = () => {
@@ -190,6 +164,7 @@ const Header: React.FC = () => {
             </Box>
             {/* Wrapper for Search Bar */}
             <Box
+             ref={searchContainerRef}
               sx={{
                 width: { xs: "100%", sm: "35%", md: "40%" },
                 position: "relative",
@@ -215,8 +190,6 @@ const Header: React.FC = () => {
                 }}
               >
                 <InputBase
-                  value={searchTerm}
-                  onChange={handleInputChange}
                   sx={{
                     "&::placeholder": {
                       fontSize: { xs: "0", sm: "14px", md: "16px" }, // Ekran boyutuna göre font boyutu
@@ -227,9 +200,18 @@ const Header: React.FC = () => {
                   }}
                   placeholder="Aradığınız ürünü yazınız"
                   inputProps={{ "aria-label": "search" }}
+                  value={searchTerm}
+              onChange={handleSearchChange}
                 />
+                            {/* Arama Sonuçları Modal'ı */}
+            {showResults && (
+              <SearchResultsModal
+                results={searchResults}
+                searchTerm={searchTerm}
+                onClose={() => setShowResults(false)}
+              />
+            )}
                 <Button
-                  onClick={() => handleSearch(searchTerm)}
                   variant="contained"
                   sx={{
                     width: { xs: "100%", sm: "0px", md: "20%" },
@@ -242,33 +224,6 @@ const Header: React.FC = () => {
                   ARA
                 </Button>
               </Box>
-              <Modal
-                open={open}
-                onClose={() => setOpen(false)}
-                disableEnforceFocus
-                disableAutoFocus
-                sx={{
-                  position: "absolute",
-                  top: "11%", // Modal'ı InputBase'in altına yerleştir
-                  left: "30%",
-                  width: "33%", // Genişliği InputBase ile aynı yap
-                  height: "40%",
-                  zIndex: 10, // Modal'ın diğer elementlerin üstünde olması için
-                }}
-              >
-                <Box sx={modalStyle}>
-                  <List>
-                    {searchResults.map((product) => (
-                      <ListItem
-                        key={product.id}
-                        onClick={() => handleProductClick(product)}
-                      >
-                        <ListItemText primary={product.name} />
-                      </ListItem>
-                    ))}
-                  </List>
-                </Box>
-              </Modal>
             </Box>
             {/* Wrapper for Account and Cart Buttons */}
             <Box
@@ -300,8 +255,8 @@ const Header: React.FC = () => {
                 Hesap
               </Button>
               <Menu
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
+                anchorEl={accountMenu}
+                open={Boolean(accountMenu)}
                 onClose={handleClose}
               >
                 <MenuItem onClick={handleClose}>Profil</MenuItem>
@@ -440,5 +395,4 @@ const Header: React.FC = () => {
     </>
   );
 };
-
 export default Header;

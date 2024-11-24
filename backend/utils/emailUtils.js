@@ -11,7 +11,7 @@ const sendVerificationEmail = async (user) => {
         auth: {
             user: process.env.EMAIL,
             /* çift faktörlü dogrulama vardı bende bunu güvenlik >  uygulama şifreleri kısmından ayarladım */ 
-            pass: 'wnhe uunl jcoa czhc'  
+            pass: 'ddzt qirp rmnu trlx'  
         }
     });
     
