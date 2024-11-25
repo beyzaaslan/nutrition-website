@@ -15,14 +15,9 @@ export const getCurrentUser = async () => {
 };
 
 // E-posta doğrulama fonksiyonu
-export const verifyEmail = async () => {
-    const token = localStorage.getItem('verificationToken'); // Token'ı localStorage'den alın
-    if (!token) {
-        throw new Error('Verification token is missing');
-    }
-
-    return await apiRequest('POST', '/auth/verifyemail', { token });
-};
+export const verifyEmail = async (token: string) => {
+    return await apiRequest('POST',  '/auth/verifyEmail', { token });
+  };
 
 
 

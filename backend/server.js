@@ -4,15 +4,13 @@ const errorHandler = require('./middleware/errorHandler');
 const db = require('./models');
 const cors = require('cors');
 
+
 const app = express();
 app.use(cors());  // fonksiyonu çağırarak middleware'ı ekleyin
 app.use(express.json()); /* json parse */
 
 
-
-
-
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
     res.json({ message: 'Uygulamaya Hosgeldiinn.' });
 });
 

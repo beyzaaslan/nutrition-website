@@ -22,7 +22,6 @@ module.exports = (sequelize, DataTypes) => {
       //one-to-many
       Product.hasMany(models.Variant, { foreignKey: 'ProductId' });
     };
-
     return Product;
   };
   
