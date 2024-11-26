@@ -1,12 +1,12 @@
 import { CartItem } from '../types/CartItem';
 import { useLocalStorage } from '../hooks/useLocalStorage';
-import{ createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 interface ShoppingCartContextProps {
-  getItemAmount: (id: number) => number;
-  increaseCartAmount: (id: number, cartItemData: CartItem) => void;
-  decreaseCartAmount: (id: number) => void;
-  removeFromCart: (id: number) => void;
+  getItemAmount: (variantId: number) => number;
+  increaseCartAmount: (cartItemData: CartItem) => void;
+  decreaseCartAmount: (cartItemData: CartItem) => void;
+  removeFromCart: (variantId: number) => void;
   cartItems: CartItem[];
   cartQuantity: number;
   isOpen: boolean;
@@ -15,7 +15,9 @@ interface ShoppingCartContextProps {
 
 const ShoppingCartContext = createContext({} as ShoppingCartContextProps);
 
-export const useShoppingCart = () => {return useContext(ShoppingCartContext)};
+export const useShoppingCart = () => {
+  return useContext(ShoppingCartContext);
+};
 
 export const ShoppingCartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>('sepetteki-ürünler', []);
@@ -23,54 +25,56 @@ export const ShoppingCartProvider: React.FC<{ children: React.ReactNode }> = ({ 
 
   const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0);
 
-  const getItemAmount = (id: number) => {
-    return cartItems.find(item => item.id === id)?.quantity || 1;
+  const getItemAmount = (variantId: number) => {
+    return cartItems.find(item => item.variantId === variantId)?.quantity || 1;
   };
 
-  const increaseCartAmount = (id: number, cartItemData: CartItem) => {
+  const increaseCartAmount = (cartItemData: CartItem) => {
     setCartItems(currItems => {
-      const existingItem = currItems.find(item => item.id === id);
-      
+      const existingItem = currItems.find(
+        item => item.variantId === cartItemData.variantId && item.flavor === cartItemData.flavor
+      );
+
       if (!existingItem) {
-        return [...currItems, cartItemData];
+        return [...currItems, { ...cartItemData, quantity: 1 }];
       }
 
-      return currItems.map(item => {
-        if (item.id === id) {
-          return { ...cartItemData, quantity: item.quantity + 1 };
-        }
-        return item;
-      });
+      return currItems.map(item =>
+        item.variantId === cartItemData.variantId && item.flavor === cartItemData.flavor
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
     });
   };
-  
-  const decreaseCartAmount = (id: number) => {
+
+  const decreaseCartAmount = (cartItemData: CartItem) => {
     setCartItems(currItems => {
-      const existingItem = currItems.find(item => item.id === id);
-      
+      const existingItem = currItems.find(
+        item => item.variantId === cartItemData.variantId && item.flavor === cartItemData.flavor
+      );
+
       if (existingItem?.quantity === 1) {
-        return currItems.filter(item => item.id !== id);
+        return currItems.filter(
+          item => !(item.variantId === cartItemData.variantId && item.flavor === cartItemData.flavor)
+        );
       }
 
-      return currItems.map(item => {
-        if (item.id === id) {
-          return { ...item, quantity: item.quantity - 1 };
-        }
-        return item;
-      });
+      return currItems.map(item =>
+        item.variantId === cartItemData.variantId && item.flavor === cartItemData.flavor
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      );
     });
   };
-
-  const removeFromCart = (id: number) => {
-    setCartItems(currItems => currItems.filter(item => item.id !== id));
+  const removeFromCart = (variantId: number) => {
+    setCartItems(currItems => currItems.filter(item => item.variantId !== variantId));
   };
-
   return (
-    <ShoppingCartContext.Provider 
-      value={{ 
-        getItemAmount, 
-        increaseCartAmount, 
-        decreaseCartAmount, 
+    <ShoppingCartContext.Provider
+      value={{
+        getItemAmount,
+        increaseCartAmount,
+        decreaseCartAmount,
         removeFromCart,
         cartItems,
         cartQuantity,
@@ -82,5 +86,3 @@ export const ShoppingCartProvider: React.FC<{ children: React.ReactNode }> = ({ 
     </ShoppingCartContext.Provider>
   );
 };
-
-

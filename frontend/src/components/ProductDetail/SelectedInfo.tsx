@@ -32,20 +32,22 @@ export interface SelectedInfoProps {
 
 export const SelectedInfo: React.FC<SelectedInfoProps> = ({ priceInfo,id,selectedVariant,selectedFlavor,selectedSize,productName}) => {
   const { getItemAmount, increaseCartAmount, decreaseCartAmount } =useShoppingCart();
-  const quantity = getItemAmount(id);
+  const quantity = getItemAmount(selectedVariant.id);
+
+  const createCartItemData = (): CartItem => ({
+    id,
+    variantId: selectedVariant.id,
+    quantity: 1,
+    name: productName,
+    photo_src: selectedVariant.photo_src || "",
+    price: priceInfo?.discounted_price || priceInfo?.total_price || 0,
+    flavor: selectedFlavor,
+    size: `${selectedSize.gram}G`,
+  });
 
   const handleAddToCart = () => {
-    const cartItemData: CartItem = {
-      id,
-      variantId: selectedVariant.id,
-      quantity: 1,
-      name: productName,
-      photo_src: selectedVariant.photo_src || "",
-      price: priceInfo?.discounted_price || priceInfo?.total_price || 0,
-      flavor: selectedFlavor,
-      size: `${selectedSize.gram}G `,
-    };
-    increaseCartAmount(id, cartItemData);
+    const cartItemData = createCartItemData();
+    increaseCartAmount(cartItemData);
   };
 
   return (
@@ -123,7 +125,7 @@ export const SelectedInfo: React.FC<SelectedInfoProps> = ({ priceInfo,id,selecte
           }}
         >
           <IconButton
-            onClick={() => decreaseCartAmount(id)}
+            onClick={() => decreaseCartAmount(createCartItemData())}
             sx={{
               borderRight: "1px solid #ccc",
               backgroundColor: "#f7f7f7",
@@ -144,18 +146,8 @@ export const SelectedInfo: React.FC<SelectedInfoProps> = ({ priceInfo,id,selecte
           </Typography>
           <IconButton
             onClick={() => {
-              const cartItemData: CartItem = {
-                id,
-                variantId: selectedVariant.id,
-                quantity: 1,
-                name: productName,
-                photo_src: selectedVariant.photo_src || "",
-                price:
-                  priceInfo?.discounted_price || priceInfo?.total_price || 0,
-                flavor: selectedFlavor,
-                size: `${selectedSize.gram}Gram`,
-              };
-              increaseCartAmount(id, cartItemData);
+              const cartItemData = createCartItemData();
+              increaseCartAmount(cartItemData);
             }}
             sx={{
               borderRight: "1px solid #ccc",

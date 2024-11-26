@@ -64,10 +64,10 @@ const LoginRegister: React.FC = () => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-
+    console.log("Kayıt için gönderilen veriler:", formData);
     try {
       const response = await register(formData as unknown as User);
-      console.log("Kullanıcı başarıyla kaydedildi:", response);
+      console.log("Sunucudan gelen tam yanıt:", response.data);
       toast.success('Kayıt başarılı! E-postanızı kontrol edin ve doğrulama linkine tıklayın.', {
         position: "top-center",
         autoClose: 3000,
@@ -88,6 +88,8 @@ const LoginRegister: React.FC = () => {
         error.response?.data?.message || "Kayıt başarısız! Lütfen tekrar deneyin"
       );
       console.error("Kayıt hatası:", error);
+      console.error("Hata yanıtı:", error.response);
+
     }
   };
 

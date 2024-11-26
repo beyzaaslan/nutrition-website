@@ -10,18 +10,25 @@ interface CartItemProps {
 export const CartItem: React.FC<CartItemProps> = ({ item }) => {
   const { removeFromCart, increaseCartAmount, decreaseCartAmount } = useShoppingCart();
 
+  const createCartItemData = (): CartItemType => ({
+    id: item.id,
+    variantId: item.variantId,
+    quantity: 1,
+    name: item.name,
+    photo_src: item.photo_src,
+    price: item.price,
+    flavor: item.flavor,
+    size: item.size,
+  });
+
+  const handleDecrease = () => {
+    const cartItemData = createCartItemData();
+    decreaseCartAmount(cartItemData);
+  };
+
   const handleIncrease = () => {
-    const cartItemData: CartItemType = {
-      id: item.id,
-      variantId: item.variantId,
-      quantity: 1,
-      name: item.name,
-      photo_src: item.photo_src,
-      price: item.price,
-      flavor: item.flavor,
-      size: item.size,
-    };
-    increaseCartAmount(item.id, cartItemData);
+    const cartItemData = createCartItemData();
+    increaseCartAmount(cartItemData);
   };
 
   return (
@@ -31,7 +38,6 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
         alignItems: 'center',
         justifyContent: 'space-between',
         borderBottom: '1px solid #eee',
-
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
@@ -44,13 +50,13 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
             objectFit: 'fill',
           }}
         />
-        
+
         <Box>
           <Typography fontWeight="bold">
             {item.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {item.flavor} {item.size} ||''
+            {item.flavor} {item.size}
           </Typography>
         </Box>
       </Box>
@@ -67,7 +73,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
         >
           <IconButton
             size="small"
-            onClick={() => decreaseCartAmount(item.id)}
+            onClick={handleDecrease}
           >
             <RemoveIcon />
           </IconButton>
@@ -87,7 +93,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
         </Typography>
 
         <IconButton
-          onClick={() => removeFromCart(item.id)}
+          onClick={() => removeFromCart(item.variantId)}
           color="error"
         >
           <DeleteIcon />

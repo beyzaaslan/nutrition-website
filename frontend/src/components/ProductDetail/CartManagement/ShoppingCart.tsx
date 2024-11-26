@@ -22,7 +22,7 @@ export const ShoppingCart: React.FC = () => {
         </Box>
         {cartItems.map(item => (
           <CartItem 
-          key={`${item.id}-${item.variantId}`} 
+          key={item.variantId} 
           item={{
             id:item.id,
             variantId: item.variantId,

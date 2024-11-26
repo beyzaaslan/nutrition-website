@@ -7,7 +7,9 @@ export const login = async (credentials: { email: string; password: string }) =>
 };
 // Kullanıcı kayıt fonksiyonu
 export const register = async (userData: User) => {
-    return await apiRequest('POST', '/auth/register', userData);
+  const  response =  await apiRequest('POST', '/auth/register', userData);
+    console.log(response.userData);
+    return response
 };
 // Geçerli kullanıcıyı alma fonksiyonu
 export const getCurrentUser = async () => {

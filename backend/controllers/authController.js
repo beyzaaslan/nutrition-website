@@ -11,7 +11,7 @@ const register = async (req, res) => {
     }
 
     const {name, last_name, email, password, role} = req.body;
-
+      console.log("register",req.body);
     try {
         let user = await db.User.findOne({where: {email: email}});
         if (user) {
