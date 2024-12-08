@@ -10,18 +10,19 @@ import Typography from "@mui/material/Typography";
 import AddressSelection from "./AddressSelectionStep";
 import CreditCardForm from "./CreditCardForm"; // Import CreditCardForm
 import { Address } from "./../../types/Address";
+import Divider from '@mui/material/Divider';
 
 const steps = [
   {
     label: "Adres",
-    description: "Adres seçimi yaparak bir adım ilerleyin.",
+    description: "Teslimat Adresi",
   },
   {
     label: "Kargo",
-    description: "Ücretsiz Kargo (16:00 öncesi siparişler aynı gün kargolanır)",
+    description: "Ücretsiz Kargo (16:00 öncesi siparişler aynı gün kargolanır).",
   },
   {
-    label: "Siparişi Onayla",
+    label: "Ödeme",
     description: "Siparişinizi kontrol edin ve onaylayın.",
   },
 ];
@@ -33,8 +34,7 @@ export default function VerticalLinearStepper() {
   const handleNext = (address?: Address) => {
     if (activeStep === 0 && address) {
       setSelectedAddress(address);
-      // Adres seçildikten sonra Kargo adımını atla, doğrudan Siparişi Onayla adımına geç
-      setActiveStep(2); // 3. adım, yani Siparişi Onayla
+      setActiveStep(2);
     } else {
       setActiveStep((prevActiveStep) => prevActiveStep + 1);
     }
@@ -46,25 +46,45 @@ export default function VerticalLinearStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: 700 }}>
-      <Stepper activeStep={activeStep} orientation="vertical">
+    <Box sx={{ maxWidth: 400, overflowY: "auto" }}>
+      <Stepper
+        activeStep={activeStep}
+        orientation="vertical"
+        sx={{
+          "& .MuiStep-root": {
+            "& .MuiStepContent-root": {
+              marginTop: 2,
+              borderLeft: "none", // Remove the vertical line
+            },
+          },
+          "& .MuiStepConnector-lineVertical": {
+            display: "none", // Hide vertical line
+          },
+          "& .MuiStepConnector-line": {
+            height: 2, // Make the line horizontal
+          },
+        }}
+      >
         {steps.map((step, index) => (
-          <Step key={step.label}>
-            <StepLabel>{step.label}</StepLabel>
-            <StepContent>
-              <Typography variant="body1" sx={{ mb: 2 }}>
-                {step.description} {/* Show the description */}
+          <Step key={step.label} sx={{ marginTop: "10px" }}>
+            <StepLabel>
+              <Typography variant="h6">{step.label}</Typography>
+              <Typography variant="body2" color="text.secondary">
+                {step.description}
               </Typography>
+            </StepLabel>
+            <StepContent>
               {index === 0 ? (
                 <AddressSelection
-                  onAddressSelect={(address) => handleNext(address)} // Adres seçildiğinde otomatik geçiş
+                  onAddressSelect={(address) => handleNext(address)}
                 />
               ) : index === 1 ? (
-                <Typography>{step.description}</Typography> // Kargo bilgisi (Atlanacak)
+                <Typography>{step.description}</Typography>
               ) : (
-                <CreditCardForm /> // 3. adımda kredi kartı formunu ekle
+                <CreditCardForm />
               )}
             </StepContent>
+            {index < steps.length - 1 && <Divider />}
           </Step>
         ))}
       </Stepper>

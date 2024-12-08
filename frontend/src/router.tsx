@@ -10,7 +10,6 @@ const AppRouter = () => {
     //alısveris sepeti artık tumune erişebilir demek bu  
     <ShoppingCartProvider>
       <AddressProvider>
-   
       <Routes>
                 <Route path="/" element={<MainLayout><Homepage /></MainLayout>} />
                 <Route path="/about" element={<MainLayout><About /></MainLayout>} />
@@ -18,16 +17,14 @@ const AppRouter = () => {
                 <Route path="/cart" element={<MainLayout><Cart /></MainLayout>} />
                 <Route path="/contact" element={<MainLayout><Contact /></MainLayout>} />
                 <Route path="/account" element={<MainLayout><Account /></MainLayout>} />
-                <Route path="/payment" element={<MainLayout><Payment /></MainLayout>} />
+                <Route path="/payment" element={<Payment />} />
                 <Route path="/404" element={<MainLayout><Page404 /></MainLayout>} />
                 <Route path="/sss" element={<MainLayout><SSS /></MainLayout>} />
                 <Route path="/product/:productId" element={<MainLayout><Detail /></MainLayout>} />
                 <Route path="/all-products" element={<MainLayout><ProductList /></MainLayout>} />
                 <Route path="/:categoryName" element={<MainLayout><CategoryProductsPage /></MainLayout>} />
                 <Route path="*" element={<MainLayout><Page404 /></MainLayout>} /> {/* Catch-all route for 404 */}
-                
       </Routes>
-   
       </AddressProvider>
       </ShoppingCartProvider>
 

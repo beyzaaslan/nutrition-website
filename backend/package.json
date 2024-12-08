@@ -23,6 +23,7 @@
     "passport-local": "^1.0.0",
     "react-hot-loader": "^4.13.1",
     "sequelize": "^6.37.3",
+    "stripe": "^17.4.0",
     "tedious": "^18.3.0"
   }
 }

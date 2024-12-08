@@ -8,22 +8,15 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import { Checkbox } from "@mui/material";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle'; // Checkmark icon
 
 const CreditCardForm: React.FC = () => {
-  const [paymentMethod, setPaymentMethod] = React.useState<
-    "credit_card" | "cash" | "none"
-  >("none");
+  const [paymentMethod, setPaymentMethod] = React.useState<"credit_card" | "cash" | "none">("none");
   const [agreeTerms, setAgreeTerms] = React.useState(false);
 
-  const handlePaymentMethodChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const handlePaymentMethodChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value as "credit_card" | "cash" | "none";
-
-    // Reset the checkbox state if the payment method is toggled
     setAgreeTerms(false);
-
-    // If the selected method is already the current one, reset it (deselect it)
     setPaymentMethod((prev) => (prev === value ? "none" : value));
   };
 
@@ -32,101 +25,97 @@ const CreditCardForm: React.FC = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, backgroundColor: "red" }}>
+    <Box sx={{ maxWidth: 400, borderRadius: "4px" }}>
       {/* Accordion, Kredi Kartı Seçildiğinde Açılacak */}
       <Accordion
         expanded={paymentMethod === "credit_card"}
-        sx={{ border: "1px solid #ccc", borderRadius: 1, background: "yellow" }}
+        sx={{
+          border: paymentMethod === "credit_card" ? "2px solid blue" : "2px solid #ccc",
+          background: paymentMethod === "credit_card" ? "#f7f7f9" : "#fff",
+        }}
       >
         <AccordionSummary
           aria-controls="credit-card-content"
           id="credit-card-header"
-          sx={{
-            borderBottom: "1px solid #ccc",
-            background: "pink",
-          }}
+          onChange={handlePaymentMethodChange}
         >
           <FormControlLabel
-            sx={{ background: "green" }}
             control={
               <Radio
                 checked={paymentMethod === "credit_card"}
-                onChange={handlePaymentMethodChange}
                 value="credit_card"
                 name="payment-method"
+                icon={<CheckCircleIcon />}  // Custom icon when not selected
+                checkedIcon={<CheckCircleIcon sx={{ color: "blue" }} />}  // Icon when selected (blue color)
               />
             }
-            label="Kredi Kartı ile Ödeme"
+            label="Kredi Kartı"
           />
         </AccordionSummary>
-        <AccordionDetails sx={{ background: "purple" }}>
+        <AccordionDetails sx={{ background: "#f7f7f9" }}>
           <TextField
             fullWidth
-            label="Kart Numarası"
+            placeholder="Kart Numarası"
             variant="outlined"
             sx={{
-              backgroundColor: "cyan",
-              borderColor: "#ccc", // Border color for TextField
+              backgroundColor: "#fff",
               "& .MuiOutlinedInput-root": {
-                "& fieldset": {
-                  borderColor: "#ccc", // Gray border
-                },
+                "& fieldset": { borderColor: "#ccc" },
               },
             }}
           />
           <TextField
             fullWidth
-            label="Kart Üzerindeki İsim"
+            placeholder="Kart Üzerindeki İsim"
             variant="outlined"
             margin="normal"
             sx={{
-              backgroundColor: "cyan",
-
-              borderColor: "#ccc",
+              backgroundColor: "#fff",
               "& .MuiOutlinedInput-root": {
-                "& fieldset": {
-                  borderColor: "#ccc",
-                },
+                "& fieldset": { borderColor: "#ccc" },
               },
             }}
           />
-          <TextField
-            fullWidth
-            label="Ay / Yıl"
-            variant="outlined"
-            margin="normal"
-            sx={{
-              backgroundColor: "cyan",
 
-              borderColor: "#ccc",
-              "& .MuiOutlinedInput-root": {
-                "& fieldset": {
-                  borderColor: "#ccc",
+          {/* Ay/Yıl ve CVC Yan Yana */}
+          <Box sx={{ display: 'flex', gap: 2, mt: 1 }}>
+            <TextField
+              fullWidth
+              placeholder="Ay / Yıl"
+              variant="outlined"
+              margin="normal"
+              sx={{
+                backgroundColor: "#fff",
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "#ccc" },
                 },
-              },
-            }}
-          />
-          <TextField
-            fullWidth
-            label="CVC"
-            variant="outlined"
-            margin="normal"
-            sx={{
-              backgroundColor: "cyan",
-
-              borderColor: "#ccc",
-              "& .MuiOutlinedInput-root": {
-                "& fieldset": {
-                  borderColor: "#ccc",
+              }}
+            />
+            <TextField
+              fullWidth
+              placeholder="CVC"
+              variant="outlined"
+              margin="normal"
+              sx={{
+                backgroundColor: "#fff",
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "#ccc" },
                 },
-              },
-            }}
-          />
+              }}
+            />
+          </Box>
         </AccordionDetails>
       </Accordion>
 
-      {/* Kapıda Ödeme Seçenekleri */}
-      <Box mt={2} sx={{ border: "3px solid #ccc", borderRadius: 1 }}>
+      {/* Kapıda Ödeme (Nakit) */}
+      <Box
+        mt={2}
+        sx={{
+          border: paymentMethod === "cash" ? "3px solid blue" : "3px solid #ccc",
+          background: paymentMethod === "cash" ? "#f7f7f9" : "#fff",
+          borderRadius: 1,
+        }}
+      >
         <FormControlLabel
           control={
             <Radio
@@ -134,6 +123,8 @@ const CreditCardForm: React.FC = () => {
               onChange={handlePaymentMethodChange}
               value="cash"
               name="payment-method"
+              icon={<CheckCircleIcon />}  // Custom icon when not selected
+              checkedIcon={<CheckCircleIcon sx={{ color: "blue" }} />}  // Icon when selected (blue color)
             />
           }
           label="Kapıda Ödeme (Nakit)"
@@ -143,7 +134,16 @@ const CreditCardForm: React.FC = () => {
           }}
         />
       </Box>
-      <Box mt={2} sx={{ border: "3px solid #ccc" }}>
+
+      {/* Kapıda Ödeme (Kredi) */}
+      <Box
+        mt={2}
+        sx={{
+          border: paymentMethod === "none" ? "3px solid blue" : "3px solid #ccc",
+          background: paymentMethod === "none" ? "#f7f7f9" : "#fff",
+          borderRadius: 1,
+        }}
+      >
         <FormControlLabel
           control={
             <Radio
@@ -151,11 +151,12 @@ const CreditCardForm: React.FC = () => {
               onChange={handlePaymentMethodChange}
               value="none"
               name="payment-method"
+              icon={<CheckCircleIcon />}  // Custom icon when not selected
+              checkedIcon={<CheckCircleIcon sx={{ color: "blue" }} />}  // Icon when selected (blue color)
             />
           }
           label="Kapıda Ödeme (Kredi)"
           sx={{
-            borderRadius: 1,
             width: "95%",
             padding: "10px",
           }}
