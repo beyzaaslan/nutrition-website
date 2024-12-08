@@ -9,6 +9,6 @@ module.exports = (sequelize, DataTypes) => {
             enum: ["pending", "completed", "cancelled"]
         },
     });
-
     return Order;
 }
+

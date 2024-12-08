@@ -102,7 +102,7 @@ const LoginRegister: React.FC = () => {
         password: formData.password,
       });
 
-      Cookies.set("authToken", response.token);
+      Cookies.set("x-auth-token", response.data.token); 
       try {
         await verifyEmail(response.data.token);
         toast.success("Token başarıyla doğrulandı!");

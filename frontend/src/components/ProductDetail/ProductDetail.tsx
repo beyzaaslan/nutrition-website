@@ -32,7 +32,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     product.Variants?.[0]?.Sizes[0] ?? null
   );
   const [selectedPhoto, setSelectedPhoto] = useState<string>(
-    product.Variants?.[0]?.photo_src || ""
+    product.Variants?.[0]?.photo_src || "Resim bulunamadı"
   );
   const [selectedVariant, setSelectedVariant] = useState<Variant | null>(
     product.Variants?.[0] ?? null

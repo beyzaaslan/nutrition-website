@@ -1,152 +1,279 @@
-import { useState, useEffect } from "react";
-import { Box, Grid, Button, Alert, Typography, TextField } from "@mui/material";
-import { createAddress } from "../../services/addressService";
-import { getCurrentUser } from '../../services/authService';
-
-// Address form data type
-interface AddressFormData {
-  address_line1: string;
-  address_line2?: string;
-  city: string;
-  state: string;
-  postal_code: string;
-  country: string;
-  UserId?: undefined; // UserId is optional
-}
+import React, { useEffect, useState } from "react";
+import { getCurrentUser } from '../../services/me';  // Make sure this imports correctly
+import { Box, Typography, Alert, Button, Grid, TextField } from '@mui/material';
+import { User } from "../../types/User";
+import { Address } from "../../types/Address";
+import { useAddress } from '../../context/AddressContext';
+import Cookies from 'js-cookie';
 
 interface AddressFormProps {
-  onAddressAdded: () => void;
+  initialAddress?: Address;
+  onSubmit?: (address: Address) => Promise<void>;
+  onCancel?: () => void;
+  className?: string; 
+
 }
 
-const AddressForm: React.FC<AddressFormProps> = ({ onAddressAdded }) => {
-  const [formData, setFormData] = useState<AddressFormData>({
-    address_line1: "",
-    address_line2: "",
-    city: "",
-    state: "",
-    postal_code: "",
-    country: "",
-    UserId: undefined,
-  });
-
+const AddressForm: React.FC<AddressFormProps> = ({ 
+  initialAddress, 
+  onSubmit, 
+  className,
+}) => {
+  const { addAddress, updateExistingAddress, addresses } = useAddress();
+  const [user, setUser] = useState<User>();
+  const [loading, setLoading] = useState(true);
+  const [formData, setFormData] = useState<Address>({address_line1: '',address_line2: '',city: '',state: '',postal_code: '',country: 'Turkey',is_primary: false,...(initialAddress || {}),});
   useEffect(() => {
-    const fetchUserId = async () => {
+    const fetchUser = async () => {
       try {
-        const user = await getCurrentUser();
-        setFormData((prevData) => ({
-          ...prevData,
-          UserId: user?.id,
-        }));
+        const token = Cookies.get('x-auth-token');
+        console.log("tokenbeyza",token)
+        if (token) {
+          const currentUser = await getCurrentUser(); 
+          setUser(currentUser.id);
+          console.log("setUser",currentUser);
+          setFormData((prevFormData) => ({
+            ...prevFormData,
+            UserId: currentUser.user,
+          }));
+        } else {
+          console.error("No token found.");
+        }
       } catch (error) {
-        console.error("Error fetching current user:", error);
+        console.error("Error fetching user:", error);
+      } finally {
+        setLoading(false);
       }
     };
+    if (!initialAddress) {
+      fetchUser();
+    } else {
+      setLoading(false);
+    }
+  }, [initialAddress]);
 
-    fetchUserId();
-  }, []);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const { UserId, ...addressData } = formData;
-    if (UserId !== undefined) {
-      try {
-        await createAddress({ ...addressData, UserId });
-        console.log("Address added successfully");
-        onAddressAdded();
-        setFormData({
-          address_line1: "",
-          address_line2: "",
-          city: "",
-          state: "",
-          postal_code: "",
-          country: "",
-          UserId,
-        });
-      } catch (error) {
-        console.error("Error adding address", error);
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+
+    try {
+      if (onSubmit) {
+        await onSubmit(formData);
+        return;
       }
-    } else {
-      console.error("UserId is not defined");
+
+      if (user) {
+        if (initialAddress) {
+          await updateExistingAddress(initialAddress.id!, formData);
+        } else {
+          await addAddress(formData);
+        }
+        setFormData({address_line1: '',address_line2: '',city: '',state: '',postal_code: '',country: 'Turkey',is_primary: false,UserId: user.id,});
+      }
+    } catch (error) {
+      console.error("Error submitting address:", error);
     }
   };
 
-  return (
-    <Box sx={{ paddingX: 6 }}>
-      <Box sx={{ width: "100%", display: "flex", flexDirection: "column" }}>
-        <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
-          Create Address
-        </Typography>
-        <Alert
-          severity="info"
-          sx={{ backgroundColor: "#f4f1ff", border: "1px solid #9C27B0" }}
-        >
-          No address found. Please create one below.
+  if (loading) return <div>Yükleniyor...</div>;
+
+  if (!user) {
+    return (
+      <Box>
+        <Typography variant="h6">Adres Oluştur</Typography>
+        <Alert severity="info">
+          Adres işlemleri için lütfen giriş yapın.
         </Alert>
       </Box>
-      <form onSubmit={handleSubmit}>
-        <Grid container spacing={1} sx={{ marginTop: 1 }}>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              name="address_line1"
-              label="Address Line 1"
-              value={formData.address_line1}
-              onChange={handleInputChange}
-            />
+    );
+  }
+  return (
+    <Box>
+      <Typography variant="h6" gutterBottom>
+        {initialAddress ? 'Adresi Düzenle' : 'Adres Oluştur'}
+      </Typography>
+      {!initialAddress && addresses.length === 0 && (
+        <Alert
+        severity="info"
+        sx={{ backgroundColor: "#f4f1ff", border: "1px solid #9C27B0" }}
+      >
+        Kayıtlı bir adresiniz yok. Lütfen aşağıdaki kısımdan adres
+        oluşturunuz.
+      </Alert>
+      )}
+      <form onSubmit={handleSubmit}  className={className}>
+      <Grid container spacing={1} sx={{ marginTop: 1 }}>
+      <Grid item xs={12} md={6}>
+              <Typography
+                variant="body1"
+                sx={{ fontWeight: "500", color: "#222222" }}
+              >
+                *Adres Başlığı
+              </Typography>
+              <TextField
+                onChange={handleInputChange}
+                fullWidth
+                name="address_line1"
+                value={formData.address_line1}
+                placeholder="ev, iş vb..."
+                variant="outlined"
+                required
+                sx={{
+                  backgroundColor: "#F7F7F7",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": { borderColor: "#E5E5E5" },
+                  },
+                }}
+              />
+            </Grid>
+            <Grid container spacing={1} sx={{ marginTop: 1 }}>
+            <Grid item xs={12} md={6}>
+              <Typography
+                variant="body1"
+                sx={{ fontWeight: "500", color: "#222222" }}
+              >
+                *Ad
+              </Typography>
+              <TextField
+                required
+                onChange={handleInputChange}
+                fullWidth
+                name="name"
+                variant="outlined"
+                sx={{
+                  backgroundColor: "#F7F7F7",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": { borderColor: "#E5E5E5" },
+                  },
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Typography
+                variant="body1"
+                sx={{ fontWeight: "500", color: "#222222" }}
+              >
+                *Soyad
+              </Typography>
+              <TextField
+                required
+                onChange={handleInputChange}
+                fullWidth
+                name="lastName"
+                variant="outlined"
+                sx={{
+                  backgroundColor: "#F7F7F7",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": { borderColor: "#E5E5E5" },
+                  },
+                }}
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              name="address_line2"
-              label="Address Line 2"
-              value={formData.address_line2}
-              onChange={handleInputChange}
-            />
+
+          <Grid container spacing={1} sx={{ marginTop: 1 }}>
+            <Grid item xs={12}>
+              <Typography
+                variant="body1"
+                sx={{ fontWeight: "500", color: "#222222" }}
+              >
+                *Adres
+              </Typography>
+              <TextField
+                required
+                onChange={handleInputChange}
+                fullWidth
+                name="address_line2"
+                value={formData.address_line2}
+                variant="outlined"
+                sx={{
+                  backgroundColor: "#F7F7F7",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": { borderColor: "#E5E5E5" },
+                  },
+                }}
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={6}>
-            <TextField
-              fullWidth
-              name="city"
-              label="City"
-              value={formData.city}
-              onChange={handleInputChange}
-            />
+
+          <Grid container spacing={1} sx={{ marginTop: 1 }}>
+            <Grid item xs={12} md={6}>
+              <Typography
+                variant="body1"
+                sx={{ fontWeight: "500", color: "#222222" }}
+              >
+                *Şehir
+              </Typography>
+              <TextField
+                required
+                onChange={handleInputChange}
+                fullWidth
+                name="city"
+                value={formData.city}
+                variant="outlined"
+                sx={{
+                  backgroundColor: "#F7F7F7",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": { borderColor: "#E5E5E5" },
+                  },
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Typography
+                variant="body1"
+                sx={{ fontWeight: "500", color: "#222222" }}
+              >
+                *İlçe
+              </Typography>
+              <TextField
+                required
+                onChange={handleInputChange}
+                fullWidth
+                name="state"
+                value={formData.state}
+                variant="outlined"
+                sx={{
+                  backgroundColor: "#F7F7F7",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": { borderColor: "#E5E5E5" },
+                  },
+                }}
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={6}>
-            <TextField
-              fullWidth
-              name="state"
-              label="State"
-              value={formData.state}
-              onChange={handleInputChange}
-            />
+
+          <Grid container spacing={1} sx={{ marginTop: 1 }}>
+            <Grid item xs={12}>
+              <Typography
+                variant="body1"
+                sx={{ marginY: "2px", fontWeight: "500", color: "#222222" }}
+              >
+                *Telefon
+              </Typography>
+              <TextField
+                required
+                onChange={handleInputChange}
+                fullWidth
+                name="phone"
+                variant="outlined"
+                sx={{
+                  backgroundColor: "#F7F7F7",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": { borderColor: "#E5E5E5" },
+                  },
+                }}
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={6}>
-            <TextField
-              fullWidth
-              name="postal_code"
-              label="Postal Code"
-              value={formData.postal_code}
-              onChange={handleInputChange}
-            />
-          </Grid>
-          <Grid item xs={6}>
-            <TextField
-              fullWidth
-              name="country"
-              label="Country"
-              value={formData.country}
-              onChange={handleInputChange}
-            />
-          </Grid>
-        </Grid>
+
         <Box textAlign="right" mt={3}>
           <Button
             variant="contained"
@@ -161,6 +288,8 @@ const AddressForm: React.FC<AddressFormProps> = ({ onAddressAdded }) => {
             Kaydet
           </Button>
         </Box>
+      </Grid>
+       
       </form>
     </Box>
   );

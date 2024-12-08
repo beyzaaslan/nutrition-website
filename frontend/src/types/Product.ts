@@ -4,7 +4,6 @@ import { PriceInfo } from './PriceInfo';
 import { Variant } from './Variant';
 
 export interface Product {
-  productId:number;
   id: number; 
   name: string; 
   short_explanation: string; 

@@ -23,6 +23,7 @@ const Homepage = () => {
     height = "480px";
   }
 
+
   return (
     <div>
       <Box
@@ -47,6 +48,7 @@ const Homepage = () => {
       <Typography variant="h6" gutterBottom textAlign="center" mt={3}>
         ÇOK SATANLAR
       </Typography>
+      
       <Box
         sx={{
           width: "100%",

@@ -8,7 +8,7 @@ interface CartItemProps {
 }
 
 export const CartItem: React.FC<CartItemProps> = ({ item }) => {
-  const { removeFromCart, increaseCartAmount, decreaseCartAmount } = useShoppingCart();
+  const {removeFromCart, increaseCartAmount, decreaseCartAmount } = useShoppingCart();
 
   const createCartItemData = (): CartItemType => ({
     id: item.id,
@@ -38,6 +38,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
         alignItems: 'center',
         justifyContent: 'space-between',
         borderBottom: '1px solid #eee',
+        background:'#F7F7F7'
       }}
     >
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
@@ -98,6 +99,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
         >
           <DeleteIcon />
         </IconButton>
+    
       </Box>
     </Box>
   );

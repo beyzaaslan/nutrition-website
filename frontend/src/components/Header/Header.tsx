@@ -98,6 +98,7 @@ const Header: React.FC = () => {
           boxShadow: "none",
           height: { xs: "auto", sm: "175px", md: "169px" },
           background: "#fff",
+
         }}
       >
         <Toolbar

@@ -1,11 +1,12 @@
+import Question from '../components/Sss/Question';
 
-const SSS = () => {
+
+const Sss = () => {
   return (
     <div>
-      SSS
+      <Question/>
     </div>
   )
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
-export default SSS
+export default Sss

@@ -1,8 +1,8 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import AccountInfo from './AccountInfo';
 import Orders from './Orders';
 import LayoutAccount from './LayoutAccount';
-import Address from './AddressList';
+import AddressList from './AddressList';
 
 const AccountPage = () => {
   const [selectedTab, setSelectedTab] = useState('account');
@@ -14,12 +14,9 @@ const AccountPage = () => {
       case 'orders':
         return <Orders />;
       case 'address':
-        return <Address />;
-      default:
-        return null;
-    }
-  };
-
+        return <AddressList  />
+  }
+  }
   return (
     <LayoutAccount onTabChange={setSelectedTab}>
       {renderContent()}

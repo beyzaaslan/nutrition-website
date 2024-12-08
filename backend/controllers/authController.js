@@ -34,7 +34,7 @@ const register = async (req, res) => {
 
         await sendVerificationEmail(user);  // E-posta doğrulama maili gönderiliyor
         const payload = {userId: user.id};
-        const token = jwt.sign(payload, process.env.JWT_SECRET, {expiresIn: '1h'});
+        const token = jwt.sign(payload, process.env.JWT_SECRET, {expiresIn: '15m'});
 
         res.status(201).json({token});
     } catch (err) {
@@ -59,8 +59,7 @@ const login = async (req, res) => {
             return res.status(400).json({msg: 'Invalid credentials'});
         }
 
-        const payload = {userId: user.id};
-        const token = jwt.sign(payload, process.env.JWT_SECRET, {expiresIn: '1h'});
+        const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
         res.status(200).json({token});
     } catch (err) {
@@ -68,7 +67,6 @@ const login = async (req, res) => {
         res.status(500).send('Server error');
     }
 };
-
 const me = async (req, res) => {
     const token = req.header('x-auth-token');
 
@@ -85,14 +83,16 @@ const me = async (req, res) => {
             return res.status(401).json({msg: 'Invalid token'});
         }
 
-        res.status(200).json({user: {id: user.id, name: user.name, email: user.email}});
+        res.status(200).json({user: {id: user.id, name: user.name,email: user.email, lastName:user.lastName}});
     } catch (err) {
         res.status(401).json({msg: 'Invalid token'});
     }
 };
 
+
 const verifyEmail = async (req, res) => {
     try {
+
         const { token } = req.body;
 
         if (!token) {

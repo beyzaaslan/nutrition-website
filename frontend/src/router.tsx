@@ -3,12 +3,15 @@ import MainLayout from './layouts/MainLayout';
 import CategoryProductsPage from './components/Categories/CategoryProductsPage';
 import { ShoppingCartProvider } from './context/ShoppingCartContext';
 import { About,Account,Cart,Contact,Homepage,Page404,Payment,SSS,Login,ProductList,Detail,} from './pages'; 
+import { AddressProvider } from './context/AddressContext';
 
 const AppRouter = () => {
   return (
-    //alısveris sepeti artık tumune erişebilir demek bu 
+    //alısveris sepeti artık tumune erişebilir demek bu  
     <ShoppingCartProvider>
-        <Routes>
+      <AddressProvider>
+   
+      <Routes>
                 <Route path="/" element={<MainLayout><Homepage /></MainLayout>} />
                 <Route path="/about" element={<MainLayout><About /></MainLayout>} />
                 <Route path="/login" element={<MainLayout><Login/></MainLayout>} />
@@ -23,8 +26,11 @@ const AppRouter = () => {
                 <Route path="/:categoryName" element={<MainLayout><CategoryProductsPage /></MainLayout>} />
                 <Route path="*" element={<MainLayout><Page404 /></MainLayout>} /> {/* Catch-all route for 404 */}
                 
-        </Routes>
-    </ShoppingCartProvider>
+      </Routes>
+   
+      </AddressProvider>
+      </ShoppingCartProvider>
+
            
   )
 }

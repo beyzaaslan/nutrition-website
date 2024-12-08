@@ -7,6 +7,7 @@ interface ShoppingCartContextProps {
   increaseCartAmount: (cartItemData: CartItem) => void;
   decreaseCartAmount: (cartItemData: CartItem) => void;
   removeFromCart: (variantId: number) => void;
+  getTotalPrice: () => number;
   cartItems: CartItem[];
   cartQuantity: number;
   isOpen: boolean;
@@ -66,9 +67,15 @@ export const ShoppingCartProvider: React.FC<{ children: React.ReactNode }> = ({ 
       );
     });
   };
+
   const removeFromCart = (variantId: number) => {
     setCartItems(currItems => currItems.filter(item => item.variantId !== variantId));
   };
+
+  const getTotalPrice = () => {
+    return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+  };
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -76,6 +83,7 @@ export const ShoppingCartProvider: React.FC<{ children: React.ReactNode }> = ({ 
         increaseCartAmount,
         decreaseCartAmount,
         removeFromCart,
+        getTotalPrice,
         cartItems,
         cartQuantity,
         isOpen,
