@@ -37,7 +37,6 @@ export const getProductById = async (productId: number): Promise<Product | null>
     }
 };
 
-
 // Yeni bir ürün oluşturmak için
 export const createProduct = async (productData: Product) => {
     try {

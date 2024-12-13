@@ -1,186 +1,100 @@
-import * as React from "react";
-import TextField from "@mui/material/TextField";
-import Radio from "@mui/material/Radio";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import { Checkbox } from "@mui/material";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import CheckCircleIcon from '@mui/icons-material/CheckCircle'; // Checkmark icon
+import React, { useState } from 'react';
+import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
+import { useNavigate } from 'react-router-dom';
+import { createStripePayment } from '../../services/stripe';
 
-const CreditCardForm: React.FC = () => {
-  const [paymentMethod, setPaymentMethod] = React.useState<"credit_card" | "cash" | "none">("none");
-  const [agreeTerms, setAgreeTerms] = React.useState(false);
+interface CreditCardFormProps {
+    orderId: number;
+    amount: number;
+    orderResponse: any; // orderResponse'ı buraya ekliyoruz
+}
 
-  const handlePaymentMethodChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value as "credit_card" | "cash" | "none";
-    setAgreeTerms(false);
-    setPaymentMethod((prev) => (prev === value ? "none" : value));
-  };
+const CreditCardForm: React.FC<CreditCardFormProps> = ({ orderId, amount }) => {
+    const stripe = useStripe();
+    const elements = useElements();
+    const navigate = useNavigate();
 
-  const handleTermsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setAgreeTerms(event.target.checked);
-  };
+    const [processing, setProcessing] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const [success, setSuccess] = useState(false);
 
-  return (
-    <Box sx={{ maxWidth: 400, borderRadius: "4px" }}>
-      {/* Accordion, Kredi Kartı Seçildiğinde Açılacak */}
-      <Accordion
-        expanded={paymentMethod === "credit_card"}
-        sx={{
-          border: paymentMethod === "credit_card" ? "2px solid blue" : "2px solid #ccc",
-          background: paymentMethod === "credit_card" ? "#f7f7f9" : "#fff",
-        }}
-      >
-        <AccordionSummary
-          aria-controls="credit-card-content"
-          id="credit-card-header"
-          onChange={handlePaymentMethodChange}
-        >
-          <FormControlLabel
-            control={
-              <Radio
-                checked={paymentMethod === "credit_card"}
-                value="credit_card"
-                name="payment-method"
-                icon={<CheckCircleIcon />}  // Custom icon when not selected
-                checkedIcon={<CheckCircleIcon sx={{ color: "blue" }} />}  // Icon when selected (blue color)
-              />
+    const handlePaymentSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setProcessing(true);
+        setError(null);
+
+        if (!stripe || !elements) {
+            setError('Stripe yüklenemedi. Lütfen sayfayı yenileyin.');
+            setProcessing(false);
+            return;
+        }
+
+        const cardElement = elements.getElement(CardElement);
+
+        if (!cardElement) {
+            setError('Kart bilgileri bulunamadı.');
+            setProcessing(false);
+            return;
+        }
+
+        try {
+            // Stripe ödeme için clientSecret'ı almak
+            const response = await createStripePayment(orderId, amount);  // Parametreler burada değişti
+            const clientSecret = response.data.clientSecret;  // 'clientSecret' response'dan alınır
+
+            // Stripe ile ödeme intentini tamamla
+            const { error: stripeError, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+                payment_method: { card: cardElement },
+            });
+
+            if (stripeError) {
+                setError(stripeError.message || 'Ödeme işlemi başarısız oldu.');
+            } else if (paymentIntent?.status === 'succeeded') {
+                setSuccess(true);
+                navigate('/success'); // Başarı sayfasına yönlendirin
+            } else {
+                setError('Ödeme tamamlanamadı.');
             }
-            label="Kredi Kartı"
-          />
-        </AccordionSummary>
-        <AccordionDetails sx={{ background: "#f7f7f9" }}>
-          <TextField
-            fullWidth
-            placeholder="Kart Numarası"
-            variant="outlined"
-            sx={{
-              backgroundColor: "#fff",
-              "& .MuiOutlinedInput-root": {
-                "& fieldset": { borderColor: "#ccc" },
-              },
-            }}
-          />
-          <TextField
-            fullWidth
-            placeholder="Kart Üzerindeki İsim"
-            variant="outlined"
-            margin="normal"
-            sx={{
-              backgroundColor: "#fff",
-              "& .MuiOutlinedInput-root": {
-                "& fieldset": { borderColor: "#ccc" },
-              },
-            }}
-          />
+        } catch (err) {
+            setError(err instanceof Error ? err.message : 'Bir hata oluştu. Lütfen tekrar deneyin.');
+        } finally {
+            setProcessing(false);
+        }
+    };
 
-          {/* Ay/Yıl ve CVC Yan Yana */}
-          <Box sx={{ display: 'flex', gap: 2, mt: 1 }}>
-            <TextField
-              fullWidth
-              placeholder="Ay / Yıl"
-              variant="outlined"
-              margin="normal"
-              sx={{
-                backgroundColor: "#fff",
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "#ccc" },
-                },
-              }}
-            />
-            <TextField
-              fullWidth
-              placeholder="CVC"
-              variant="outlined"
-              margin="normal"
-              sx={{
-                backgroundColor: "#fff",
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "#ccc" },
-                },
-              }}
-            />
-          </Box>
-        </AccordionDetails>
-      </Accordion>
-
-      {/* Kapıda Ödeme (Nakit) */}
-      <Box
-        mt={2}
-        sx={{
-          border: paymentMethod === "cash" ? "3px solid blue" : "3px solid #ccc",
-          background: paymentMethod === "cash" ? "#f7f7f9" : "#fff",
-          borderRadius: 1,
-        }}
-      >
-        <FormControlLabel
-          control={
-            <Radio
-              checked={paymentMethod === "cash"}
-              onChange={handlePaymentMethodChange}
-              value="cash"
-              name="payment-method"
-              icon={<CheckCircleIcon />}  // Custom icon when not selected
-              checkedIcon={<CheckCircleIcon sx={{ color: "blue" }} />}  // Icon when selected (blue color)
-            />
-          }
-          label="Kapıda Ödeme (Nakit)"
-          sx={{
-            width: "95%",
-            padding: "10px",
-          }}
-        />
-      </Box>
-
-      {/* Kapıda Ödeme (Kredi) */}
-      <Box
-        mt={2}
-        sx={{
-          border: paymentMethod === "none" ? "3px solid blue" : "3px solid #ccc",
-          background: paymentMethod === "none" ? "#f7f7f9" : "#fff",
-          borderRadius: 1,
-        }}
-      >
-        <FormControlLabel
-          control={
-            <Radio
-              checked={paymentMethod === "none"}
-              onChange={handlePaymentMethodChange}
-              value="none"
-              name="payment-method"
-              icon={<CheckCircleIcon />}  // Custom icon when not selected
-              checkedIcon={<CheckCircleIcon sx={{ color: "blue" }} />}  // Icon when selected (blue color)
-            />
-          }
-          label="Kapıda Ödeme (Kredi)"
-          sx={{
-            width: "95%",
-            padding: "10px",
-          }}
-        />
-      </Box>
-
-      {/* Gizlilik Sözleşmesi Onayı */}
-      <FormControlLabel
-        control={<Checkbox checked={agreeTerms} onChange={handleTermsChange} />}
-        label="Gizlilik Sözleşmesini ve Satış Sözleşmesini okudum, onaylıyorum."
-      />
-
-      {/* Ödeme Tamamlama Butonu */}
-      <Box mt={2}>
-        <Button
-          variant="contained"
-          color="primary"
-          disabled={!agreeTerms || paymentMethod === "none"}
-        >
-          Ödemeyi Tamamla
-        </Button>
-      </Box>
-    </Box>
-  );
+    return (
+        <div>
+            <h2>Ödeme Formu</h2>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            {success ? (
+                <p style={{ color: 'green' }}>Ödeme başarıyla tamamlandı!</p>
+            ) : (
+                <form onSubmit={handlePaymentSubmit}>
+                    <div style={{ margin: '20px 0' }}>
+                        <CardElement
+                            options={{
+                                style: {
+                                    base: {
+                                        fontSize: '16px',
+                                        color: '#424770',
+                                        '::placeholder': {
+                                            color: '#aab7c4',
+                                        },
+                                    },
+                                    invalid: {
+                                        color: '#9e2146',
+                                    },
+                                },
+                            }}
+                        />
+                    </div>
+                    <button type="submit" disabled={!stripe || processing} style={{ padding: '10px 20px' }}>
+                        {processing ? 'İşlem yapılıyor...' : 'Öde'}
+                    </button>
+                </form>
+            )}
+        </div>
+    );
 };
 
 export default CreditCardForm;

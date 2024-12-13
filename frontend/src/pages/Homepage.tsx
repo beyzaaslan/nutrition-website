@@ -2,6 +2,8 @@ import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import AutoPlaySlider from '../components/Review/Slider/Slider';
 import CategoriesGrid from '../components/Categories/CategoriesGrid';
 
+
+
 const Homepage = () => {
   const theme = useTheme();
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
@@ -10,7 +12,7 @@ const Homepage = () => {
 
   // Ekran boyutuna göre objectPosition değerini ayarlayın
   let objectPosition = "center";
-  let height = "400px"; // Varsayılan yükseklik
+  let height = "400px"; 
 
   if (isXs) {
     objectPosition = "right";
@@ -22,7 +24,6 @@ const Homepage = () => {
     objectPosition = "center";
     height = "480px";
   }
-
 
   return (
     <div>
@@ -44,7 +45,7 @@ const Homepage = () => {
           }}
         />
       </Box>
-      <CategoriesGrid/>
+      <CategoriesGrid />
       <Typography variant="h6" gutterBottom textAlign="center" mt={3}>
         ÇOK SATANLAR
       </Typography>
@@ -73,6 +74,7 @@ const Homepage = () => {
       <Box sx={{ marginY: "60px" }}>
         <AutoPlaySlider />
       </Box>
+   
     </div>
   );
 };

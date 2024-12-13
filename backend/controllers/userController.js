@@ -1,5 +1,4 @@
 const db = require('../models');
-
 const getAllUsers = async (req, res) => {
     try {
         const users = await db.User.findAll();
@@ -8,7 +7,6 @@ const getAllUsers = async (req, res) => {
         res.status(500).send(err.message);
     }
 };
-
 const getUserById = async (req, res) => {
     try {
         const { user_id } = req.params; // 'user_id' doğru şekilde kullanılmalı
@@ -27,8 +25,6 @@ const getUserById = async (req, res) => {
         res.status(500).send(err.message);
     }
 };
-
-
 const createUser = async (req, res) => {
     try {
         const { name, lastName, email, password, role } = req.body;
@@ -42,17 +38,14 @@ const createUser = async (req, res) => {
             createdAt: new Date(),
             updatedAt: new Date()
         });
-
         if (!createUser) {
             res.status(400).send('User not created');
         }
-
         res.status(201).send('User Created Successfully');
     } catch (err) {
         res.status(500).send(err.message);
     }
 };
-
 module.exports = {
     getAllUsers,
     getUserById,

@@ -1,17 +1,13 @@
 import { apiRequest } from './apiHelper';
 import { Order } from '../types/Order';
+import { OrderItem } from '../types/OrderItem';
 
-// Tüm siparişleri almak için
-export const getOrders = async () => {
-    return await apiRequest('GET', '/order');
+export const createOrder = async (orderData: Partial<Order>) => {
+  const response = await apiRequest<Partial<Order>>('POST', '/order', orderData);
+  return response.data;
 };
 
-// Belirli bir siparişi almak için
-export const getOrderById = async (orderId: number) => {
-    return await apiRequest('GET', `/order/${orderId}`);
-};
-
-// Yeni bir sipariş oluşturmak için
-export const createOrder = async (orderData: Order) => {
-    return await apiRequest('POST', '/order', orderData);
+export const createOrderItem = async (orderItemData: Partial<OrderItem>) => {
+  const response = await apiRequest<Partial<OrderItem>>('POST', '/orderItem', orderItemData);
+  return response.data;
 };

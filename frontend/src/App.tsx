@@ -4,6 +4,11 @@ import AppRouter from "./router";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
+
+// Stripe'ı yükle
+
+
 function App() {
   return (
     <>
@@ -11,6 +16,8 @@ function App() {
       <ToastContainer /> 
         <AppRouter />
       </BrowserRouter>
+    
+     
     </>
   );
 }

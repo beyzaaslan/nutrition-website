@@ -100,6 +100,7 @@ const AddressSelection: React.FC<AddressSelectionProps> = ({ onAddressSelect }) 
             margin: "1rem auto",
             border: "1px solid #ccc",
             padding: "1rem",
+            background:'#f9f9f9',
             borderRadius: "8px",
           }}
         />

@@ -10,8 +10,11 @@ const register = async (req, res) => {
         return res.status(400).json({errors: errors.array()});
     }
 
+    
+
     const {name, last_name, email, password, role} = req.body;
       console.log("register",req.body);
+
     try {
         let user = await db.User.findOne({where: {email: email}});
         if (user) {
@@ -47,6 +50,7 @@ const login = async (req, res) => {
     const {email, password} = req.body;
 
     try {
+                // Kullanıcıyı e-posta ile bul
         const user = await db.User.findOne({where: {email: email}});
 
         if (!user) {
@@ -59,7 +63,7 @@ const login = async (req, res) => {
             return res.status(400).json({msg: 'Invalid credentials'});
         }
 
-        const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+        const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
         res.status(200).json({token});
     } catch (err) {

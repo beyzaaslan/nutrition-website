@@ -1,7 +1,10 @@
 export interface OrderItem {
     id?: number;
-    quantity: number;
+    amount: number;
     price: number;
     OrderId?: number; // Foreign key
     ProductId?: number; // Foreign key
+    variantId: number; // Eklenen alan
+    quantity: number; // quantity ekliyoruz
+
 }

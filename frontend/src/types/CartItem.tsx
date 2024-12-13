@@ -8,4 +8,5 @@ export type CartItem = {
     price: number;
     flavor: string;
     size: string;
+    
   }

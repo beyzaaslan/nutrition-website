@@ -114,7 +114,6 @@ const AddressForm: React.FC<AddressFormProps> = ({
   return (
     <Box sx={{ 
       padding: 1, 
-      backgroundColor: '#f9f9f9', 
       borderRadius: 2, 
       ...sx 
     }}>

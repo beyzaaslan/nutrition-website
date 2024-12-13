@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import Typography from "@mui/material/Typography";
-import { login, register, verifyEmail } from "../../services/authService";
+import { login, register } from "../../services/authService";
 import "./style.css";
 import { User } from "../../types/User";
 import Cookies from "js-cookie";
@@ -97,29 +97,22 @@ const LoginRegister: React.FC = () => {
     e.preventDefault();
     setError("");
     try {
-      const response = await login({
-        email: formData.email,
-        password: formData.password,
-      });
+        const response = await login({
+            email: formData.email,
+            password: formData.password,
+        });
 
-      Cookies.set("x-auth-token", response.data.token); 
-      try {
-        await verifyEmail(response.data.token);
-        toast.success("Token başarıyla doğrulandı!");
-      } catch (error) {
-        console.error("Doğrulama hatası:", error);
-        toast.error("E mail doğrulaması başarısız oldu.");
-      }
-
-      navigate("/");
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        Cookies.set("x-auth-token", response.data.token);
+        toast.success("Doğrulama olmadan giriş başarılı!");
+        navigate("/");
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
-      setError(
-        error.response?.data?.message || "Giriş sırasında bir hata oluştu"
-      );
-      console.error("Giriş hatası:", error);
+        setError(
+            error.response?.data?.message || "Giriş sırasında bir hata oluştu"
+        );
     }
-  };
+};
+
 
   return (
     <Container

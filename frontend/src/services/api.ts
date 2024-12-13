@@ -15,6 +15,9 @@ export const endpoints = {
     review: `${BASE_URL}/review`,
     order: `${BASE_URL}/order`,
     orderItem: `${BASE_URL}/orderItem`,
-    payment: `${BASE_URL}/payment`,
+    payment: {
+        base: `${BASE_URL}/payment`,
+        stripe: `${BASE_URL}/payment/stripe`
+      },
     priceInfo: `${BASE_URL}/priceInfo`,
 };

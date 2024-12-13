@@ -98,5 +98,4 @@ async function seedDatabase() {
     }
 }
 
-// Run the seed process
 seedDatabase();

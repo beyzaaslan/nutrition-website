@@ -1,6 +1,6 @@
 export interface Order {
-    id?: number;
+    id: number;
     total: number;
-    status: 'pending' | 'completed' | 'cancelled';
+    status: string;
     UserId?: number; // Foreign key
 }

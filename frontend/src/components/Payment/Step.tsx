@@ -8,9 +8,10 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import AddressSelection from "./AddressSelectionStep";
-import CreditCardForm from "./CreditCardForm"; // Import CreditCardForm
+import CreditCardForm from "./CreditCardForm"; 
 import { Address } from "./../../types/Address";
-import Divider from '@mui/material/Divider';
+import { useShoppingCart } from '../../context/ShoppingCartContext';
+import { createOrder, createOrderItem } from '../../services/orderService';
 
 const steps = [
   {
@@ -30,76 +31,138 @@ const steps = [
 export default function VerticalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [selectedAddress, setSelectedAddress] = React.useState<Address | null>(null);
+  const [orderResponse, setOrderResponse] = React.useState<any>(null); // Sipariş yanıtını burada saklıyoruz
+  const { cartItems, getTotalPrice } = useShoppingCart();
 
-  const handleNext = (address?: Address) => {
+  const handleNext = async (address?: Address) => {
     if (activeStep === 0 && address) {
       setSelectedAddress(address);
-      setActiveStep(2);
+      
+      try {
+        // Sipariş oluştur
+        const order = await createOrder({
+          total: getTotalPrice(),
+          status: 'pending',
+          UserId: address.UserId
+        });
+        
+        setOrderResponse(order); // Siparişi kaydediyoruz
+        
+        // Sipariş detaylarını oluştur
+        await Promise.all(cartItems.map(item => 
+          createOrderItem({
+            quantity: item.quantity, // quantity burada eklendi
+            price: item.price,       // price burada var
+            OrderId: orderResponse.id,
+            variantId: item.variantId
+          })
+        ));
+
+        setActiveStep(2); // Ödeme adımına geçiyoruz
+      } catch (error) {
+        console.error('Sipariş oluşturma hatası:', error);
+      }
     } else {
       setActiveStep((prevActiveStep) => prevActiveStep + 1);
     }
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
-    setSelectedAddress(null);
-  };
-
   return (
-    <Box sx={{ maxWidth: 400, overflowY: "auto" }}>
+    <Box sx={{ 
+      width: "100%",
+      height: "calc(100vh - 120px)", // Header için alan bırakıyoruz
+      overflowY: "auto",
+      px: 4 // Yanlarda padding
+    }}>
       <Stepper
         activeStep={activeStep}
         orientation="vertical"
         sx={{
+          width: "100%",
           "& .MuiStep-root": {
-            "& .MuiStepContent-root": {
-              marginTop: 2,
-              borderLeft: "none", // Remove the vertical line
+            mb: 3, // Her adım arasında boşluk
+            "& .MuiStepLabel-root": {
+              p: 2,
+              border: "1px solid #e0e0e0",
+              borderRadius: 1,
+              bgcolor: "white"
             },
-          },
-          "& .MuiStepConnector-lineVertical": {
-            display: "none", // Hide vertical line
-          },
-          "& .MuiStepConnector-line": {
-            height: 2, // Make the line horizontal
-          },
+            "& .MuiStepContent-root": {
+              ml: 3,
+              borderLeft: "2px solid #e0e0e0",
+              p: 2,
+              mt: 2
+            }
+          }
         }}
       >
         {steps.map((step, index) => (
-          <Step key={step.label} sx={{ marginTop: "10px" }}>
+          <Step key={step.label}>
             <StepLabel>
-              <Typography variant="h6">{step.label}</Typography>
-              <Typography variant="body2" color="text.secondary">
-                {step.description}
-              </Typography>
+              <Box>
+                <Typography variant="subtitle1" fontWeight="bold">
+                  {step.label}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {step.description}
+                </Typography>
+              </Box>
             </StepLabel>
             <StepContent>
-              {index === 0 ? (
-                <AddressSelection
-                  onAddressSelect={(address) => handleNext(address)}
-                />
-              ) : index === 1 ? (
-                <Typography>{step.description}</Typography>
-              ) : (
-                <CreditCardForm />
-              )}
+              <Box sx={{ 
+                bgcolor: "white", 
+                p: 3, 
+                borderRadius: 1,
+                boxShadow: "0 2px 4px rgba(0,0,0,0.05)"
+              }}>
+                {index === 0 ? (
+                  <AddressSelection
+                    onAddressSelect={(address) => handleNext(address)}
+                  />
+                ) : index === 1 ? (
+                  <Box>
+                    <Typography variant="body1" sx={{ mb: 2 }}>
+                      {step.description}
+                    </Typography>
+                    <Button
+                      variant="contained"
+                      onClick={() => handleNext()}
+                      sx={{
+                        bgcolor: "black",
+                        color: "white",
+                        "&:hover": { bgcolor: "black" }
+                      }}
+                    >
+                      Devam Et
+                    </Button>
+                  </Box>
+                ) : index === 2 && orderResponse && (
+                  <CreditCardForm amount={getTotalPrice()} orderId={orderResponse.id} orderResponse={orderResponse} />
+                )}
+              </Box>
             </StepContent>
-            {index < steps.length - 1 && <Divider />}
           </Step>
         ))}
       </Stepper>
+
       {activeStep === steps.length && (
-        <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>Tüm adımlar tamamlandı - İşlemi bitirdiniz.</Typography>
+        <Paper 
+          elevation={0} 
+          sx={{ 
+            p: 3, 
+            bgcolor: "white",
+            borderRadius: 1,
+            mt: 2
+          }}
+        >
+          <Typography variant="h6" gutterBottom>
+            Siparişiniz Tamamlandı
+          </Typography>
           {selectedAddress && (
-            <Typography sx={{ mt: 2 }}>
-              Seçilen Adres:{" "}
-              {selectedAddress.address_line1 || "Bilinmeyen Adres"}
+            <Typography variant="body2" color="text.secondary">
+              Teslimat Adresi: {selectedAddress.address_line1}
             </Typography>
           )}
-          <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-            Sıfırla
-          </Button>
         </Paper>
       )}
     </Box>
