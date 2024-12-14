@@ -3,6 +3,7 @@ import "./App.css";
 import AppRouter from "./router";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { UserProvider } from './context/UserContext';
 
 
 
@@ -12,12 +13,12 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <>
+      <UserProvider>
       <BrowserRouter>
       <ToastContainer /> 
         <AppRouter />
       </BrowserRouter>
-    
-     
+      </UserProvider>
     </>
   );
 }

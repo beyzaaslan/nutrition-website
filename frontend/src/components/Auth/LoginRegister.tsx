@@ -101,7 +101,7 @@ const LoginRegister: React.FC = () => {
             email: formData.email,
             password: formData.password,
         });
-
+        
         Cookies.set("x-auth-token", response.data.token);
         toast.success("Doğrulama olmadan giriş başarılı!");
         navigate("/");

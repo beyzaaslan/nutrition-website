@@ -1,95 +1,126 @@
 const db = require('../models');
-const stripe = require('stripe')('sk_test_51QTrHhDmeOtxZbxLYpubFS45fZ3K0gV7VCvOXBLPHO9i254olhLwfLbWEPu2f6k0eTRBhsyQavZp89UCGClpstpj00euhMqj7G'); // Stripe API anahtarınızı buraya ekleyin
-
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const StripeService = require('../services/stripeService');
 
 const getAllPayments = async (req, res) => {
     try {
-        const allPayments = await db.Payment.findAll();
-
+        const allPayments = await db.StripePayment.findAll({
+            include: [{ 
+                model: db.Order, 
+                attributes: ['id', 'total', 'status'] 
+            }]
+        });
+        
         res.json(allPayments);
     } catch (err) {
-        res.status(500).send(err.message);
+        res.status(500).json({
+            message: 'Ödemeler alınırken hata oluştu',
+            error: err.message
+        });
     }
 }
 
 const getPaymentById = async (req, res) => {
     try {
-        const {payment_id} = req.params;
-
-        const payment = await db.Payment.findOne({
-            where: {id: payment_id}
+        const { payment_id } = req.params;
+        
+        const payment = await db.StripePayment.findOne({
+            where: { id: payment_id },
+            include: [{ 
+                model: db.Order, 
+                attributes: ['id', 'total', 'status'] 
+            }]
         });
-
+        
         if (!payment) {
-            res.status(404).send('Payment not found');
+            return res.status(404).json({ message: 'Ödeme bulunamadı' });
         }
-
+        
         res.json(payment);
     } catch (err) {
-        res.status(500).send(err.message);
-    }
-}
-
-const createPayment = async (req, res) => {
-    try {
-        const {amount, type, orderId} = req.body;
-
-        const createPayment = await db.Payment.create({
-            amount,
-            type,
-            orderId,
-            createdAt: new Date(),
-            updatedAt: new Date()
+        res.status(500).json({
+            message: 'Ödeme bilgisi alınırken hata oluştu',
+            error: err.message
         });
-
-        if (!createPayment) {
-            res.status(400).send('Payment not created');
-        }
-
-        res.status(201).send('Payment Created Successfully');
-    } catch (err) {
-        res.status(500).send(err.message);
     }
 }
 
 const createStripePayment = async (req, res) => {
     try {
-        const { amount, orderId } = req.body;
-
-        // Ödeme tutarını cent cinsinden gönderdiğinizden emin olun (Stripe dolar cinsinden cent olarak alır)
-        const paymentAmount = amount * 100; // örneğin 100.00 TL, 10000 cent olmalıdır.
-
-        // Stripe ödeme isteği oluşturma
-        const paymentIntent = await stripe.paymentIntents.create({
-            amount: paymentAmount,
-            currency: 'usd', // Burada ödeme yapacağınız para birimini belirtin.
-            metadata: { orderId: orderId }
+        const { orderId } = req.body;
+        console.log("orderId",orderId);
+        
+        // Siparişi kontrol et
+        const order = await db.Order.findOne({ 
+            where: { 
+                id: orderId, 
+                UserId: req.user.id 
+            } 
         });
 
-        // Yeni ödeme kaydını veritabanına ekleyin
-        const payment = await db.Payment.create({
-            amount,
-            type: 'credit_card',  // Stripe üzerinden ödeme yapıldığı için type'ı 'credit_card' olarak bırakıyoruz
-            orderId,
-            createdAt: new Date(),
-            updatedAt: new Date()
-        });
-
-        if (!payment) {
-            res.status(400).send('Payment not created');
+        if (!order) {
+            return res.status(404).json({ message: 'Sipariş bulunamadı' });
         }
 
-        // Stripe client secret'ı frontend'e gönderin
-        res.json({ clientSecret: paymentIntent.client_secret });
+        // Ödeme niyeti oluştur
+        const paymentIntent = await StripeService.createPaymentIntent(order);
+        
+        res.status(200).json({
+            clientSecret: paymentIntent.clientSecret,
+            paymentIntentId: paymentIntent.paymentIntentId
+        });
     } catch (err) {
-        console.error(err);
-        res.status(500).send(err.message);
+        res.status(500).json({
+            message: 'Ödeme oluşturulurken hata oluştu',
+            error: err.message
+        });
+    }
+}
+
+const confirmStripePayment = async (req, res) => {
+    try {
+        const { paymentIntentId } = req.body;
+        
+        const status = await StripeService.confirmPayment(paymentIntentId);
+        
+        res.status(200).json({ 
+            status,
+            message: status === 'succeeded' ? 'Ödeme başarıyla tamamlandı' : 'Ödeme başarısız' 
+        });
+    } catch (err) {
+        res.status(500).json({
+            message: 'Ödeme onaylanırken hata oluştu',
+            error: err.message
+        });
+    }
+}
+
+const getStripePaymentHistory = async (req, res) => {
+    try {
+        const userId = req.user.id;
+        
+        const payments = await db.StripePayment.findAll({
+            include: [{ 
+                model: db.Order,
+                where: { UserId: userId },
+                attributes: ['id', 'total', 'status'] 
+            }],
+            order: [['createdAt', 'DESC']]
+        });
+        
+        res.json(payments);
+    } catch (err) {
+        res.status(500).json({
+            message: 'Ödeme geçmişi alınırken hata oluştu',
+            error: err.message
+        });
     }
 }
 
 module.exports = {
     getAllPayments,
     getPaymentById,
-    createPayment,
-    createStripePayment
+    createStripePayment,
+    confirmStripePayment,
+    getStripePaymentHistory
 };

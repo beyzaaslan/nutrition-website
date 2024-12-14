@@ -12,6 +12,7 @@ import CreditCardForm from "./CreditCardForm";
 import { Address } from "./../../types/Address";
 import { useShoppingCart } from '../../context/ShoppingCartContext';
 import { createOrder, createOrderItem } from '../../services/orderService';
+import { OrderItem } from "../../types/OrderItem";
 
 const steps = [
   {
@@ -31,7 +32,7 @@ const steps = [
 export default function VerticalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [selectedAddress, setSelectedAddress] = React.useState<Address | null>(null);
-  const [orderResponse, setOrderResponse] = React.useState<any>(null); // Sipariş yanıtını burada saklıyoruz
+  const [orderResponse, setOrderResponse] = React.useState<OrderItem>(); // Sipariş yanıtını burada saklıyoruz
   const { cartItems, getTotalPrice } = useShoppingCart();
 
   const handleNext = async (address?: Address) => {
@@ -53,8 +54,7 @@ export default function VerticalLinearStepper() {
           createOrderItem({
             quantity: item.quantity, // quantity burada eklendi
             price: item.price,       // price burada var
-            OrderId: orderResponse.id,
-            variantId: item.variantId
+            OrderId: orderResponse?.OrderId,
           })
         ));
 
@@ -137,7 +137,7 @@ export default function VerticalLinearStepper() {
                     </Button>
                   </Box>
                 ) : index === 2 && orderResponse && (
-                  <CreditCardForm amount={getTotalPrice()} orderId={orderResponse.id} orderResponse={orderResponse} />
+                  <CreditCardForm amount={getTotalPrice()} orderId={orderResponse.id!} orderResponse={orderResponse} />
                 )}
               </Box>
             </StepContent>

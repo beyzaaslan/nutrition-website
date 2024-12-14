@@ -5,7 +5,8 @@ const paymentController = require('../controllers/paymentController');
 
 router.get('/', paymentController.getAllPayments);
 router.get('/:payment_id', paymentController.getPaymentById);
-router.post('/', paymentController.createPayment);
-router.post('/stripe', paymentController.createStripePayment); 
-
+// Yeni Stripe route'ları
+router.post('/create-intent', authMiddleware, paymentController.createStripePayment);
+router.post('/confirm', authMiddleware, paymentController.confirmStripePayment);
+router.get('/history', authMiddleware, paymentController.getStripePaymentHistory);
 module.exports = router;

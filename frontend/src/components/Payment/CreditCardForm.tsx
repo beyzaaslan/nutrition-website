@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import { useNavigate } from 'react-router-dom';
+import { OrderItem } from '../../types/OrderItem';
 import { createStripePayment } from '../../services/stripe';
 
 interface CreditCardFormProps {
     orderId: number;
     amount: number;
-    orderResponse: any; // orderResponse'ı buraya ekliyoruz
+    orderResponse: OrderItem; 
 }
 
 const CreditCardForm: React.FC<CreditCardFormProps> = ({ orderId, amount }) => {
@@ -39,7 +40,9 @@ const CreditCardForm: React.FC<CreditCardFormProps> = ({ orderId, amount }) => {
 
         try {
             // Stripe ödeme için clientSecret'ı almak
-            const response = await createStripePayment(orderId, amount);  // Parametreler burada değişti
+            console.log("beyza");  
+            const response = await createStripePayment(orderId, amount);
+            console.log("beyza",response);  
             const clientSecret = response.data.clientSecret;  // 'clientSecret' response'dan alınır
 
             // Stripe ile ödeme intentini tamamla
@@ -64,7 +67,6 @@ const CreditCardForm: React.FC<CreditCardFormProps> = ({ orderId, amount }) => {
 
     return (
         <div>
-            <h2>Ödeme Formu</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
             {success ? (
                 <p style={{ color: 'green' }}>Ödeme başarıyla tamamlandı!</p>

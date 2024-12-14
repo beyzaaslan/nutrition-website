@@ -35,6 +35,8 @@ db.Review = require("./review")(sequelize, Sequelize);
 db.User = require("./user")(sequelize, Sequelize);
 db.Variant = require("./variant")(sequelize, Sequelize);
 db.Size = require("./size")(sequelize, Sequelize);
+db.StripePayment = require("./stripePayment")(sequelize, Sequelize);
+
 db.ProductCategory = sequelize.define(
   "ProductCategory",
   {},
@@ -63,6 +65,9 @@ db.OrderItem.belongsTo(db.Product, { foreignKey: "ProductId" });
 // Payment and Order
 db.Payment.belongsTo(db.Order, { foreignKey: "OrderId" });
 
+// İlişkileri tanımlayın
+db.StripePayment.belongsTo(db.Order, { foreignKey: 'orderId' });
+db.Order.hasOne(db.StripePayment, { foreignKey: 'orderId' });
 // PriceInfo and Product
 db.Product.hasOne(db.PriceInfo, { foreignKey: "ProductId" });
 db.PriceInfo.belongsTo(db.Product, { foreignKey: "ProductId" });
