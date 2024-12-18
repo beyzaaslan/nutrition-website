@@ -9,13 +9,13 @@ class StripeService {
                 amount: Math.round(order.total * 100), // Kuruş cinsinden
                 currency: 'try',
                 metadata: { 
-                    orderId: order.id 
+                    OrderId: order.id 
                 }
             });
 
             // Stripe ödeme bilgisini veritabanına kaydet
             await StripePayment.create({
-                orderId: order.id,
+                OrderId: order.id,
                 stripePaymentIntentId: paymentIntent.id,
                 amount: order.total,
                 status: 'pending',
@@ -48,7 +48,7 @@ class StripeService {
                 // İlgili siparişin durumunu güncelle
                 await Order.update(
                     { status: paymentIntent.status === 'succeeded' ? 'completed' : 'cancelled' },
-                    { where: { id: stripePayment.orderId } }
+                    { where: { id: stripePayment.OrderId } }
                 );
             }
 

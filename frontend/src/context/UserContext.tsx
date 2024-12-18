@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { User } from '../types/User';
-import { getCurrentUser } from '../services/me';
+import { getCurrentUser } from '../services/authService';
 
 // Context için tip tanımları
 interface UserContextType {
@@ -25,6 +25,12 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
     };
     fetchUser();
+    /* localde tutma     
+        login olanı userda tutma  sepete hem localde tut hem de db kaydet  speet drumunu da sakla
+        kullanıcının baktıgı son urun 
+        user içinde endpoint ac  array  lastViewed içinde obje tut  orderin id si var mı  yoksa o ürünü başa ekle sondan sil
+        
+    */
   }, []);
 
   return (

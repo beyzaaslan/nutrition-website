@@ -5,12 +5,12 @@ import { OrderItem } from '../../types/OrderItem';
 import { createStripePayment } from '../../services/stripe';
 
 interface CreditCardFormProps {
-    orderId: number;
+    OrderId: number;
     amount: number;
     orderResponse: OrderItem; 
 }
 
-const CreditCardForm: React.FC<CreditCardFormProps> = ({ orderId, amount }) => {
+const CreditCardForm: React.FC<CreditCardFormProps> = ({ OrderId, amount }) => {
     const stripe = useStripe();
     const elements = useElements();
     const navigate = useNavigate();
@@ -41,8 +41,8 @@ const CreditCardForm: React.FC<CreditCardFormProps> = ({ orderId, amount }) => {
         try {
             // Stripe ödeme için clientSecret'ı almak
             console.log("beyza");  
-            const response = await createStripePayment(orderId, amount);
-            console.log("beyza",response);  
+            const response = await createStripePayment(OrderId, amount);
+            console.log("beyza",response,OrderId,amount);  
             const clientSecret = response.data.clientSecret;  // 'clientSecret' response'dan alınır
 
             // Stripe ile ödeme intentini tamamla

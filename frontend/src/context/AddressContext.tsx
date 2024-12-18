@@ -1,9 +1,9 @@
 import React, { createContext, useState, useContext, useCallback, useEffect }from 'react';
 import { Address } from '../types/Address';
 import { getAddressesByUserId,createAddress,updateAddress,deleteAddress}from '../services/addressService';
-import { getCurrentUser } from '../services/me';
 import { User } from '../types/User';
 import Cookies from 'js-cookie';
+import { getCurrentUser } from '../services/authService';
 
 interface AddressContextType {
   addresses: Address[];

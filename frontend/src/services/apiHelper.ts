@@ -7,6 +7,8 @@ export const apiRequest = async <T>(
   method: "GET" | "POST" | "PUT" | "DELETE",
   endpoint: string,
   data?: T,
+  headers?: Record<string, string> // Header'ları opsiyonel olarak ekle
+
 
 ): Promise<any> => {
   const url = `${BASE_URL}${endpoint}`;
@@ -14,7 +16,8 @@ export const apiRequest = async <T>(
   const config: AxiosRequestConfig = {
     method,
     url,
-    data
+    data,
+    headers
     };
   try {
     const response = await axios(config);

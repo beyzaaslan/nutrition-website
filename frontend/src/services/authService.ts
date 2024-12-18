@@ -19,6 +19,29 @@ export const register = async (userData: User) => {
   return response;
 };
 
+// E-posta doğrulama fonksiyonu
 export const verifyEmail = async (token: string) => {
-  return await apiRequest('POST', '/auth/verifyEmail', { token });
+  return await apiRequest('POST',  '/auth/verifyEmail', { token });
+};
+
+// Kullanıcı bilgilerini almak için me servisi
+export const getCurrentUser = async () => {
+  try {
+    // Cookie'den token'ı al
+    const token = Cookies.get('x-auth-token') as string;
+
+    // Token varsa isteğe ekle
+    const headers = {
+      'x-auth-token': token,
+    };
+
+    // API isteği gönder
+    const response = await apiRequest('GET', '/auth/me', undefined, headers);
+
+    // Kullanıcı bilgilerini döndür
+    return response.data.user;
+  } catch (error) {
+    console.error('Kullanıcı bilgileri alınamadı:', error);
+    throw error;
+  }
 };

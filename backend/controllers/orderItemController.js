@@ -9,7 +9,7 @@ const getAllOrderItems = async (req, res) => {
         res.status(500).send(err.message);
     }
 }
-
+/* order adres kargo  kontrol  tüm item  at ordera ata  */
 const getOrderItemById = async (req, res) => {
     try {
         const {orderItem_id} = req.params;
@@ -30,12 +30,12 @@ const getOrderItemById = async (req, res) => {
 
 const createOrderItem = async (req, res) => {
     try {
-        const {quantity, price, orderId, productId} = req.body;
+        const {quantity, price, OrderId, productId} = req.body;
 
         const createOrderItem = await db.OrderItem.create({
             quantity,
             price,
-            orderId,
+            OrderId,
             productId,
             createdAt: new Date(),
             updatedAt: new Date()

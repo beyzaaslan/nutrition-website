@@ -1,8 +1,8 @@
 const db = require('../models');
+const StripeService = require('../utils/stripeService');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const StripeService = require('../services/stripeService');
 
-const getAllPayments = async (req, res) => {
+const getAllPayments = async (_req, res) => {
     try {
         const allPayments = await db.StripePayment.findAll({
             include: [{ 
@@ -47,13 +47,13 @@ const getPaymentById = async (req, res) => {
 
 const createStripePayment = async (req, res) => {
     try {
-        const { orderId } = req.body;
-        console.log("orderId",orderId);
+        const { OrderId } = req.body;
+        console.log("OrderId",OrderId);
         
         // Siparişi kontrol et
         const order = await db.Order.findOne({ 
             where: { 
-                id: orderId, 
+                id: OrderId, 
                 UserId: req.user.id 
             } 
         });

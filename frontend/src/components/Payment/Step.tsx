@@ -32,35 +32,38 @@ const steps = [
 export default function VerticalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [selectedAddress, setSelectedAddress] = React.useState<Address | null>(null);
-  const [orderResponse, setOrderResponse] = React.useState<OrderItem>(); // Sipariş yanıtını burada saklıyoruz
+  const [orderResponse, setOrderResponse] = React.useState<OrderItem>(); 
   const { cartItems, getTotalPrice } = useShoppingCart();
 
   const handleNext = async (address?: Address) => {
     if (activeStep === 0 && address) {
       setSelectedAddress(address);
-      
+
       try {
         // Sipariş oluştur
         const order = await createOrder({
           total: getTotalPrice(),
           status: 'pending',
-          UserId: address.UserId
+          UserId: address.UserId,
         });
-        
-        setOrderResponse(order); // Siparişi kaydediyoruz
-        
-        // Sipariş detaylarını oluştur
-        await Promise.all(cartItems.map(item => 
-          createOrderItem({
-            quantity: item.quantity, // quantity burada eklendi
-            price: item.price,       // price burada var
-            OrderId: orderResponse?.OrderId,
-          })
-        ));
 
+        setOrderResponse(order); // Siparişi duruma kaydediyoruz
+
+        // Sipariş detaylarını oluştur
+        await Promise.all(
+          cartItems.map((item) =>
+            createOrderItem({
+              quantity: item.quantity,
+              price: item.price,
+              OrderId: order.OrderId, // Yeni oluşturulan OrderId kullanılıyor
+            })
+          )
+        );
+
+        console.log("Order and items created successfully:", order);
         setActiveStep(2); // Ödeme adımına geçiyoruz
       } catch (error) {
-        console.error('Sipariş oluşturma hatası:', error);
+        console.error("Sipariş oluşturma hatası:", error);
       }
     } else {
       setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -68,12 +71,14 @@ export default function VerticalLinearStepper() {
   };
 
   return (
-    <Box sx={{ 
-      width: "100%",
-      height: "calc(100vh - 120px)", // Header için alan bırakıyoruz
-      overflowY: "auto",
-      px: 4 // Yanlarda padding
-    }}>
+    <Box
+      sx={{ 
+        width: "100%",
+        height: "calc(100vh - 120px)", // Header için alan bırakıyoruz
+        overflowY: "auto",
+        px: 4, // Yanlarda padding
+      }}
+    >
       <Stepper
         activeStep={activeStep}
         orientation="vertical"
@@ -85,15 +90,15 @@ export default function VerticalLinearStepper() {
               p: 2,
               border: "1px solid #e0e0e0",
               borderRadius: 1,
-              bgcolor: "white"
+              bgcolor: "white",
             },
             "& .MuiStepContent-root": {
               ml: 3,
               borderLeft: "2px solid #e0e0e0",
               p: 2,
-              mt: 2
-            }
-          }
+              mt: 2,
+            },
+          },
         }}
       >
         {steps.map((step, index) => (
@@ -109,12 +114,14 @@ export default function VerticalLinearStepper() {
               </Box>
             </StepLabel>
             <StepContent>
-              <Box sx={{ 
-                bgcolor: "white", 
-                p: 3, 
-                borderRadius: 1,
-                boxShadow: "0 2px 4px rgba(0,0,0,0.05)"
-              }}>
+              <Box
+                sx={{ 
+                  bgcolor: "white", 
+                  p: 3, 
+                  borderRadius: 1,
+                  boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+                }}
+              >
                 {index === 0 ? (
                   <AddressSelection
                     onAddressSelect={(address) => handleNext(address)}
@@ -130,14 +137,19 @@ export default function VerticalLinearStepper() {
                       sx={{
                         bgcolor: "black",
                         color: "white",
-                        "&:hover": { bgcolor: "black" }
+                        "&:hover": { bgcolor: "black" },
                       }}
                     >
                       Devam Et
                     </Button>
                   </Box>
                 ) : index === 2 && orderResponse && (
-                  <CreditCardForm amount={getTotalPrice()} orderId={orderResponse.id!} orderResponse={orderResponse} />
+                  // Burada güvenli erişim sağlıyoruz
+                  <CreditCardForm
+                    amount={getTotalPrice()}
+                    OrderId={orderResponse?.OrderId ?? 0}
+                    orderResponse={orderResponse}
+                  />
                 )}
               </Box>
             </StepContent>
@@ -152,7 +164,7 @@ export default function VerticalLinearStepper() {
             p: 3, 
             bgcolor: "white",
             borderRadius: 1,
-            mt: 2
+            mt: 2,
           }}
         >
           <Typography variant="h6" gutterBottom>

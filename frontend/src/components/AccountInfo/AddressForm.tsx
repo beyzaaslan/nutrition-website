@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { getCurrentUser } from '../../services/me';
 import { Box, Typography, Alert, Button, Grid, TextField } from '@mui/material';
 import { User } from "../../types/User";
 import { Address } from "../../types/Address";
 import { useAddress } from '../../context/AddressContext';
 import Cookies from 'js-cookie';
+import { getCurrentUser } from '../../services/authService';
 
 interface AddressFormProps {
   initialAddress?: Address;

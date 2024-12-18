@@ -10,8 +10,6 @@ const register = async (req, res) => {
         return res.status(400).json({errors: errors.array()});
     }
 
-    
-
     const {name, last_name, email, password, role} = req.body;
       console.log("register",req.body);
 
@@ -62,7 +60,7 @@ const login = async (req, res) => {
         if (!isMatch) {
             return res.status(400).json({msg: 'Invalid credentials'});
         }
-
+        const payload = {userId: user.id};
         const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
         res.status(200).json({token});

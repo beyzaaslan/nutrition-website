@@ -1,10 +1,14 @@
 /* Stripe'a özgü detayları StripePayment modelinde saklarsınız */
 module.exports = (sequelize, DataTypes) => {
     const StripePayment = sequelize.define('StripePayment', {
-        orderId: {
+        OrderId: { // Sadece birini kullanmalısınız
             type: DataTypes.INTEGER,
+            references: {
+              model: 'Orders',
+              key: 'id'
+            },
             allowNull: false
-        },
+          },
         stripePaymentIntentId: {
             type: DataTypes.STRING,
             allowNull: false,

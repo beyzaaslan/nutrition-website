@@ -66,8 +66,8 @@ db.OrderItem.belongsTo(db.Product, { foreignKey: "ProductId" });
 db.Payment.belongsTo(db.Order, { foreignKey: "OrderId" });
 
 // İlişkileri tanımlayın
-db.StripePayment.belongsTo(db.Order, { foreignKey: 'orderId' });
-db.Order.hasOne(db.StripePayment, { foreignKey: 'orderId' });
+db.StripePayment.belongsTo(db.Order, { foreignKey: 'OrderId' });
+db.Order.hasOne(db.StripePayment, { foreignKey: 'OrderId' });
 // PriceInfo and Product
 db.Product.hasOne(db.PriceInfo, { foreignKey: "ProductId" });
 db.PriceInfo.belongsTo(db.Product, { foreignKey: "ProductId" });

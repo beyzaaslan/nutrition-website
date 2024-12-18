@@ -7,7 +7,6 @@ export const endpoints = {
         login: `${BASE_URL}/auth/login`,
         me: `${BASE_URL}/auth/me`,
         verifyEmail: '${BASE_URL}/auth/verifyemail', // Endpoint doğru düzenlendi
-
     },
     category: `${BASE_URL}/category`,
     user: `${BASE_URL}/user`,
