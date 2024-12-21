@@ -13,6 +13,8 @@ const config = {
     }
 };
 
+console.log("config", config);
+
 const testConnection = async () => {
     try {
       const pool = await new sql.ConnectionPool(config).connect();

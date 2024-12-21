@@ -12,12 +12,12 @@ export const getReviewsForProduct = async (productId: number) => {
     "GET",
     `/product/${productId}?include=review`
   );
-  console.log("responseComment",response.data.Reviews);
   return response.data.Reviews || [];
 };
 
-// Yeni bir inceleme oluşturmak için
+// Yeni bir yorum oluşturmak için
 export const createReview = async (reviewData: Review) => {
+  console.log("createReview comment", reviewData);
   const response = await apiRequest("POST", "/review", reviewData);
-  return response.data;
+  return response;
 };

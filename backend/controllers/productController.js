@@ -11,18 +11,18 @@ const getProductById = async (req, res) => {
         { model: db.Review },
         { model: db.Category },
         { model: db.PriceInfo },
-        {model: db.Variant, include: [
-          { model: db.Size },
-          { model: db.PriceInfo }
-        ] },
+        {
+          model: db.Variant,
+          include: [{ model: db.Size }, { model: db.PriceInfo }],
+        },
       ],
     });
 
     if (!product) {
       return res.status(404).send("Product not found");
-    } 
+    }
     console.log("beyza", product);
-    console.log('Product ID:', req.params.id);
+    console.log("Product ID:", req.params.id);
     return res.json(product);
   } catch (err) {
     console.log(err);
@@ -51,7 +51,6 @@ const getProductByName = async (req, res) => {
 };
 const createProduct = async (req, res) => {
   try {
-    // Önce ürünü kaydedin
     const {
       name,
       short_explanation,
@@ -83,38 +82,79 @@ const createProduct = async (req, res) => {
     if (!createProduct) {
       return res.status(400).send("Product not created");
     }
-    // Varyantları ürüne ekleyin
+
     if (variants && variants.length > 0) {
-      const variantInstances = variants.map((variant) => ({
-        ...variant,
-        productId: createProduct.id,
-      }));
-      console.log("variant");
-      await variants.bulkCreate(variantInstances);
+      const variantInstances = variants.map((variant) => {
+        if (!variant.aroma) {
+          throw new Error(`Variant is missing required field: aroma`);
+        }
+
+        return {
+          flavor: variant.aroma,
+          productId: createProduct.id,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          ...variant,
+        };
+      });
+
+      await db.Variant.bulkCreate(variantInstances);
     }
-    // Handle Size creation
+
     if (sizes && sizes.length > 0) {
       const sizeInstances = sizes.map((size) => ({
         ...size,
-        productId: createProduct.id, // Associate the size with the created product
+        productId: createProduct.id,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       }));
-      await db.Size.bulkCreate(sizeInstances); // Create Size instances in the database
+      await db.Size.bulkCreate(sizeInstances);
     }
 
     return res.status(201).send("Product Created Successfully");
   } catch (err) {
+    console.error(err);
     return res.status(500).send(err.message);
   }
 };
 
 const getAllProduct = async (req, res) => {
   try {
-    const { limit = 12, offset = 0 } = req.query; // limit ve offset değerlerini istekte alıyoruz, varsayılan değerler atıyoruz
+    const { limit = 12, offset = 0 } = req.query;
+
+    // Ürünleri ilişkili Review modeliyle birlikte alıyoruz
     const products = await db.Product.findAll({
-      limit: parseInt(limit), // limit değeri isteğe bağlı
-      offset: parseInt(offset), // offset değeri isteğe bağlı
+      limit: parseInt(limit),
+      offset: parseInt(offset),
+      include: [
+        {
+          model: db.Review,
+          attributes: ["id", "rating", "description"], // Gerekli alanları seçiyoruz
+        },
+      ],
     });
-    res.json(products);
+
+    // Her ürün için yorum özeti (ortalama puan ve yorum sayısı) ekliyoruz
+    const productsWithReviews = products.map((product) => {
+      const reviews = product.Reviews || [];
+      const reviewCount = reviews.length;
+      const averageRating =
+        reviewCount > 0
+          ? reviews.reduce((sum, review) => sum + review.rating, 0) /
+            reviewCount
+          : 0;
+
+      return {
+        ...product.toJSON(),
+        // Sequelize nesnesini düz JSON'a çeviriyoruz
+        reviewSummary: {
+          reviewCount,
+          averageRating,
+        },
+      };
+    });
+
+    res.json(productsWithReviews);
   } catch (err) {
     res.status(500).send(err.message);
   }

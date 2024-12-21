@@ -9,7 +9,7 @@ const sequelize = new Sequelize(
   {
     host: process.env.DB_SERVER,
     dialect: "mssql",
-
+    logging: console.log, // Hataları görmek için
     dialectOptions: {
       options: {
         encrypt: true,
@@ -93,3 +93,5 @@ db.Variant.hasMany(db.Size, { foreignKey: "VariantId" });
 db.Size.belongsTo(db.Variant, { foreignKey: "VariantId" });
 
 module.exports = db;
+
+

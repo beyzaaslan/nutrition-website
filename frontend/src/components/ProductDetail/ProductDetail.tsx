@@ -18,6 +18,7 @@ import { SelectedInfo } from "./SelectedInfo";
 import { ProductImage } from "./ProductImage";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { CommentSection } from "./CommentSection";
 
 export interface ProductDetailsProps {
   product: Product;
@@ -93,124 +94,139 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
   }, [selectedFlavor, selectedSize, product.Variants]);
 
   return (
-    <Grid container spacing={2}>
-      {/* Görsel Kısmı - 7/12 alan */}
-      <Grid item xs={12} md={7}>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100%",
-          }}
-        >
-          <ProductImage
-            product={product}
-            selectedPhoto={selectedPhoto}
-            discountPercentage={
-              selectedVariant?.PriceInfos[0]?.discount_percentage ?? null
-            }
-          />
-        </Box>
-      </Grid>
-
-      {/* Detay Kısmı - 5/12 alan */}
-      <Grid item xs={12} md={5}>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            padding: "16px",
-            height: "100%",
-          }}
-        >
-          <ProductRating commentCount={product.comment_count} />
-
-          <ProductHeader
-            name={product.name || ""}
-            shortExplanation={product.short_explanation || ""}
-            tags={tags}
-          />
-
-          <Divider sx={{ margin: "8px 0" }} />
-
-          {groupedVariants && (
-            <FlavorSelector
-              groupedVariants={groupedVariants}
-              selectedFlavor={selectedFlavor}
-              onFlavorSelect={handleFlavorSelect}
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+        width: "100%",
+      }}
+    >
+      <Grid container spacing={2}>
+        {/* Görsel Kısmı - 7/12 alan */}
+        <Grid item xs={12} md={7}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+            }}
+          >
+            <ProductImage
+              product={product}
+              selectedPhoto={selectedPhoto}
+              discountPercentage={
+                selectedVariant?.PriceInfos[0]?.discount_percentage ?? null
+              }
             />
-          )}
+          </Box>
+        </Grid>
 
-          {availableSizes.length > 0 && (
-            <SizeSelector
-              availableSizes={availableSizes}
-              selectedSize={selectedSize}
-              onSizeSelect={setSelectedSize}
+        {/* Detay Kısmı - 5/12 alan */}
+        <Grid item xs={12} md={5}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              padding: "16px",
+              height: "100%",
+            }}
+          >
+            <ProductRating commentCount={product.comment_count} />
+
+            <ProductHeader
+              name={product.name || ""}
+              shortExplanation={product.short_explanation || ""}
+              tags={tags}
             />
-          )}
 
-          {selectedFlavor && selectedSize && selectedVariant && (
-            <Box sx={{ position: "relative" }}>
-              <SelectedInfo
+            <Divider sx={{ margin: "8px 0" }} />
+
+            {groupedVariants && (
+              <FlavorSelector
+                groupedVariants={groupedVariants}
                 selectedFlavor={selectedFlavor}
-                selectedSize={selectedSize}
-                priceInfo={selectedVariant.PriceInfos[0]} // PriceInfos olarak düzeltildi
-                selectedVariant={selectedVariant} // Eksik alan düzeltildi
-                id={product.id}
-                productName={product.name}
+                onFlavorSelect={handleFlavorSelect}
               />
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "start",
-                  flexDirection: "column",
-                  marginTop: "25px",
-                }}
-              >
-                {/* Divider */}
-                <Divider />
+            )}
 
-                {/* Son Kullanma Tarihi */}
-                <Typography variant="body2" mt={3}>
-                  Son Kullanma Tarihi: 07.2025
-                </Typography>
+            {availableSizes.length > 0 && (
+              <SizeSelector
+                availableSizes={availableSizes}
+                selectedSize={selectedSize}
+                onSizeSelect={setSelectedSize}
+              />
+            )}
 
-                {/* Accordion Sections */}
-                <Accordion sx={{ boxShadow: "none" }}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon  />}>
-                    <Typography sx={{fontWeight:600}}  >ÖZELLİKLER</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails
-                  >
-                    <Typography>{product.features}</Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Divider />
+            {selectedFlavor && selectedSize && selectedVariant && (
+              <Box sx={{ position: "relative" }}>
+                <SelectedInfo
+                  selectedFlavor={selectedFlavor}
+                  selectedSize={selectedSize}
+                  priceInfo={selectedVariant.PriceInfos[0]} // PriceInfos olarak düzeltildi
+                  selectedVariant={selectedVariant} // Eksik alan düzeltildi
+                  id={product.id}
+                  productName={product.name}
+                />
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "start",
+                    flexDirection: "column",
+                    marginTop: "25px",
+                  }}
+                >
+                  {/* Divider */}
+                  <Divider />
 
-                <Accordion sx={{ boxShadow: "none" }}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography sx={{fontWeight:600}}>BESİN İÇERİĞİ</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>{product.description}</Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <Divider />
+                  {/* Son Kullanma Tarihi */}
+                  <Typography variant="body2" mt={3}>
+                    Son Kullanma Tarihi: 07.2025
+                  </Typography>
 
-                <Accordion sx={{ boxShadow: "none" }}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography sx={{fontWeight:600}}>KULLANIM ŞEKLİ</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>{product.usage}</Typography>
-                  </AccordionDetails>
-                </Accordion>
+                  {/* Accordion Sections */}
+                  <Accordion sx={{ boxShadow: "none" }}>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                      <Typography sx={{ fontWeight: 600 }}>
+                        ÖZELLİKLER
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>{product.features}</Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Divider />
+
+                  <Accordion sx={{ boxShadow: "none" }}>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                      <Typography sx={{ fontWeight: 600 }}>
+                        BESİN İÇERİĞİ
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>{product.description}</Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <Divider />
+
+                  <Accordion sx={{ boxShadow: "none" }}>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                      <Typography sx={{ fontWeight: 600 }}>
+                        KULLANIM ŞEKLİ
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography>{product.usage}</Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                </Box>
               </Box>
-            </Box>
-          )}
-        </Box>
+            )}
+          </Box>
+        </Grid>
       </Grid>
-    </Grid>
+      <CommentSection productId={product.id} />
+    </Box>
   );
 };

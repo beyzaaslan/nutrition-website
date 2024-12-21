@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useLocation } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -8,10 +9,10 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import AddressSelection from "./AddressSelectionStep";
-import CreditCardForm from "./CreditCardForm"; 
+import CreditCardForm from "./CreditCardForm";
 import { Address } from "./../../types/Address";
-import { useShoppingCart } from '../../context/ShoppingCartContext';
-import { createOrder, createOrderItem } from '../../services/orderService';
+import { useShoppingCart } from "../../context/ShoppingCartContext";
+import { createOrder, createOrderItem } from "../../services/orderService";
 import { OrderItem } from "../../types/OrderItem";
 
 const steps = [
@@ -21,7 +22,8 @@ const steps = [
   },
   {
     label: "Kargo",
-    description: "Ücretsiz Kargo (16:00 öncesi siparişler aynı gün kargolanır).",
+    description:
+      "Ücretsiz Kargo (16:00 öncesi siparişler aynı gün kargolanır).",
   },
   {
     label: "Ödeme",
@@ -31,9 +33,28 @@ const steps = [
 
 export default function VerticalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
-  const [selectedAddress, setSelectedAddress] = React.useState<Address | null>(null);
-  const [orderResponse, setOrderResponse] = React.useState<OrderItem>(); 
+  const [selectedAddress, setSelectedAddress] = React.useState<Address | null>(
+    null
+  );
+  const [orderResponse, setOrderResponse] = React.useState<OrderItem>();
   const { cartItems, getTotalPrice } = useShoppingCart();
+  const location = useLocation(); // useLocation ile URL parametrelerini alıyoruz
+  const [paymentStatus, setPaymentStatus] = React.useState<
+    "idle" | "success" | "failure"
+  >("idle");
+
+  React.useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const status = queryParams.get("status");
+    setPaymentStatus(status as "idle" | "success" | "failure");
+    if (status === "failure") {
+      setActiveStep(1);
+    } else if (status === "success") {
+      setTimeout(() => {
+        window.location.href = "/"; // Ödeme başarılıysa anasayfaya yönlendir
+      }, 5000);
+    }
+  }, [location.search]);
 
   const handleNext = async (address?: Address) => {
     if (activeStep === 0 && address) {
@@ -43,7 +64,7 @@ export default function VerticalLinearStepper() {
         // Sipariş oluştur
         const order = await createOrder({
           total: getTotalPrice(),
-          status: 'pending',
+          status: "pending",
           UserId: address.UserId,
         });
 
@@ -72,7 +93,7 @@ export default function VerticalLinearStepper() {
 
   return (
     <Box
-      sx={{ 
+      sx={{
         width: "100%",
         height: "calc(100vh - 120px)", // Header için alan bırakıyoruz
         overflowY: "auto",
@@ -101,67 +122,88 @@ export default function VerticalLinearStepper() {
           },
         }}
       >
-        {steps.map((step, index) => (
-          <Step key={step.label}>
-            <StepLabel>
-              <Box>
-                <Typography variant="subtitle1" fontWeight="bold">
-                  {step.label}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {step.description}
-                </Typography>
-              </Box>
-            </StepLabel>
-            <StepContent>
-              <Box
-                sx={{ 
-                  bgcolor: "white", 
-                  p: 3, 
-                  borderRadius: 1,
-                  boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
-                }}
-              >
-                {index === 0 ? (
-                  <AddressSelection
-                    onAddressSelect={(address) => handleNext(address)}
-                  />
-                ) : index === 1 ? (
-                  <Box>
-                    <Typography variant="body1" sx={{ mb: 2 }}>
-                      {step.description}
-                    </Typography>
-                    <Button
-                      variant="contained"
-                      onClick={() => handleNext()}
-                      sx={{
-                        bgcolor: "black",
-                        color: "white",
-                        "&:hover": { bgcolor: "black" },
-                      }}
-                    >
-                      Devam Et
-                    </Button>
-                  </Box>
-                ) : index === 2 && orderResponse && (
-                  // Burada güvenli erişim sağlıyoruz
-                  <CreditCardForm
-                    amount={getTotalPrice()}
-                    OrderId={orderResponse?.OrderId ?? 0}
-                    orderResponse={orderResponse}
-                  />
-                )}
-              </Box>
-            </StepContent>
-          </Step>
-        ))}
+        {paymentStatus === "failure" && (
+          <Box color={"red"}>Ödeme Başarılı olmadı! Tekrar deneyiniz. </Box>
+        )}
+        {paymentStatus === "success" ? (
+          <Box color={"green"}>Ödeme Başarılı! Siparişiniz alınmıştır.</Box>
+        ) : (
+          steps.map((step, index) => (
+            <Step key={step.label}>
+              <StepLabel>
+                <Box>
+                  <Typography variant="subtitle1" fontWeight="bold">
+                    {step.label}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {step.description}
+                  </Typography>
+                </Box>
+              </StepLabel>
+              <StepContent>
+                <Box
+                  sx={{
+                    bgcolor: "white",
+                    p: 3,
+                    borderRadius: 1,
+                    boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+                  }}
+                >
+                  {index === 0 ? (
+                    <AddressSelection
+                      onAddressSelect={(address) => handleNext(address)}
+                    />
+                  ) : index === 1 ? (
+                    <Box>
+                      <Typography variant="body1" sx={{ mb: 2 }}>
+                        {step.description}
+                      </Typography>
+                      <Button
+                        variant="contained"
+                        onClick={() => handleNext()}
+                        sx={{
+                          bgcolor: "black",
+                          color: "white",
+                          "&:hover": { bgcolor: "black" },
+                        }}
+                      >
+                        Devam Et
+                      </Button>
+                    </Box>
+                  ) : (
+                    index === 2 &&
+                    orderResponse && (
+                      <Box>
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          sx={{ mb: 2 }}
+                        >
+                          {location.search.includes("status=failure") && (
+                            <Typography variant="body1" color="error">
+                              Ödeme Başarısız! Lütfen tekrar deneyin.
+                            </Typography>
+                          )}
+                        </Typography>
+                        <CreditCardForm
+                          amount={getTotalPrice()}
+                          OrderId={orderResponse?.OrderId ?? 0}
+                        />
+                      </Box>
+                    )
+                  )}
+                </Box>
+              </StepContent>
+            </Step>
+          ))
+        )}
       </Stepper>
 
       {activeStep === steps.length && (
-        <Paper 
-          elevation={0} 
-          sx={{ 
-            p: 3, 
+        <Paper
+          elevation={0}
+          sx={{
+            p: 3,
             bgcolor: "white",
             borderRadius: 1,
             mt: 2,

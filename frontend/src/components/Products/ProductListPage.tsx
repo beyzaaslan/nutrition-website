@@ -2,8 +2,8 @@ import React, { useEffect, useState, useRef, useCallback } from "react";
 import { ProductCard } from "./ProductCard";
 import { Product } from "../../types/Product";
 import { getProducts } from "../../services/productService";
-import { Grid, Container } from '@mui/material';
-import Typography from '@mui/material/Typography';
+import { Grid, Container } from "@mui/material";
+import Typography from "@mui/material/Typography";
 
 const ITEMS_PER_PAGE = 12;
 
@@ -35,6 +35,7 @@ export const ProductListPage: React.FC = () => {
     try {
       setLoading(true);
       const data = await getProducts(page, ITEMS_PER_PAGE);
+      console.log("first product", data);
       setProducts((prevProducts) => {
         const newProducts = [...prevProducts];
         data.forEach((product: Product) => {
@@ -44,20 +45,22 @@ export const ProductListPage: React.FC = () => {
         });
         return newProducts;
       });
+
       setHasMore(data.length === ITEMS_PER_PAGE);
     } catch (error) {
       console.error("Ürünler yüklenirken hata oluştu:", error);
-      setError("Ürünler yüklenirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
+      setError(
+        "Ürünler yüklenirken bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+      );
     } finally {
       setLoading(false);
     }
   }, [page]);
-  
 
   useEffect(() => {
     fetchProducts();
   }, [fetchProducts]);
-  
+
   if (error) {
     return <div className="text-center py-8 text-red-600">{error}</div>;
   }
@@ -67,12 +70,19 @@ export const ProductListPage: React.FC = () => {
       <Typography variant="h4" gutterBottom textAlign="center" mb={5}>
         TÜM ÜRÜNLER
       </Typography>
-      
-      <Grid container spacing={2} justifyContent="center" alignItems="flex-start">
+
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="flex-start"
+      >
         {products.map((product, index) => (
           <Grid
             item
-            xs={12} sm={6} md={4} // Her satırda 3 ürün göstermek için md={4} ayarı kullanılıyor.
+            xs={12}
+            sm={6}
+            md={4} // Her satırda 3 ürün göstermek için md={4} ayarı kullanılıyor.
             key={product.id}
             ref={index === products.length - 1 ? lastProductRef : null}
           >

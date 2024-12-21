@@ -3,8 +3,7 @@ const router = express.Router();
 ;
 const productController = require('../controllers/productController');
 
-/* router.get('/', productController.getAllProducts);
- */router.get('/', productController.getAllProduct);
+router.get('/', productController.getAllProduct);
 router.get('/:product_id', productController.getProductById);
 router.post('/', productController.createProduct);
 router.get('/:productName', productController.getProductByName); // Yeni arama rotası

@@ -35,6 +35,7 @@ const initialFormData: FormData = {
   role: "user",
 };
 
+
 const LoginRegister: React.FC = () => {
   const [tabValue, setTabValue] = useState(0);
   const [formData, setFormData] = useState<FormData>(initialFormData);
@@ -64,10 +65,10 @@ const LoginRegister: React.FC = () => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-    console.log("Kayıt için gönderilen veriler:", formData);
+
     try {
-      const response = await register(formData as unknown as User);
-      console.log("Sunucudan gelen tam yanıt:", response.data);
+      const response = await register(formData as User);
+      console.log("Kullanıcı başarıyla kaydedildi:", response);
       toast.success('Kayıt başarılı! E-postanızı kontrol edin ve doğrulama linkine tıklayın.', {
         position: "top-center",
         autoClose: 3000,
@@ -80,7 +81,7 @@ const LoginRegister: React.FC = () => {
       });
       
       
-      navigate('/login');
+      navigate('/login'); // E-posta doğrulama sayfasına yönlendirin
       setTabValue(0);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
@@ -88,8 +89,6 @@ const LoginRegister: React.FC = () => {
         error.response?.data?.message || "Kayıt başarısız! Lütfen tekrar deneyin"
       );
       console.error("Kayıt hatası:", error);
-      console.error("Hata yanıtı:", error.response);
-
     }
   };
 
@@ -102,9 +101,10 @@ const LoginRegister: React.FC = () => {
         password: formData.password,
       });
 
-      Cookies.set('x-auth-token', response.token);
+      Cookies.set("authToken", response.token);
+      /* backene verify token yolla */
       try {
-        await verifyEmail(response.data.token);
+        await verifyEmail(response.token);
         toast.success("Token başarıyla doğrulandı!");
       } catch (error) {
         console.error("Doğrulama hatası:", error);

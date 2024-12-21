@@ -25,5 +25,3 @@ router.use('/review', reviewRoutes);
 router.use('/user', userRoutes);/* testi okey */
 
 module.exports = router;
-
-

@@ -15,5 +15,3 @@ export const getPaymentById = async (paymentId: number) => {
 export const createPayment = async (paymentData: Payment) => {
     return await apiRequest('POST', '/payment', paymentData);
 };
-
-
