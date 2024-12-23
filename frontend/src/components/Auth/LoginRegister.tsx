@@ -1,7 +1,7 @@
 // src/pages/auth/LoginRegister.tsx
 import React, { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom';
-import 'react-toastify/dist/ReactToastify.css';
+import { useLocation } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 import {
   Container,
   Grid,
@@ -17,7 +17,7 @@ import { login, register, verifyEmail } from "../../services/authService";
 import "./style.css";
 import { User } from "../../types/User";
 import Cookies from "js-cookie";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 interface FormData {
   name: string;
@@ -35,7 +35,6 @@ const initialFormData: FormData = {
   role: "user",
 };
 
-
 const LoginRegister: React.FC = () => {
   const [tabValue, setTabValue] = useState(0);
   const [formData, setFormData] = useState<FormData>(initialFormData);
@@ -43,11 +42,13 @@ const LoginRegister: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-   // E-posta doğrulandıysa bildirim göster
-   useEffect(() => {
+  // E-posta doğrulandıysa bildirim göster
+  useEffect(() => {
     const params = new URLSearchParams(location.search);
-    if (params.get('verified') === 'true') {
-      toast.success('E-posta başarıyla doğrulandı! Şimdi giriş yapabilirsiniz.');
+    if (params.get("verified") === "true") {
+      toast.success(
+        "E-posta başarıyla doğrulandı! Şimdi giriş yapabilirsiniz."
+      );
     }
   }, [location]);
 
@@ -65,30 +66,34 @@ const LoginRegister: React.FC = () => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
-
+    console.log("Kayıt için gönderilen veriler:", formData);
     try {
-      const response = await register(formData as User);
-      console.log("Kullanıcı başarıyla kaydedildi:", response);
-      toast.success('Kayıt başarılı! E-postanızı kontrol edin ve doğrulama linkine tıklayın.', {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        className: 'custom-toast',  // Özel class adı
-        bodyClassName: 'custom-toast-body',
-      });
-      
-      
-      navigate('/login'); // E-posta doğrulama sayfasına yönlendirin
+      const response = await register(formData as unknown as User);
+      console.log("Sunucudan gelen tam yanıt:", response.data);
+      toast.success(
+        "Kayıt başarılı! E-postanızı kontrol edin ve doğrulama linkine tıklayın.",
+        {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          className: "custom-toast", // Özel class adı
+          bodyClassName: "custom-toast-body",
+        }
+      );
+
+      navigate("/login");
       setTabValue(0);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setError(
-        error.response?.data?.message || "Kayıt başarısız! Lütfen tekrar deneyin"
+        error.response?.data?.message ||
+          "Kayıt başarısız! Lütfen tekrar deneyin"
       );
       console.error("Kayıt hatası:", error);
+      console.error("Hata yanıtı:", error.response);
     }
   };
 
@@ -100,11 +105,9 @@ const LoginRegister: React.FC = () => {
         email: formData.email,
         password: formData.password,
       });
-
-      Cookies.set("authToken", response.token);
-      /* backene verify token yolla */
+      Cookies.set("x-auth-token", response?.data?.token);
       try {
-        await verifyEmail(response.token);
+        await verifyEmail(response?.data?.token);
         toast.success("Token başarıyla doğrulandı!");
       } catch (error) {
         console.error("Doğrulama hatası:", error);

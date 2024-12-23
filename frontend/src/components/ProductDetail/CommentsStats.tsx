@@ -1,17 +1,16 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Box, Typography, Grid } from "@mui/material";
 
 const calculateReviewStats = (comments: any[]) => {
   const totalReviews = comments.length;
-  const ratingCounts = [0, 0, 0, 0, 0]; // To store counts of 1-star to 5-star reviews
+  const ratingCounts = [0, 0, 0, 0, 0]; 
 
   comments.forEach((comment: { rating: number }) => {
-    ratingCounts[comment.rating - 1] += 1; // Increment the respective rating count
+    ratingCounts[comment.rating - 1] += 1; 
   });
 
   const averageRating =
     comments.reduce(
-      (sum: any, comment: { rating: any }) => sum + comment.rating,
+      (sum: number, comment: { rating: number }) => sum + comment.rating,
       0
     ) / totalReviews;
 
@@ -24,7 +23,6 @@ const calculateReviewStats = (comments: any[]) => {
 
 interface Comment {
   rating: number;
-  // Add other properties of the comment if needed
 }
 
 interface ReviewStatsProps {
@@ -38,12 +36,22 @@ const ReviewStats = ({ comments }: ReviewStatsProps) => {
   return (
     <Grid
       container
-      spacing={2}
       alignItems="center"
-      sx={{ marginBottom: 4, maxWidth: "600px" }}
+      justifyContent="space-between" 
+      sx={{
+        marginBottom: 6,
+        maxWidth: "1200px",
+      }}
     >
       {/* Left: Main Rating */}
-      <Grid item xs={4} textAlign="center">
+      <Box
+        sx={{
+          textAlign: "center",
+          padding: 2,
+          flex: 1,
+          maxWidth: "30%",
+        }}
+      >
         <Typography
           variant="h3"
           sx={{
@@ -62,10 +70,15 @@ const ReviewStats = ({ comments }: ReviewStatsProps) => {
         >
           {totalReviews} Yoruma Göre
         </Typography>
-      </Grid>
+      </Box>
 
       {/* Right: Rating Breakdown */}
-      <Grid item xs={8}>
+      <Box
+        sx={{
+          flex: 1,
+          maxWidth: "35%",
+        }}
+      >
         {ratingCounts.map((count, index) => (
           <Box
             key={5 - index}
@@ -78,7 +91,11 @@ const ReviewStats = ({ comments }: ReviewStatsProps) => {
             {/* Star Rating */}
             <Typography
               variant="body2"
-              sx={{ width: "10%", textAlign: "right", marginRight: 1 }}
+              sx={{
+                width: "10%",
+                textAlign: "right",
+                marginRight: 1,
+              }}
             >
               {5 - index} ★
             </Typography>
@@ -87,8 +104,7 @@ const ReviewStats = ({ comments }: ReviewStatsProps) => {
               sx={{
                 flexGrow: 1,
                 height: "10px",
-                backgroundColor: "#eee",
-                borderRadius: "5px",
+                backgroundColor: "#ccc",
                 position: "relative",
                 overflow: "hidden",
               }}
@@ -104,13 +120,17 @@ const ReviewStats = ({ comments }: ReviewStatsProps) => {
             {/* Count */}
             <Typography
               variant="body2"
-              sx={{ width: "10%", marginLeft: 1, textAlign: "left" }}
+              sx={{
+                width: "10%",
+                marginLeft: 1,
+                textAlign: "left",
+              }}
             >
               ({count})
             </Typography>
           </Box>
         ))}
-      </Grid>
+      </Box>
     </Grid>
   );
 };

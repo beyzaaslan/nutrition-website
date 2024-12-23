@@ -23,7 +23,7 @@ const ReviewForm = ({
 }) => {
   const handleSubmit = () => {
     if (productId && rating !== null && description.trim()) {
-      onSubmit({ ProductId: Number(productId), rating, description });
+      onSubmit({ productId: Number(productId), rating, description });
       if (onReset) {
         onReset();
       }
@@ -36,8 +36,8 @@ const ReviewForm = ({
         display: "flex",
         flexDirection: "column",
         gap: 2,
-        width: "80%",
-        alignItems: "center",
+        width: "40%",
+        alignItems: "start",
       }}
     >
       <Rating
@@ -47,7 +47,7 @@ const ReviewForm = ({
         size="large"
       />
       <TextField
-        label="Yorum Yazın"
+        placeholder="Yorumunuz"
         multiline
         rows={4}
         value={description}
@@ -55,13 +55,19 @@ const ReviewForm = ({
         variant="outlined"
         fullWidth
         required
+        sx={{
+          marginBottom: "2px",
+          backgroundColor: "#F7F7F7",
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": { borderColor: "#E5E5E5" },
+          },
+        }}
       />
       <Button
         variant="contained"
         onClick={handleSubmit}
-        disabled={
-          loading || !productId || rating === null || !description.trim()
-        }
+        disabled={loading || !productId || rating === null || !description.trim()}
+        sx={{backgroundColor: "black", color: "white", fontWeight: "bold"}} 
       >
         Gönder
       </Button>

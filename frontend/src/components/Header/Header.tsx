@@ -37,6 +37,7 @@ const Header: React.FC = () => {
   const [showResults, setShowResults] = useState(false);
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -78,6 +79,10 @@ const Header: React.FC = () => {
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAccountMenu(event.currentTarget);
+  };
+
+  const toggleLogin = () => {
+    setIsLoggedIn(!isLoggedIn); // Giriş durumunu değiştirme
   };
 
   const handleClose = () => {
@@ -256,14 +261,31 @@ const Header: React.FC = () => {
                 Hesap
               </Button>
               <Menu
-                anchorEl={accountMenu}
-                open={Boolean(accountMenu)}
-                onClose={handleClose}
-              >
-                <MenuItem onClick={handleClose}>Profil</MenuItem>
-                <MenuItem onClick={handleClose}>Hesabım</MenuItem>
-                <MenuItem onClick={handleClose}>Çıkış</MenuItem>
-              </Menu>
+              anchorEl={accountMenu}
+              open={Boolean(accountMenu)}
+              onClose={handleClose}
+            >
+              {isLoggedIn ? ( // Kullanıcı giriş yaptıysa
+                <>
+                  <MenuItem onClick={handleClose}>Hesap</MenuItem>
+                  <MenuItem onClick={handleClose}>Siparişlerim</MenuItem>
+                  <MenuItem
+                    onClick={() => {
+                      toggleLogin(); // Çıkış yapınca giriş durumu değişir
+                      handleClose();
+                    }}
+                    sx={{ color: "red" }}
+                  >
+                    Çıkış Yap
+                  </MenuItem>
+                </>
+              ) : ( // Kullanıcı giriş yapmadıysa
+                <>
+                  <MenuItem onClick={handleClose}>Üye Girişi</MenuItem>
+                  <MenuItem onClick={handleClose}>Üye Ol</MenuItem>
+                </>
+              )}
+            </Menu>
               <Button
                 onClick={() => setIsOpen(true)}
                 variant="contained"

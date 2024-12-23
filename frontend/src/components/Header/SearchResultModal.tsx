@@ -90,12 +90,6 @@ const SearchResultsModal: React.FC<SearchResultsModalProps> = ({
                     {product.short_explanation}
                   </Typography>
                 </Box>
-
-                {/* Fiyatlar */}
-                <Box sx={{ textAlign: "right" }}>
-  
-                  10TL
-                </Box>
               </ListItem>
               <Divider sx={{ borderColor: "rgba(0, 0, 0, 0.1)" }} />
             </React.Fragment>
