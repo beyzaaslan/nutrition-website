@@ -209,7 +209,7 @@ const Header: React.FC = () => {
                   value={searchTerm}
               onChange={handleSearchChange}
                 />
-                            {/* Arama Sonuçları Modal'ı */}
+          {/* Arama Sonuçları Modal'ı */}
             {showResults && (
               <SearchResultsModal
                 results={searchResults}

@@ -111,6 +111,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
               justifyContent: "center",
               alignItems: "center",
               height: "100%",
+              marginTop:  "-130px",
             }}
           >
             <ProductImage

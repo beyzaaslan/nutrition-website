@@ -1,6 +1,7 @@
-import { Box, TextField, Button, Rating } from "@mui/material";
+import { Box, TextField, Button } from "@mui/material";
 import { Review } from "../../types/Review";
 import { Dispatch, SetStateAction } from "react";
+import StarRating from '../StarRating/StarRating';
 
 const ReviewForm = ({
   onSubmit,
@@ -18,7 +19,7 @@ const ReviewForm = ({
   onReset?: () => void;
   rating: number | null;
   description: string;
-  setRating: Dispatch<SetStateAction<number | null>>;
+  setRating: Dispatch<SetStateAction<number>>;
   setDescription: Dispatch<SetStateAction<string>>;
 }) => {
   const handleSubmit = () => {
@@ -43,12 +44,11 @@ const ReviewForm = ({
         color:"#797676"
       }}
     >
-      <Rating
-        value={rating}
-        onChange={(_, newValue) => setRating(newValue)}
-        size="medium"
-        color="#FDD835"
-      />
+      <StarRating
+          rating={rating || 0} // Varsayılan değer olarak 0
+          setRating={setRating}
+          interactive={true} // Kullanıcının yıldızları seçebilmesi için
+        />
         Yorumunuzu ve puanınızı belirtin!
 
       <TextField

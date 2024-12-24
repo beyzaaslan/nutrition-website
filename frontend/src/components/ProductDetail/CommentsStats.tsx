@@ -101,6 +101,7 @@ const ReviewStats = ({ comments }: ReviewStatsProps) => {
               >
                 <StarRating rating={starCount} interactive={false} />
               </Box>
+              {/* Progress Bar */}
               <Box
                 sx={{
                   flexGrow: 1,

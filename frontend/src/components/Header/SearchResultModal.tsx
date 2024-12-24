@@ -1,11 +1,10 @@
-// components/SearchResultsModal.tsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Typography, List, ListItem, Divider } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Product } from "../../types/Product";
 
 interface SearchResultsModalProps {
-  results: Product[];
+  results: Product[]; // Tüm ürünlerin listesi
   searchTerm: string;
   onClose: () => void;
 }
@@ -16,6 +15,19 @@ const SearchResultsModal: React.FC<SearchResultsModalProps> = ({
   onClose,
 }) => {
   const navigate = useNavigate();
+  const [filteredResults, setFilteredResults] = useState<Product[]>([]);
+
+  useEffect(() => {
+    if (searchTerm.trim()) {
+      const lowerCaseSearchTerm = searchTerm.toLowerCase();
+      const filtered = results.filter((product) =>
+        product.name.toLowerCase().includes(lowerCaseSearchTerm)
+      );
+      setFilteredResults(filtered);
+    } else {
+      setFilteredResults([]);
+    }
+  }, [searchTerm, results]);
 
   const handleProductClick = (productId: number) => {
     navigate(`/product/${productId}`);
@@ -31,18 +43,18 @@ const SearchResultsModal: React.FC<SearchResultsModalProps> = ({
         top: "102%",
         left: 0,
         right: 0,
-        bgcolor: "white", 
+        bgcolor: "white",
         boxShadow: 3,
         borderRadius: 1,
         maxHeight: "400px",
         overflowY: "auto",
         zIndex: 1000,
-        color: "black", 
+        color: "black",
       }}
     >
-      {results.length > 0 ? (
+      {filteredResults.length > 0 ? (
         <List>
-          {results.map((product) => (
+          {filteredResults.map((product) => (
             <React.Fragment key={product.id}>
               <ListItem
                 onClick={() => handleProductClick(product.id)}
@@ -82,8 +94,8 @@ const SearchResultsModal: React.FC<SearchResultsModalProps> = ({
                   <Typography
                     variant="body2"
                     sx={{
-                      fontSize: "10px", 
-                      color: "text.secondary", 
+                      fontSize: "10px",
+                      color: "text.secondary",
                       mt: 0.5,
                     }}
                   >

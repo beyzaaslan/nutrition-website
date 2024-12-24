@@ -222,9 +222,9 @@ export const CommentSection: React.FC<CommentSectionProps> = ({
         loading={loading}
         productId={productId}
         onReset={resetForm}
-        rating={rating}
+        rating={rating ?? 1}
         description={description}
-        setRating={setRating}
+        setRating={setRating as React.Dispatch<React.SetStateAction<number>>} 
         setDescription={setDescription}
       />
     </Box>

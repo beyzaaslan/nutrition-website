@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import "slick-carousel/slick/slick.css";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { useTheme, useMediaQuery } from '@mui/material';
 import Divider from '@mui/material/Divider';
 import { getReviews } from '../../../services/reviewService';
 import { Review } from '../../../types/Review';
+import StarRating from '../../StarRating/StarRating';
 
 const AutoPlaySlider: React.FC = () => {
   const sliderRef = useRef<Slider>(null);
@@ -26,7 +26,6 @@ const AutoPlaySlider: React.FC = () => {
     const fetchReviews = async () => {
       try {
         const data = await getReviews(); // API'den yorumları al
-        console.log(data);
         setReviews(data.data); // Yorumları state'e ata
       } catch (error) {
         console.error("Yorumlar alınırken bir hata oluştu:", error);
@@ -34,6 +33,17 @@ const AutoPlaySlider: React.FC = () => {
     };
     fetchReviews();
   }, []);
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("tr-TR", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  };
 
   // Slider ayarları
   const settings = {
@@ -44,10 +54,10 @@ const AutoPlaySlider: React.FC = () => {
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear",
+    arrows: false,
   };
 
-  const handleNext = () => sliderRef.current?.slickNext();
-  const handlePrev = () => sliderRef.current?.slickPrev();
+
 
   return (
     <>
@@ -55,9 +65,9 @@ const AutoPlaySlider: React.FC = () => {
         <Typography variant="h6" sx={{ fontWeight: 'bold', textAlign: { xs: 'left', md: 'left' }, ml: 2 }}>
           GERÇEK MÜŞTERİ YORUMLARI
         </Typography>
-        <Box sx={{ display: 'flex', alignItems: 'center',color:"black" }}>
-          <ArrowBackIosIcon onClick={handlePrev} sx={{ ml: 1, fontSize: '1.5rem', color: '#56575F', cursor: 'pointer' }} />
-          <ArrowForwardIosIcon onClick={handleNext} sx={{ ml: 1, fontSize: '1.5rem', color: '#56575F', cursor: 'pointer' }} />
+        <Box sx={{ display: 'flex', alignItems: 'center', color: "black" }}>
+          <ArrowBackIosIcon  sx={{ ml: 1, fontSize: '1.5rem', color: '#56575F', cursor: 'pointer' }} />
+          <ArrowForwardIosIcon  sx={{ ml: 1, fontSize: '1.5rem', color: '#56575F', cursor: 'pointer' }} />
         </Box>
       </Box>
       <Divider sx={{ border: '2px solid #E3E3E3', mb: 2, mx: { xs: 2, sm: 4, md: 8, lg: 18 } }} />
@@ -76,18 +86,31 @@ const AutoPlaySlider: React.FC = () => {
           <Slider ref={sliderRef} {...settings}>
             {reviews.map((review) => (
               <Box key={review.id} sx={{ px: 1 }}>
-                <Box className="slider-item" sx={{
-                  p: 2,
-                  bgcolor: 'background.paper',
-                  borderRadius: 2,
-                  cursor: 'pointer',
-                  textAlign: 'left',
-                  color:"black"
-                }}>
-                  <Typography variant="body2" color="textSecondary" sx={{ fontStyle: 'italic' }}>{review.createdAt}</Typography>
-                  <Typography variant="body1" sx={{ mt: 2 }}>{review.rating} ★</Typography>
-                  <Typography variant="body2" sx={{ mt: 1,color:"black" }}>{review.description}</Typography>
+                <Box
+                  className="slider-item"
+                  sx={{
+                    p: 2,
+                    bgcolor: 'background.paper',
+                    borderRadius: 2,
+                    cursor: 'pointer',
+                    textAlign: 'left',
+                    color: "black",
+                  }}
+                >
+                  {/* Tarih kısmı */}
+                  <Typography variant="body2" color="textSecondary" sx={{ fontStyle: 'italic' }}>
+                    {formatDate(review.createdAt || '')}
+                  </Typography>
 
+                  {/* StarRating Bileşeni */}
+                  <Box sx={{ mt: 2 }}>
+                    <StarRating value={review.rating} interactive={false} />
+                  </Box>
+
+                  {/* Yorum Açıklaması */}
+                  <Typography variant="body2" sx={{ mt: 1, color: "black" }}>
+                    {review.description}
+                  </Typography>
                 </Box>
               </Box>
             ))}

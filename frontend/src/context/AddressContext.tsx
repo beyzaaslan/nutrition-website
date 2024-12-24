@@ -144,6 +144,7 @@ export const AddressProvider: React.FC<{ children: React.ReactNode }> = ({ child
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAddress = () => {
   const context = useContext(AddressContext);
   if (context === undefined) {

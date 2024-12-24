@@ -1,7 +1,7 @@
-import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import AutoPlaySlider from '../components/Review/Slider/Slider';
 import CategoriesGrid from '../components/Categories/CategoriesGrid';
-
+import "slick-carousel/slick/slick.css";
 
 
 const Homepage = () => {
@@ -46,9 +46,9 @@ const Homepage = () => {
         />
       </Box>
       <CategoriesGrid />
-      <Typography variant="h6" gutterBottom textAlign="center" mt={3}>
+{/*       <Typography variant="h6" gutterBottom textAlign="center" mt={3}>
         ÇOK SATANLAR
-      </Typography>
+      </Typography> */}
       
       <Box
         sx={{
