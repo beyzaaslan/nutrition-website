@@ -4,6 +4,7 @@ import { PriceInfo } from "./PriceInfo";
 import { Variant } from "./Variant";
 
 export interface Product {
+  commentCount: number;
   id: number;
   name: string;
   short_explanation: string;

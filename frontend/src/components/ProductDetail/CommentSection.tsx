@@ -16,6 +16,7 @@ import {
 import ReviewStats from "./CommentsStats";
 import ReviewForm from "./ReviewForm";
 import { Review } from "../../types/Review";
+import { useUser } from '../../context/UserContext';
 
 interface Comment {
   id: number;
@@ -33,26 +34,18 @@ interface CommentSectionProps {
 export const CommentSection: React.FC<CommentSectionProps> = ({
   productId,
 }) => {
-  const [comments, setComments] = useState<Comment[]>([
-    {
-      id: 1,
-      content: "Tadını beğenmedim ama yine de içilebilir",
-      user: "Harun Ç.",
-      createdAt: "2024-12-18",
-      rating: 5,
-      verified: true,
-    },
-  ]);
+  const [comments, setComments] = useState<Comment[]>([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
   const [rating, setRating] = useState<number | null>(null);
   const [description, setDescription] = useState<string>("");
+  const { user } = useUser(); 
 
   const fetchComments = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await getReviewsForProduct(productId); // API çağrısı
+      const response = await getReviewsForProduct(productId); 
       if (!response) {
         console.log("first comment", response);
         throw new Error("API Response not OK");
@@ -63,7 +56,7 @@ export const CommentSection: React.FC<CommentSectionProps> = ({
       const formattedComments: Comment[] = response.map((item: any) => ({
         id: item.id,
         content: item.description,
-        user: `User ${item.UserId}`,
+        user:user?.id || "",
         createdAt: item.createdAt,
         rating: item.rating,
         verified: true,
@@ -75,6 +68,7 @@ export const CommentSection: React.FC<CommentSectionProps> = ({
     } finally {
       setLoading(false);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productId]);
 
   const handleAddComment = async (
@@ -82,11 +76,7 @@ export const CommentSection: React.FC<CommentSectionProps> = ({
   ) => {
     setLoading(true);
     try {
-      const response = await createReview({
-        ...newComments,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      });
+      const response = await createReview(newComments);
       if (response?.status === 201) {
         fetchComments();
         resetForm(); // Formu sıfırla
@@ -146,7 +136,6 @@ export const CommentSection: React.FC<CommentSectionProps> = ({
             width: "80%",
           }}
         >
-          {/* Üst Satır: Solda Rating ve Kullanıcı Bilgisi, Sağda Tarih */}
           <Grid container justifyContent="space-between" alignItems="center">
             <Grid item xs={9}>
               <Box display="flex" alignItems="center" gap={1}>
@@ -182,7 +171,7 @@ export const CommentSection: React.FC<CommentSectionProps> = ({
                   variant="body1"
                   sx={{ fontWeight: "bold", marginRight: 1 }}
                 >
-                  {comment.user}
+                  {`${user?.name || ""} ${user?.lastName?.charAt(0)  || ""}`}.
                 </Typography>
                 {comment.verified && (
                   <Chip

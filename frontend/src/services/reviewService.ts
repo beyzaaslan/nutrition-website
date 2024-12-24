@@ -15,7 +15,7 @@ export const getReviewsForProduct = async (productId: number) => {
   return response.data.Reviews || [];
 };
 
-// Yeni bir yorum oluşturmak için
+// Yeni bir inceleme oluşturmak için
 export const createReview = async (reviewData: Review) => {
   console.log("createReview comment", reviewData);
   const response = await apiRequest("POST", "/review", reviewData);

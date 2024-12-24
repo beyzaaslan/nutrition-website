@@ -1,6 +1,7 @@
 import { Box, Typography, Grid } from "@mui/material";
+import StarRating from '../StarRating/StarRating';
 
-const calculateReviewStats = (comments: any[]) => {
+const calculateReviewStats = (comments: Comment[]) => {
   const totalReviews = comments.length;
   const ratingCounts = [0, 0, 0, 0, 0]; 
 
@@ -79,57 +80,55 @@ const ReviewStats = ({ comments }: ReviewStatsProps) => {
           maxWidth: "35%",
         }}
       >
-        {ratingCounts.map((count, index) => (
-          <Box
-            key={5 - index}
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              marginBottom: 1,
-            }}
-          >
-            {/* Star Rating */}
-            <Typography
-              variant="body2"
-              sx={{
-                width: "10%",
-                textAlign: "right",
-                marginRight: 1,
-              }}
-            >
-              {5 - index} ★
-            </Typography>
-            {/* Progress Bar */}
+              {ratingCounts.map((count, index) => {
+          const starCount = 5 - index; // Yıldız sayısı
+          return (
             <Box
+              key={starCount}
               sx={{
-                flexGrow: 1,
-                height: "10px",
-                backgroundColor: "#ccc",
-                position: "relative",
-                overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                marginBottom: 1,
               }}
             >
+              {/* Star Rating */}
               <Box
                 sx={{
-                  width: `${((count / totalReviews) * 100).toFixed(1)}%`,
-                  height: "100%",
-                  backgroundColor: "#007AFF",
+                  display: "flex",
+                  alignItems: "center",
+                  marginRight: 1,
                 }}
-              />
+              >
+                <StarRating rating={starCount} interactive={false} />
+              </Box>
+              <Box
+                sx={{
+                  flexGrow: 1,
+                  height: "10px",
+                  backgroundColor: "#eee",
+                  position: "relative",
+                  overflow: "hidden",
+                  width: "30%",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: `${((count / totalReviews) * 100).toFixed(1)}%`,
+                    height: "100%",
+                    backgroundColor: "#007AFF",
+                  }}
+                />
+              </Box>
+              {/* Count */}
+              <Typography
+                variant="body2"
+                sx={{ width: "10%", marginLeft: 1, textAlign: "left" }}
+              >
+                ({count})
+              </Typography>
             </Box>
-            {/* Count */}
-            <Typography
-              variant="body2"
-              sx={{
-                width: "10%",
-                marginLeft: 1,
-                textAlign: "left",
-              }}
-            >
-              ({count})
-            </Typography>
-          </Box>
-        ))}
+          );
+        })}
       </Box>
     </Grid>
   );

@@ -2,6 +2,12 @@ const db = require("../models");
 const jwt = require("jsonwebtoken");
 
 const getAllAddresses = async (_req, res) => {
+  try {
+    const addresses = await db.Address.findAll();
+    res.json(addresses);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
 };
 
 const createAddress = async (req, res) => {

@@ -12,7 +12,7 @@ const ReviewForm = ({
   setRating,
   setDescription,
 }: {
-  onSubmit: (review: Omit<Review, "id" | "createdAt" | "updatedAt">) => void;
+  onSubmit: (review: Review) => void;
   loading: boolean;
   productId: number | null;
   onReset?: () => void;
@@ -23,7 +23,9 @@ const ReviewForm = ({
 }) => {
   const handleSubmit = () => {
     if (productId && rating !== null && description.trim()) {
-      onSubmit({ productId: Number(productId), rating, description });
+      onSubmit({
+        ProductId: Number(productId), rating, description,
+      });
       if (onReset) {
         onReset();
       }
@@ -38,16 +40,19 @@ const ReviewForm = ({
         gap: 2,
         width: "40%",
         alignItems: "start",
+        color:"#797676"
       }}
     >
       <Rating
         value={rating}
         onChange={(_, newValue) => setRating(newValue)}
-        precision={0.5}
-        size="large"
+        size="medium"
+        color="#FDD835"
       />
+        Yorumunuzu ve puanınızı belirtin!
+
       <TextField
-        placeholder="Yorumunuz"
+        placeholder="Yorum yazın..."
         multiline
         rows={4}
         value={description}
@@ -66,8 +71,10 @@ const ReviewForm = ({
       <Button
         variant="contained"
         onClick={handleSubmit}
-        disabled={loading || !productId || rating === null || !description.trim()}
         sx={{backgroundColor: "black", color: "white", fontWeight: "bold"}} 
+        disabled={
+          loading || !productId || rating === null || !description.trim()
+        }
       >
         Gönder
       </Button>

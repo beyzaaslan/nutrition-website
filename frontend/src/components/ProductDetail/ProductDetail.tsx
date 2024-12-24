@@ -133,9 +133,8 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
               height: "100%",
             }}
           >
-            <ProductRating commentCount={product.comment_count} />
-
-            <ProductHeader
+<ProductRating commentCount={product.Reviews?.length ?? 0} />
+<ProductHeader
               name={product.name || ""}
               shortExplanation={product.short_explanation || ""}
               tags={tags}

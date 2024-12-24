@@ -4,7 +4,7 @@ import { Address} from './Address';
 export interface User {
   id?: number; // Typically the primary key in Sequelize models
   name: string;
-  last_name: string;
+  lastName?: string;
   email: string;
   password: string;
   isVerified?: boolean;

@@ -1,18 +1,19 @@
 const { Sequelize } = require("sequelize");
-const path = require('path');
-require("dotenv").config({ path: path.join(__dirname, '../.env') });
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 
 const sequelize = new Sequelize(
   process.env.DB_DATABASE,
   process.env.DB_USER,
-  process.env.DB_PASSWORD,
+  process.env.SA_PASSWORD,
   {
-    host: process.env.DB_SERVER,
+    host: process.env.DB_SERVER, 
+    port: process.env.DB_PORT || 1433,
     dialect: "mssql",
-    logging: console.log, // Hataları görmek için
+    logging: console.log, 
     dialectOptions: {
       options: {
-        encrypt: true,
+        encrypt: false,
         trustServerCertificate: true,
       },
     },
@@ -66,8 +67,8 @@ db.OrderItem.belongsTo(db.Product, { foreignKey: "ProductId" });
 db.Payment.belongsTo(db.Order, { foreignKey: "OrderId" });
 
 // İlişkileri tanımlayın
-db.StripePayment.belongsTo(db.Order, { foreignKey: 'OrderId' });
-db.Order.hasOne(db.StripePayment, { foreignKey: 'OrderId' });
+db.StripePayment.belongsTo(db.Order, { foreignKey: "OrderId" });
+db.Order.hasOne(db.StripePayment, { foreignKey: "OrderId" });
 // PriceInfo and Product
 db.Product.hasOne(db.PriceInfo, { foreignKey: "ProductId" });
 db.PriceInfo.belongsTo(db.Product, { foreignKey: "ProductId" });
@@ -93,5 +94,3 @@ db.Variant.hasMany(db.Size, { foreignKey: "VariantId" });
 db.Size.belongsTo(db.Variant, { foreignKey: "VariantId" });
 
 module.exports = db;
-
-

@@ -1,19 +1,21 @@
 
 import { SetStateAction, useState } from 'react';
 import { Container, Box, Typography, Grid, TextField, Button,MenuItem, Select, InputLabel, FormControl, InputAdornment } from '@mui/material';
+import { useUser } from '../../context/UserContext';
 
 
 const countryOptions = [
   { value: '+90', label: 'Türkiye', code: 'TR' },
   { value: '+1', label: 'Amerika Birleşik Devletleri', code: 'US' },
   { value: '+44', label: 'Birleşik Krallık', code: 'GB' },
-  // Diğer ülkeleri ekleyin+
+  { value: '+33', label: 'Fransa', code: 'FR' },
+  { value: '+49', label: 'Almanya', code: 'DE' },
 ];
 
 const AccountInfo = () => {
   const [selectedCountry, setSelectedCountry] = useState(countryOptions[0].value);
   const [phone, setPhone] = useState('');
-
+  const { user } = useUser();
  
   const handleCountryChange = (event: { target: { value: SetStateAction<string>; }; }) => {
     setSelectedCountry(event.target.value);
@@ -39,7 +41,7 @@ const AccountInfo = () => {
                   required
                   fullWidth
                   label="Ad"
-                  defaultValue="Berkan"
+                  value={user?.name || ''} // Kullanıcı adı
                   variant="outlined"
                   margin="normal"
                   InputLabelProps={{ shrink: true }}
@@ -64,8 +66,8 @@ const AccountInfo = () => {
                   required
                   fullWidth
                   label="Soyad"
-                  defaultValue="Saraç"
                   variant="outlined"
+                  value={user?.lastName || ''}
                   margin="normal"
                   InputLabelProps={{ shrink: true }}
                   sx={{
@@ -163,9 +165,9 @@ const AccountInfo = () => {
                 <TextField
                   fullWidth
                   label="E-Posta"
-                  defaultValue="iletisim@onlyjs.com"
                   variant="outlined"
                   margin="normal"
+                  value={user?.email || ''}
                   InputLabelProps={{ shrink: true }}
                   sx={{
                     backgroundColor: '#F7F7F7',

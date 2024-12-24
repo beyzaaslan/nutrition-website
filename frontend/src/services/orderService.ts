@@ -12,7 +12,11 @@ export const createOrder = async (orderData: Partial<Order>) => {
 };
 
 export const createOrderItem = async (orderItemData: Partial<OrderItem>) => {
-  const response = await apiRequest<Partial<OrderItem>>("POST","/orderItem",orderItemData);
+  const response = await apiRequest<Partial<OrderItem>>(
+    "POST",
+    "/orderItem",
+    orderItemData
+  );
   return response.data;
 };
 

@@ -16,12 +16,13 @@ const createReview = async (req, res) => {
     const { rating, description, ProductId } = req.body;
     const token = req.header("x-auth-token");
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    console.log("first", decoded.userId);
+    console.log(decoded,"decoded")
+    console.log("first", decoded.id);
     const createReview = await db.Review.create({
       rating,
       description,
       ProductId,
-      UserId: decoded.userId,
+      UserId: decoded.id,
       createdAt: new Date(),
       updatedAt: new Date(),
     });

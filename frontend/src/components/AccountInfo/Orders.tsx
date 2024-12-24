@@ -1,18 +1,18 @@
 import { Container, Box, Typography, Grid, Button } from "@mui/material";
 import { useEffect, useState } from "react";
-import { getOrders } from '../../services/orderService';
+import { getOrders } from "../../services/orderService";
 
 type Orders = {
   id: number;
   total: number;
   status: "pending" | "completed" | "cancelled"; // Status için olası değerler
-  createdAt: string; // ISO tarih formatı
-  updatedAt: string; // ISO tarih formatı
-  UserId: number | null; // UserId null veya bir sayı olabilir
-  title: string; // Sipariş başlığı
-  imageUrl: string; // Siparişe ait resim URL'si
-  orderNumber: string; // Sipariş numarası
-  date: string; // Siparişin tarihi (string olarak temsil ediliyor)
+  createdAt: string; 
+  updatedAt: string; 
+  UserId: number | null; 
+  title: string; 
+  imageUrl: string; 
+  orderNumber: string; 
+  date: string; 
 };
 
 const Orders = () => {
