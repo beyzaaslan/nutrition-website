@@ -17,8 +17,8 @@ const Payment = () => {
       display: 'flex',
       minHeight: '100vh',
       gap: 2,
-      flexDirection: 'row', // Flex yönünü yatay yapıyoruz
-      justifyContent: 'space-between', // İçerik arasındaki boşluğu eşitliyoruz
+      flexDirection: 'row', 
+      justifyContent: 'space-between', 
     }}>
       {/* Sol Panel - Stepper */}
       <Box sx={{
@@ -31,7 +31,7 @@ const Payment = () => {
   <Box sx={{
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between', // Logo ve kullanıcı bilgileri kutunun iki yanına yerleşir
+    justifyContent: 'space-between', 
     mb: 4,
     pb: 2,
   }}>
@@ -141,5 +141,4 @@ const Payment = () => {
     </Box>
   );
 };
-
 export default Payment;

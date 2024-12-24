@@ -56,11 +56,12 @@ export const CommentSection: React.FC<CommentSectionProps> = ({
       const formattedComments: Comment[] = response.map((item: any) => ({
         id: item.id,
         content: item.description,
-        user:user?.id || "",
+        user:item.UserId || "",
         createdAt: item.createdAt,
         rating: item.rating,
         verified: true,
       }));
+        console.log("item",response);
       setComments(formattedComments);
       setTotalPages(Math.ceil(response.length / 5));
     } catch (error) {

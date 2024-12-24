@@ -30,13 +30,14 @@ const getOrderItemById = async (req, res) => {
 
 const createOrderItem = async (req, res) => {
     try {
-        const {quantity, price, OrderId, productId} = req.body;
+        const {quantity, price, OrderId, ProductId} = req.body;
+        console.log("createOrderItem",req.body);
 
         const createOrderItem = await db.OrderItem.create({
             quantity,
             price,
             OrderId,
-            productId,
+            ProductId,
             createdAt: new Date(),
             updatedAt: new Date()
         });

@@ -1,5 +1,6 @@
 import React from "react";
 import { createStripePayment } from "../../services/stripe";
+import Button from '@mui/material/Button';
 
 interface CreditCardFormProps {
   OrderId: number;
@@ -20,11 +21,20 @@ const CreditCardForm: React.FC<CreditCardFormProps> = ({ OrderId, amount }) => {
 
   return (
     <div>
-      <button onClick={handleCheckout} style={{ padding: "10px 20px" }}>
+      <Button
+        onClick={handleCheckout}
+        sx={{
+          backgroundColor: "black",
+          color: "white",
+          padding: "10px 20px",
+          "&:hover": {
+            backgroundColor: "gray", 
+          },
+        }}
+      >
         Ödemeye Git
-      </button>
+      </Button>
     </div>
   );
 };
-
 export default CreditCardForm;
