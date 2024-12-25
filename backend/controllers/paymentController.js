@@ -103,7 +103,6 @@ const confirmStripePayment = async (req, res) => {
 };
 
 const createStripeCheckoutSession = async (req, res) => {
-  console.log("createStripeCheckoutSession" , res);
   try {
     const successUrl = `${
       process.env.FRONTEND_URL || "http://localhost:5173"

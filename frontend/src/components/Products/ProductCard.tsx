@@ -3,19 +3,29 @@ import { CardContent, Card, CardMedia } from "@mui/material";
 import StarRating from "../StarRating/StarRating";
 import { Product } from "../../types/Product";
 import Typography from "@mui/material/Typography";
+import { useNavigate } from 'react-router-dom';
 
 interface ProductCardProps {
   product: Product;
 }
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const navigate = useNavigate();
+  const handleCardClick = () => {
+    if (product.id) {
+      navigate(`/product/${product.id}`); // Ürünün detay sayfasına yönlendirme
+    }
+  };
+
   console.log(
     "first product",
     product,
     product?.reviewSummary?.averageRating,
     product.reviewSummary?.reviewCount
   );
+
   return (
     <Card
+    onClick={handleCardClick}
       sx={{
         justifyContent: "center",
         cursor: "pointer",

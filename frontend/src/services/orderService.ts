@@ -17,6 +17,7 @@ export const createOrderItem = async (orderItemData: Partial<OrderItem>) => {
     "/orderItem",
     orderItemData
   );
+  console.log("orderItemData", response);
   return response.data;
 };
 

@@ -125,92 +125,94 @@ export const CommentSection: React.FC<CommentSectionProps> = ({
       </Typography>
       <ReviewStats comments={comments} />
 
-      {comments?.map((comment) => (
-        <Paper
-          key={comment.id}
-          elevation={1}
-          sx={{
-            padding: 2,
-            marginBottom: 2,
-            borderRadius: "12px",
-            backgroundColor: "#f9f9f9",
-            width: "80%",
-          }}
-        >
-          <Grid container justifyContent="space-between" alignItems="center">
-            <Grid item xs={9}>
-              <Box display="flex" alignItems="center" gap={1}>
-                <Box>
-                  {Array.from({ length: comment.rating }).map((_, index) => (
-                    <span
-                      key={index}
-                      style={{
-                        color: "#FFD700",
-                        fontSize: "16px",
-                        marginRight: 2,
-                      }}
-                    >
-                      ★
-                    </span>
-                  ))}
-                  {Array.from({ length: 5 - comment.rating }).map(
-                    (_, index) => (
-                      <span
-                        key={index}
-                        style={{
-                          color: "#CCC",
-                          fontSize: "16px",
-                          marginRight: 2,
-                        }}
-                      >
-                        ★
-                      </span>
-                    )
-                  )}
-                </Box>
-                <Typography
-                  variant="body1"
-                  sx={{ fontWeight: "bold", marginRight: 1 }}
-                >
-                  {`${user?.name || ""} ${user?.lastName?.charAt(0)  || ""}`}.
-                </Typography>
-                {comment.verified && (
-                  <Chip
-                    label="Doğrulanmış Satıcı"
-                    size="small"
-                    sx={{
-                      backgroundColor: "#e0f7fa",
-                      color: "#00796b",
-                      fontWeight: "bold",
-                    }}
-                  />
-                )}
-              </Box>
-            </Grid>
-            <Grid item xs={3}>
-              <Typography
-                variant="body2"
-                sx={{ textAlign: "right", color: "gray" }}
+     {comments?.map((comment) => (
+  <Paper
+    key={comment.id}
+    elevation={1}
+    sx={{
+      padding: 2,
+      marginBottom: 2,
+      borderRadius: "12px",
+      backgroundColor: "#f9f9f9",
+      width: "80%",
+    }}
+  >
+    <Grid container justifyContent="space-between" alignItems="center">
+      {/* Sol kısım: Kullanıcı bilgisi ve yıldızlar */}
+      <Grid item xs={6} display="flex" alignItems="center">
+        <Box display="flex" alignItems="center" gap={1}>
+          <Box>
+            {Array.from({ length: comment.rating }).map((_, index) => (
+              <span
+                key={index}
+                style={{
+                  color: "#FFD700",
+                  fontSize: "16px",
+                  marginRight: 2,
+                }}
               >
-                {new Date(comment.createdAt).toLocaleDateString()}
-              </Typography>
-            </Grid>
-          </Grid>
-
-          {/* Alt Satır: Yorum İçeriği */}
+                ★
+              </span>
+            ))}
+            {Array.from({ length: 5 - comment.rating }).map((_, index) => (
+              <span
+                key={index}
+                style={{
+                  color: "#CCC",
+                  fontSize: "16px",
+                  marginRight: 2,
+                }}
+              >
+                ★
+              </span>
+            ))}
+          </Box>
           <Typography
-            variant="body2"
-            sx={{
-              marginTop: 1,
-              fontSize: "14px",
-              color: "#555",
-              textAlign: "left",
-            }}
+            variant="body1"
+            sx={{ fontWeight: "bold", marginRight: 1 }}
           >
-            {comment.content}
+            {`${user?.name || ""} ${user?.lastName?.charAt(0) || ""}`} .
           </Typography>
-        </Paper>
-      ))}
+          {comment.verified && (
+            <Chip
+              label="Doğrulanmış Satıcı"
+              size="small"
+              sx={{
+                backgroundColor: "#e0f7fa",
+                color: "#00796b",
+                fontWeight: "bold",
+              }}
+            />
+          )}
+        </Box>
+      </Grid>
+
+      {/* Sağ kısım: Tarih */}
+      <Grid item xs={6} textAlign="right">
+        <Typography
+          variant="body2"
+          sx={{ textAlign: "right", color: "gray" }}
+        >
+          {new Date(comment.createdAt).toLocaleDateString()}
+        </Typography>
+      </Grid>
+    </Grid>
+
+    {/* Alt Satır: Yorum İçeriği */}
+    <Typography
+      variant="body2"
+      sx={{
+        marginTop: 1,
+        fontSize: "14px",
+        color: "#555",
+        textAlign: "left",
+      }}
+    >
+      {comment.content}
+    </Typography>
+  </Paper>
+))}
+
       <Pagination
         count={totalPages}
         page={page}

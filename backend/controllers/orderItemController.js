@@ -31,7 +31,7 @@ const getOrderItemById = async (req, res) => {
 const createOrderItem = async (req, res) => {
     try {
         const {quantity, price, OrderId, ProductId} = req.body;
-        console.log("createOrderItem",req.body);
+        //console.log("createOrderItem",req.body);
 
         const createOrderItem = await db.OrderItem.create({
             quantity,
@@ -41,6 +41,7 @@ const createOrderItem = async (req, res) => {
             createdAt: new Date(),
             updatedAt: new Date()
         });
+        console.log("createOrderItem",createOrderItem);
 
         if (!createOrderItem) {
             res.status(400).send('Order Item not created');

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from 'react-router-dom';
 import {
   Grid,
   Typography,
@@ -40,6 +40,8 @@ const CategoryProductsPage = () => {
   const { categoryName } = useParams<{ categoryName: string }>();
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -64,6 +66,10 @@ const CategoryProductsPage = () => {
     fetchProducts();
   }, [categoryName]);
 
+  const handleCardClick = (productId: number) => {
+    navigate(`/product/${productId}`); // Ürünün detay sayfasına yönlendirme
+  };
+
   if (loading) return <Typography>Yükleniyor...</Typography>;
 
   return (
@@ -79,6 +85,7 @@ const CategoryProductsPage = () => {
             {products.map((product) => (
               <Grid item xs={12} sm={6} md={4} key={product.id}>
                 <Card
+                onClick={() => handleCardClick(product.id)} 
                   sx={{
                     cursor: "pointer",
                     height: "440px",

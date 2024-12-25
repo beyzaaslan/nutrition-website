@@ -14,6 +14,7 @@ import { Address } from "./../../types/Address";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import { createOrder, createOrderItem } from "../../services/orderService";
 import { OrderItem } from "../../types/OrderItem";
+import { getCurrentUser } from '../../services/authService';
 
 const steps = [
   {
@@ -62,25 +63,25 @@ export default function VerticalLinearStepper() {
 
       try {
         // Sipariş oluştur
+        const currentUser = await getCurrentUser();
         const order = await createOrder({
           total: getTotalPrice(),
           status: "pending",
-          UserId: address.UserId,
+          UserId: currentUser.id,
         });
+          console.log("order",order);
+        setOrderResponse(order);  // Siparişi state'e kaydet
 
-        setOrderResponse(order); // Siparişi duruma kaydediyoruz
-
-        // Sipariş detaylarını oluştur
+       // 2. OrderItem oluştur
         await Promise.all(
           cartItems.map((item) =>
             createOrderItem({
               quantity: item.quantity,
               price: item.price,
-              OrderId: order.OrderId, // Yeni oluşturulan OrderId kullanılıyor
+              OrderId: order.OrderId, // Dönen OrderId kullanılıyor
             })
           )
         );
-
         console.log("Order and items created successfully:", order);
         setActiveStep(2); // Ödeme adımına geçiyoruz
       } catch (error) {

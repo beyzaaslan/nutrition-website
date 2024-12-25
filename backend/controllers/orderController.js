@@ -14,7 +14,6 @@ const getAllOrders = async (req, res) => {
     console.log("second", userId);
     console.log("third", decoded);
     const orders = await db.Order.findAll();
-
     res.json(orders);
   } catch (err) {
     res.status(500).send(err.message);

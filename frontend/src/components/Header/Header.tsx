@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import {AppBar,Toolbar,InputBase,IconButton,Box,Button,Menu,MenuItem,Typography,Link,Drawer,List,ListItem,ListItemText} from "@mui/material";
+import {AppBar,Toolbar,InputBase,IconButton,Box,Button,Menu,MenuItem,Typography,Drawer,List,ListItem,ListItemText} from "@mui/material";
+import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -14,6 +15,16 @@ import useDebounce from '../../hooks/useDebounce';
 import {useRef} from 'react';
 import { searchProducts } from '../../services/productService';
 
+
+const categories = [
+  { id: 1, name: "PROTEİN", title: "protein" },
+  { id: 2, name: "SPOR GIDALARI", title: "spor-gidalari" },
+  { id: 3, name: "KARBONHİDRATLAR", title: "karbonhidrat" },
+  { id: 4, name: "GIDA", title: "gida" },
+  { id: 5, name: "SAĞLIK", title: "saglik" },
+  { id: 6, name: "VİTAMİN", title: "vitamin" },
+  { id: 7, name: "TÜM ÜRÜNLER", title: "all-products" },
+];
 
 const StyledBadge = styled(Badge)(() => ({
   "& .MuiBadge-badge": {
@@ -321,13 +332,18 @@ const Header: React.FC = () => {
               "& a:hover": { textDecoration: "underline" },
             }}
           >
-            <Link href="#">PROTEİN</Link>
-            <Link href="#">SPOR GIDALARI</Link>
-            <Link href="#">SAĞLIK</Link>
-            <Link href="#">GIDA</Link>
-            <Link href="#">VİTAMİN</Link>
-            <Link href="#">KARBONHİDRATLAR</Link>
-            <Link href="#">TÜM ÜRÜNLER</Link>
+           {categories.map((category) => (
+              <Link
+                key={category.id}
+                to={`/${category.title}`} // Dinamik URL'ye yönlendirme
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >
+                {category.name}
+              </Link>
+            ))}
           </Box>
         </Box>
       </AppBar>
